@@ -1,6 +1,7 @@
 import streamlit as st
 from git_github import git_github
 from programacao import curso_pandas, curso_python
+from estatistica import curso_estatistica_pt01
 
 st.markdown("# Téo Me Why - 2025")
 
@@ -16,3 +17,5 @@ with st.expander("Python - em breve"):
 with st.expander("Pandas - em breve"):
     curso_pandas()
 
+with st.expander("estatística - em breve"):
+    curso_estatistica_pt01()

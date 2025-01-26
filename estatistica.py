@@ -1,6 +1,6 @@
 import streamlit as st
 
-def estatistica_pt01():
+def curso_estatistica_pt01():
 
     about = """
     Curso gratuido de Estatística (Parte I) para pessoas iniciantes na área de dados.
