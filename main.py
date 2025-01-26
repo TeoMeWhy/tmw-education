@@ -5,7 +5,7 @@ from programacao import curso_pandas, curso_python
 st.markdown("# Téo Me Why - 2025")
 
 st.markdown("## Cursos")
-st.markdown("Acompanhe aqui nossos realizados conforme avançamos e tudo o que nos espera durante este ano.")
+st.markdown("Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.")
 
 with st.expander("Git e GitHub"):
     git_github()
