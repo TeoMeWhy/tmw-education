@@ -17,5 +17,5 @@ with st.expander("Python - em breve"):
 with st.expander("Pandas - em breve"):
     curso_pandas()
 
-with st.expander("estatística - em breve"):
+with st.expander("Estatística - em breve"):
     curso_estatistica_pt01()
