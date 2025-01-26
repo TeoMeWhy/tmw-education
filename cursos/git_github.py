@@ -12,6 +12,7 @@ def git_github():
     """
     st.markdown(about)
 
+    # DIA 01
     st.markdown("#### Dia 01 - Conceitos e primeiros comandos")
     youtube_dia_01 = "PsCJWAkA8S4"
     html_code = f"""
@@ -20,7 +21,9 @@ def git_github():
     allowfullscreen></iframe>
     """
     st.components.v1.html(html_code, height=315)
+    st.checkbox(label="Dia 01 feito!")
 
+    # DIA 02
     st.markdown("#### Dia 02 - Conhecendo o GitHub")
     youtube_dia_02 = "PsCJWAkA8S4"
     html_code = f"""
@@ -29,7 +32,9 @@ def git_github():
     allowfullscreen></iframe>
     """
     st.components.v1.html(html_code, height=315)
+    st.checkbox(label="Dia 02 feito!")
 
+    # DIA 03
     st.markdown("#### Dia 03 - Fluxo de trabalho com Gitflow")
     youtube_dia_03 = "PsCJWAkA8S4"
     html_code = f"""
@@ -38,7 +43,9 @@ def git_github():
     allowfullscreen></iframe>
     """
     st.components.v1.html(html_code, height=315)
+    st.checkbox(label="Dia 03 feito!")
 
+    # DIA 04
     st.markdown("#### Dia 04 - Fluxo de trabalho com Visual Studio Code")
     youtube_dia_04 = "PsCJWAkA8S4"
     html_code = f"""
@@ -47,3 +54,4 @@ def git_github():
     allowfullscreen></iframe>
     """
     st.components.v1.html(html_code, height=315)
+    st.checkbox(label="Dia 04 feito!")
