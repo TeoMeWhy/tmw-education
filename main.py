@@ -10,7 +10,6 @@ st.markdown("Acompanhe aqui nossos cursos realizados conforme avançamos e tudo 
 with st.expander("Git e GitHub"):
     git_github()
 
-
 with st.expander("Python - em breve"):
     curso_python()
 
