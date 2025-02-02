@@ -9,7 +9,7 @@ st.markdown("# Téo Me Why - 2025")
 st.markdown("## Cursos")
 st.markdown("Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.")
 
-with st.expander("Git e GitHub - Em andamento"):
+with st.expander("Git e GitHub"):
     git_github()
 
 with st.expander("Python - 10/02 a 14/02"):
