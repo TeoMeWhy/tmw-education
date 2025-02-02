@@ -1,6 +1,7 @@
+import pandas as pd
 import streamlit as st
 
-def curso_python():
+def curso_python(course_eps:pd.DataFrame):
     about = """
     Curso completo e gratuito de Python para pessoas iniciantes na área da programação.
 
@@ -16,7 +17,7 @@ def curso_python():
     st.markdown(about)
 
 
-def curso_pandas():
+def curso_pandas(course_eps:pd.DataFrame):
     about = """
     Curso completo e gratuito de Pandas para pessoas iniciantes na área de dados.
 

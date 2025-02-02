@@ -1,6 +1,7 @@
+import pandas as pd
 import streamlit as st
 
-def curso_machine_learning():
+def curso_machine_learning(course_eps:pd.DataFrame):
     about = """
     Curso completo e gratuito de Machine Learning para pessoas iniciantes na área da Ciência de Dados.
 

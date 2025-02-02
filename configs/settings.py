@@ -10,3 +10,5 @@ TWITCH_TOKEN_URL = "https://id.twitch.tv/oauth2/token"
 TWITCH_USER_URL = "https://api.twitch.tv/helix/users"
 
 REDIRECT_URI = os.getenv("REDIRECT_URI")
+
+DB_URI = os.getenv("DB_URI")

@@ -1,12 +1,21 @@
 import requests
+from requests_oauthlib import OAuth2Session
+from sqlalchemy import orm
 import streamlit as st
 
-from requests_oauthlib import OAuth2Session
+import configs.settings as settings
+from databases import models 
+
+def get_twitch_infos(token:str):
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Client-Id": settings.TWITCH_CLIENT_ID,
+    }
+    user_response = requests.get(settings.TWITCH_USER_URL, headers=headers).json()
+    return user_response
 
 
-import settings
-
-def twitch_login():
+def twitch_login(db:orm.Session):
 
     twitch = OAuth2Session(settings.TWITCH_CLIENT_ID, redirect_uri=settings.REDIRECT_URI)
 
@@ -25,9 +34,14 @@ def twitch_login():
         ).json()
 
         try:
-            st.session_state["token"] = token_response["access_token"]
-        except:
-            print(token_response)
+            token = token_response["access_token"]
+            st.session_state["token"] = token
+            twitch_user_data = get_twitch_infos(token)
+            user = models.get_or_create_user(db, "twitch", twitch_user_data["data"][0]["id"])
+            st.session_state["user"] = user
+
+        except Exception as err:
+            pass
 
     if "token" not in st.session_state:
         auth_url, state = twitch.authorization_url(settings.TWITCH_AUTHORIZATION_BASE_URL)
@@ -36,14 +50,11 @@ def twitch_login():
         st.markdown(f"[Clique aqui para entrar com Twitch]({auth_url})")
 
     else:
-        headers = {
-            "Authorization": f"Bearer {st.session_state['token']}",
-            "Client-Id": settings.TWITCH_CLIENT_ID,
-        }
-        user_response = requests.get(settings.TWITCH_USER_URL, headers=headers).json()
-
-        print(user_response)
+        data = get_twitch_infos(st.session_state['token'])
         
-        if "data" in user_response and len(user_response["data"]) > 0:
-            user = user_response["data"][0]
-            st.success(f"Login bem-sucedido! Bem-vindo, {user['display_name']} 👋")
+        if "data" in data and len(data["data"]) > 0:
+            twitch_user = data["data"][0]
+            print(twitch_user)
+            user = models.get_or_create_user(db, "twitch", twitch_user["id"])
+            st.session_state["user"] = user
+            st.success(f"Login bem-sucedido! Boas vindas, {twitch_user['display_name']} 👋")

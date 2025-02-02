@@ -1,6 +1,7 @@
+import pandas as pd
 import streamlit as st
 
-def curso_estatistica_pt01():
+def curso_estatistica_pt01(course_eps:pd.DataFrame):
 
     about = """
     Curso gratuido de Estatística (Parte I) para pessoas iniciantes na área de dados.
@@ -22,7 +23,7 @@ def curso_estatistica_pt01():
     """
     st.markdown(about)
 
-def curso_estatistica_pt02():
+def curso_estatistica_pt02(course_eps:pd.DataFrame):
 
     about = """
     Curso gratuido de Estatística (Parte I) para pessoas iniciantes na área de dados.
