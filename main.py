@@ -1,7 +1,5 @@
 import streamlit as st
-import requests
 
-import settings
 from cursos import cursos
 from login import twitch_login
 
