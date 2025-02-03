@@ -135,7 +135,7 @@ def git_github(db:orm.Session, course_eps:pd.DataFrame):
             
     
     # Ep 07
-    st.markdown("#### Ep 07 - Criando FORK")
+    st.markdown("#### Ep 07 - Integração com Visual Studio Code")
     youtube_dia_07 = "M-mBmYj7Jh4"
     html_code = f"""
     <iframe width="560" height="315" src="https://www.youtube.com/embed/{youtube_dia_07}" 
