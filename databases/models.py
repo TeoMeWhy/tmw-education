@@ -1,6 +1,6 @@
 from configs import settings
 
-from sqlalchemy import create_engine, Column, String, TIMESTAMP, ForeignKey, func
+from sqlalchemy import create_engine, Column, String, Integer, TIMESTAMP, ForeignKey, func
 from sqlalchemy import orm, schema
 
 import uuid
@@ -27,7 +27,7 @@ class User(Base):
 class CourseCompletion(Base):
     __tablename__ = "courses_ep_complete"
 
-    ID = Column(String(150), primary_key=True, autoincrement=True)
+    ID = Column(Integer, primary_key=True, autoincrement=True)
     userID = Column(String(150))
     courseSlug = Column(String(150))
     epSlug = Column(String(150))
