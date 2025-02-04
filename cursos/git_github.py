@@ -29,6 +29,7 @@ def git_github(db:orm.Session, course_eps:pd.DataFrame):
         "ep-06": course_eps[course_eps['epSlug']=="ep-06"]['epSlug'].count() == 1,
         "ep-07": course_eps[course_eps['epSlug']=="ep-07"]['epSlug'].count() == 1,
         "ep-08": course_eps[course_eps['epSlug']=="ep-08"]['epSlug'].count() == 1,
+        "ep-09": course_eps[course_eps['epSlug']=="ep-09"]['epSlug'].count() == 1,
     }
 
 
@@ -166,4 +167,20 @@ def git_github(db:orm.Session, course_eps:pd.DataFrame):
             models.insert_user_course_ep(db, user_id=st.session_state['user'].userID, course_slug="github", ep_slug="ep-08")
         else:
             models.delete_user_course_ep(db, user_id=st.session_state['user'].userID, course_slug="github", ep_slug="ep-08")
+
+    # Ep 09
+    st.markdown("#### Ep 09 - Gitignore e Gitkeep")
+    youtube_dia_09 = "spoUnf34R4A"
+    html_code = f"""
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{youtube_dia_09}" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    """
+    st.components.v1.html(html_code, height=315)
+    checkbox_ep_09 = st.checkbox(label="Episódio 09 feito!", value=slugs_flags["ep-09"])
+    if checkbox_ep_09 != slugs_flags["ep-09"] and 'user' in st.session_state:
+        if checkbox_ep_09:
+            models.insert_user_course_ep(db, user_id=st.session_state['user'].userID, course_slug="github", ep_slug="ep-09")
+        else:
+            models.delete_user_course_ep(db, user_id=st.session_state['user'].userID, course_slug="github", ep_slug="ep-09")
             
