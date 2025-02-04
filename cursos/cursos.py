@@ -7,20 +7,8 @@ from .git_github import git_github
 from .machine_learning import curso_machine_learning
 from .programacao import curso_python, curso_pandas
 
-from databases import models
-
-def get_courses_dataframe(db:orm.Session, user_id:str)->pd.DataFrame:
-    courses_progress = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
-    resp = models.get_courses_complet_by_user(db, user_id=user_id)
-    if len(resp) > 0:
-        courses_progress = pd.DataFrame([{
-                            "userID": i.userID,
-                            "courseSlug": i.courseSlug,
-                            "epSlug": i.epSlug,
-                            "createdAt": i.createdAt,
-        } for i in resp])
-    return courses_progress
-
+from .utils import get_courses_dataframe
+    
 
 def cursos(db:orm.Session):
 
