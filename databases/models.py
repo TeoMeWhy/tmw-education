@@ -27,15 +27,10 @@ class User(Base):
 class CourseCompletion(Base):
     __tablename__ = "courses_ep_complete"
 
-    userID = Column(String(150), ForeignKey("users.userID"))
+    userID = Column(String(150))
     courseSlug = Column(String(150))
     epSlug = Column(String(150))
     createdAt = Column(TIMESTAMP, server_default=func.now())
-
-    __table_args__ = (schema.PrimaryKeyConstraint("userID", "courseSlug", "epSlug"),)
-
-
-    user = orm.relationship("User", back_populates="courses")
 
 
 def create_tables():
