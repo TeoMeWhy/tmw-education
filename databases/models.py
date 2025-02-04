@@ -21,9 +21,6 @@ class User(Base):
     createdAt = Column(TIMESTAMP, server_default=func.now())
     lastSeenAt = Column(TIMESTAMP, onupdate=func.now(), server_default=func.now())
 
-    courses = orm.relationship("CourseCompletion", back_populates="user")
-
-
 class CourseCompletion(Base):
     __tablename__ = "courses_ep_complete"
 
