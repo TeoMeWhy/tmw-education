@@ -59,7 +59,7 @@ def get_or_create_user(db:orm.Session, platform_name:str, platform_user_id:str):
 
 
 def get_courses_complet_by_user(db:orm.Session, user_id:str):
-    return db.query(CourseCompletion).filter(User.userID==user_id).all()
+    return db.query(CourseCompletion).filter(CourseCompletion.userID==user_id).all()
 
 
 def insert_user_course_ep(db:orm.Session, user_id:str, course_slug:str, ep_slug:str):
