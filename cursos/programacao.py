@@ -5,7 +5,7 @@ def curso_python(course_eps:pd.DataFrame):
     about = """
     Curso completo e gratuito de Python para pessoas iniciantes na área da programação.
 
-    As aulas de Python acontecerão nos dias 10/02 e 14/02, ai vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+    As aulas de Python acontecerão entre os dias 10/02 e 14/02, ai vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
 
     Python é uma das linguagens mais utilizadas no mundo da computação. Não apenas para criar sites, mas também para análise, engenha e ciência de dados.
     Bem como, tem grande aplicações científicas no meio acadêmico, além, é claro de vasta aplicação com inteligência artificial.
