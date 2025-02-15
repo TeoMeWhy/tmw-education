@@ -22,8 +22,8 @@ def cursos(db:orm.Session):
     with st.expander("Git e GitHub"):
         git_github(db, courses_progress[courses_progress['courseSlug']=='github'])
 
-    with st.expander("Python - 10/02 a 14/02"):
-        curso_python(courses_progress[courses_progress['courseSlug']=='python'])
+    with st.expander("Python"):
+        curso_python(db, courses_progress[courses_progress['courseSlug']=='python'])
 
     with st.expander("Pandas - 10/03 a 14/03"):
         curso_pandas(courses_progress[courses_progress['courseSlug']=='pandas'])

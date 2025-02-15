@@ -26,7 +26,8 @@ def make_course_ep(course_slug:str, title:str, youtube_id:str, ep_slug:str, slug
     allowfullscreen></iframe>
     """
     st.components.v1.html(html_code, height=315)
-    checkbox_ep = st.checkbox(label=f"{ep_title.title()} Feito!", value=slug_flag)
+    label = f"{course_slug.replace("-", " ").title()} {ep_title} Feito!"
+    checkbox_ep = st.checkbox(label=label, value=slug_flag)
     if checkbox_ep != slug_flag and 'user' in st.session_state:
         if checkbox_ep:
             models.insert_user_course_ep(db, user_id=st.session_state['user'].userID, course_slug=course_slug, ep_slug=ep_slug)

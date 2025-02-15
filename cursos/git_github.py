@@ -3,7 +3,6 @@ from sqlalchemy import orm
 import streamlit as st
 
 from .utils import make_course_ep
-from databases import models
 
 
 def git_github(db:orm.Session, course_eps:pd.DataFrame):
