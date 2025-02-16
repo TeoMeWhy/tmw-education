@@ -229,7 +229,6 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
         )
 
 
-
 def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
 
     txt = """
