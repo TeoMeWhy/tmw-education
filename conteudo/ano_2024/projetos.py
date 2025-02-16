@@ -43,6 +43,16 @@ Para Subs da Twitch, vamos deixar o link das playlist para você acompanhar por 
             ],
         )
 
+    st.markdown("#### Data Engineering")
+
+    with st.expander("Lago do Mago"):
+        lago_do_mago(
+            db,
+            courses_progress[
+                courses_progress["courseSlug"] == "lago-mago-2024"
+            ],
+        )
+
 
 def rec_sys_trampar_casa(db: orm.Session, course_eps: pd.DataFrame):
 
@@ -217,3 +227,72 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
             slug_flag=list(slugs_flags.items())[i][1],
             db=db,
         )
+
+
+
+def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
+
+    txt = """
+    Construção de um Datalake e Lake house completamente do zero, desde a criação do ambiente na AWS e Databricks até a criação de dashboard.
+    Utilizamos dados reais de nosso sistema de pontos, realizando ingestão na camada RAW. Para consumo e consolidação dos dados em BRONZE, utilizamos leitura dos dados FULL-LOAD e CDC (Change Data Capture) em streaming realizando UPSERT em DELTA. Para camada SILVER, utilizamos novamente Streaming, mas desta vez com CDF (Change Data Feed).
+    Em GOLD criamos alguns CUBOS para relatórios em dashboards.
+
+    É Sub da Twitch? Confira aqui: [Sub Twitch](https://www.twitch.tv/collections/2e8D0Vgd3hf04g)
+    """
+
+    st.markdown(txt)
+    data = [
+        {
+            "title": "Setup DATABRICKS + UNITY CATALOG",
+            "youtube_id": "tFkcPfkM8Io",
+        },
+        {
+            "title": "Lendo aqruivos FULL LOAD + CDC",
+            "youtube_id": "BSdICtxipOc",
+        },
+        {
+            "title": "CDC com Streaming",
+            "youtube_id": "kN0eqTp_Fe8",
+        },
+        {
+            "title": "Criando uma classe de ingestão",
+            "youtube_id": "j5ew3cwhlDU",
+        },
+        {
+            "title": "GitHub Actions para atualizar Worflows",
+            "youtube_id": "ksf89Cl_eCs",
+        },
+        {
+            "title": "Full-Load em Silver",
+            "youtube_id": "k83hmsXqflg",
+        },
+        {
+            "title": "Change Data Feed",
+            "youtube_id": "PWJp3eujXxQ",
+        },
+        {
+            "title": "Custos e Tipos de Clusters",
+            "youtube_id": "bOJKiwlLKn0",
+        },
+        {
+            "title": "Camada Gold",
+            "youtube_id": "xumKY0lb1a4",
+        },
+        {
+            "title": "Dash Executivo",
+            "youtube_id": "RL9HuYRxclY",
+        },
+    ]
+
+    slugs_flags = { f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1) }
+
+    for i in range(len(data)):
+        make_course_ep(
+            course_slug="lago-mago-2024",
+            title=data[i]["title"],
+            youtube_id=data[i]["youtube_id"],
+            ep_slug=list(slugs_flags.items())[i][0],
+            slug_flag=list(slugs_flags.items())[i][1],
+            db=db,
+        )
+
