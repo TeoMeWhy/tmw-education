@@ -21,6 +21,9 @@ def cursos_2025(db:orm.Session):
 Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.
     """)
 
+    with st.expander("MLFlow"):
+        git_github(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
+
     with st.expander("Git e GitHub"):
         git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
 

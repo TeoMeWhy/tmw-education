@@ -1,5 +1,8 @@
 import pandas as pd
 import streamlit as st
+from sqlalchemy import orm
+
+from ..utils import make_course_ep
 
 def curso_machine_learning(course_eps:pd.DataFrame):
     about = """
@@ -15,3 +18,45 @@ def curso_machine_learning(course_eps:pd.DataFrame):
     [Adicione na sua agenda](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MTl0bnVjbGJldHNsNjU4dWg0ajgxc3BhdXVfMjAyNTA1MDVUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL) para participar conosco ao vivo.
     """
     st.markdown(about)
+
+
+
+def mlflow(db: orm.Session, course_eps: pd.DataFrame):
+
+    txt = """
+    MLFlow é uma peça fundamental para se ganhar produtividade em projetos de Machine Learning e Inteligência Artificial.
+    Com esse poderoso framework, se pode fazer uma ótima gestão de seus modelos preditivos, LLMs e demais algoritmos de aprendizado de máquina.
+    """
+
+    st.markdown(txt)
+    data = [
+        {
+            "title": "O que é MLFlow e como Instalar",
+            "youtube_id": "W8bxk42C9UE",
+        },
+        {
+            "title": "Tracking de Modelos com MLFlow",
+            "youtube_id": "V-Zc_T6iuJc",
+        },
+        {
+            "title": "Registrando e consumindo modelos no MLFlow",
+            "youtube_id": "K2MYiW5m5Ug",
+        },
+        {
+            "title": "Atualização automática de modelos com MLFlow",
+            "youtube_id": "KdnRZSH6Drk",
+        },
+    ]
+
+    slugs_flags = { f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1) }
+
+    for i in range(len(data)):
+        make_course_ep(
+            course_slug="mlflow-2025",
+            title=data[i]["title"],
+            youtube_id=data[i]["youtube_id"],
+            ep_slug=list(slugs_flags.items())[i][0],
+            slug_flag=list(slugs_flags.items())[i][1],
+            db=db,
+        )
+
