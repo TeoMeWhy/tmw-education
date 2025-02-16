@@ -28,7 +28,7 @@ def home():
             with cols[-1]:
                 b1 = st.button("2025")
                 if b1:
-                    st.switch_page("./pages/cursos_2025.py")
+                    st.switch_page("./pages/material_2025.py")
 
     with st.container(border=True):
         cols = st.columns(2)
@@ -40,7 +40,7 @@ def home():
             with cols[-1]:
                 b2 = st.button("2024")
                 if b2:
-                    st.switch_page("./pages/cursos_2024.py")
+                    st.switch_page("./pages/material_2024.py")
 
 
     st.markdown("Caso esteja em dúvida por onde seguir, realize nosso Plano de Desenvolvimento Individual (PDI) para escolher a trilhar correta.")

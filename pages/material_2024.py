@@ -2,6 +2,8 @@ import streamlit as st
 from sqlalchemy import orm
 
 from conteudo.ano_2024.cursos import cursos_2024
+from conteudo.ano_2024.projetos import projetos_2024
+
 from databases.models import SessionLocal
 from login import twitch_login
 
@@ -28,6 +30,8 @@ Confira abaixo a lista de tudo isso que você pode e deve aproveitar.
 """)
 
     cursos_2024(db)
+    projetos_2024(db)
+    
 
 
 show_cursos_2024(db)
