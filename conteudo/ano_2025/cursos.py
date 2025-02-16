@@ -4,7 +4,7 @@ import streamlit as st
 
 from .estatistica import curso_estatistica_pt01, curso_estatistica_pt02
 from .git_github import git_github
-from .machine_learning import curso_machine_learning
+from .machine_learning import curso_machine_learning, mlflow
 from .programacao import curso_python, curso_pandas
 
 from ..utils import get_courses_dataframe
@@ -22,7 +22,7 @@ Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos esp
     """)
 
     with st.expander("MLFlow"):
-        git_github(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
+        mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
 
     with st.expander("Git e GitHub"):
         git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
