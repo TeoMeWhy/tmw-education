@@ -78,7 +78,7 @@ def curso_pandas(course_eps:pd.DataFrame):
     about = """
     Curso completo e gratuito de Pandas para pessoas iniciantes na área de dados.
 
-    As aulas acontecerão nos dias 10/03 e 14/03, ai vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+    As aulas acontecerão entre os dias 10/03 e 14/03, ao vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
 
     Pandas é uma biblioteca do ecossistema Python, uma das mais utilizadas e melhores documentadas para se trabalhar com processamento e análise de dados.
     Ela é o primeiro passo para qualquer pessoa que tem interesse pela área de dados poder realizar manipulações de dados de maneira digital e automalizar processos.
