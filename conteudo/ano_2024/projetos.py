@@ -16,7 +16,7 @@ def projetos_2024(db: orm.Session):
     st.markdown(
         """### Projetos
                 
-Acompanhe aqui nossos todos os projetos que relizamos na área de dados durante o nosso ano de 2024. Você pode acompanhar por aqui, sendo memrbo do YouTube.
+Acompanhe aqui nossos todos os projetos que relizamos na área de dados durante o nosso ano de 2024. Você pode acompanhar por aqui, sendo membro do YouTube.
                 
 Para Subs da Twitch, vamos deixar o link das playlist para você acompanhar por lá.
 
