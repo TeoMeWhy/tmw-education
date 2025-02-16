@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from sqlalchemy import orm
 
-from .utils import make_course_ep
+from ..utils import make_course_ep
 
 
 
@@ -24,49 +24,49 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
     slugs_flags = {f"ep-{i:02}": course_eps[course_eps['epSlug']==f"ep-{i:02}"]['epSlug'].count() == 1 for i in range(1,8)}
         
 
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="Conceitos de Programação e Instalação",
                    youtube_id="OeKzVjiiRm4",
                    ep_slug="ep-01",
                    slug_flag=slugs_flags["ep-01"],
                    db=db)
 
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="Primeiros Comandos",
                    youtube_id="wp23DUYKQt4",
                    ep_slug="ep-02",
                    slug_flag=slugs_flags["ep-02"],
                    db=db)
 
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="Recebendo Dados",
                    youtube_id="_40Lzu_C_Ko",
                    ep_slug="ep-03",
                    slug_flag=slugs_flags["ep-03"],
                    db=db)
    
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="IF, ELIF, ELSE",
                    youtube_id="FV9Pzj3BIuU",
                    ep_slug="ep-04",
                    slug_flag=slugs_flags["ep-04"],
                    db=db)
 
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="Laços de Repetição",
                    youtube_id="HcCH_xXwOcA",
                    ep_slug="ep-05",
                    slug_flag=slugs_flags["ep-05"],
                    db=db)
     
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="Listas",
                    youtube_id="deWlTenrlv4",
                    ep_slug="ep-06",
                    slug_flag=slugs_flags["ep-06"],
                    db=db)
 
-    make_course_ep(course_slug="python",
+    make_course_ep(course_slug="python-2025",
                    title="Dicionários e Tuplas",
                    youtube_id="EueiZ_TXe_c",
                    ep_slug="ep-07",

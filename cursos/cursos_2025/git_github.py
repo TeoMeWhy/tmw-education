@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import orm
 import streamlit as st
 
-from .utils import make_course_ep
+from ..utils import make_course_ep
 
 
 def git_github(db:orm.Session, course_eps:pd.DataFrame):
@@ -24,63 +24,63 @@ def git_github(db:orm.Session, course_eps:pd.DataFrame):
         
 
     # Ep 01
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Instalação e Primeiros Conceitos",
                    youtube_id="84FhNXNWoig",
                    ep_slug="ep-01",
                    slug_flag=slugs_flags["ep-01"],
                    db=db)
 
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Primeiros Comandos Git",
                    youtube_id="RZ0g18hstwQ",
                    ep_slug="ep-02",
                    slug_flag=slugs_flags["ep-02"],
                    db=db)
 
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Lidando com Branches",
                    youtube_id="pzjdEQOmsLA",
                    ep_slug="ep-03",
                    slug_flag=slugs_flags["ep-03"],
                    db=db)
    
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Resolvendo Conflitos",
                    youtube_id="IRmjluONHxU",
                    ep_slug="ep-04",
                    slug_flag=slugs_flags["ep-04"],
                    db=db)
 
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Realizando Pull Requests",
                    youtube_id="Y_fFZjzw-D4",
                    ep_slug="ep-05",
                    slug_flag=slugs_flags["ep-05"],
                    db=db)
     
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Criando FORK",
                    youtube_id="vWtrTmjis2w",
                    ep_slug="ep-06",
                    slug_flag=slugs_flags["ep-06"],
                    db=db)
 
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Integração com Visual Studio Code",
                    youtube_id="M-mBmYj7Jh4",
                    ep_slug="ep-07",
                    slug_flag=slugs_flags["ep-07"],
                    db=db)
 
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Git Flow",
                    youtube_id="l44uGe-sxgM",
                    ep_slug="ep-08",
                    slug_flag=slugs_flags["ep-08"],
                    db=db)
 
-    make_course_ep(course_slug="github",
+    make_course_ep(course_slug="github-2025",
                    title="Gitignore e Gitkeep",
                    youtube_id="spoUnf34R4A",
                    ep_slug="ep-09",
