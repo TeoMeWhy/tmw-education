@@ -1,3 +1,9 @@
+# configs
+.vscode
+
+# envs
 *.env
+
+# data
 __pycache__
 data
