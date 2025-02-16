@@ -1,7 +1,7 @@
 import streamlit as st
 from sqlalchemy import orm
 
-from cursos.cursos_2025.cursos import cursos_2025
+from conteudo.ano_2025.cursos import cursos_2025
 from databases.models import SessionLocal
 from login import twitch_login
 
