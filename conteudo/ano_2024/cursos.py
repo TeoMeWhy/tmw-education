@@ -12,28 +12,14 @@ from ..utils import get_courses_dataframe
 
 def cursos_2024(db:orm.Session):
 
-    txt = """
-Este ano foi um ano que tomamos coragem para ter dedicação exclusiva ao projeto.
-A partir disso, tivemos muitas realizações junto à comunidade, por isso gostaríamos de compartilhar estes feitos.
-Nossa motivação não apenas para mostrar o nosso trabalho, mas também engajar novas pessoas aos estudos na área de dados e tecnologia, como também, compartilharem seus avanços, aprendizados e lutas.
-
-Lembramos que o projeto [Téo Me Why](https://teomewhy.org) é parceiro do [Instituto Aaron Swartz](https://institutoasw.org) na luta pela emancipação do conhecimento.
-
-## Sumário
-
-No total, realizamos seis treinamentos para te ajudar nos conhecimentos básicos na área de dados.
-Além disso, realizamos seis projetos completamente mão na massa para você aplicar todos conhecimentos adquiridos anteriormente, além de te inspirar a caçar mais dados para crescer o seu portfólio. 
-Confira abaixo a lista de tudo isso que você pode e deve aproveitar.
-"""
-
-    st.markdown(txt)
-
     courses_progress = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
     if 'user' in st.session_state:
         courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
 
-    st.markdown("### Cursos")
-    st.markdown("Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.")
+    st.markdown("""### Cursos
+                
+Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.
+    """)
 
     with st.expander("Git e GitHub"):
         git_github(db, courses_progress[courses_progress['courseSlug']=='github-2024'])
