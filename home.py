@@ -21,7 +21,7 @@ def home():
     with st.container(border=True):
         cols = st.columns(2)
         with cols[0]:
-            st.markdown("Confira nosso cursos futuros e que já aconteceram durante este ano.")
+            st.markdown("Confira nossos cursos futuros e que já aconteceram durante este ano.")
             
         with cols[1]:
             cols = st.columns(3)
