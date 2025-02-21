@@ -45,6 +45,13 @@ def home():
 
     st.markdown("Caso esteja em dúvida por onde seguir, realize nosso Plano de Desenvolvimento Individual (PDI) para escolher a trilhar correta.")
 
+    html_code = f"""
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vrbU_08NjKg" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen></iframe>
+    """
+    st.components.v1.html(html_code, height=315)
+
 def main():
     home()
 
