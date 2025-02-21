@@ -21,7 +21,7 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
     """
     st.markdown(about)
 
-    slugs_flags = {f"ep-{i:02}": course_eps[course_eps['epSlug']==f"ep-{i:02}"]['epSlug'].count() == 1 for i in range(1,8)}
+    slugs_flags = {f"ep-{i:02}": course_eps[course_eps['epSlug']==f"ep-{i:02}"]['epSlug'].count() == 1 for i in range(1,12)}
         
 
     make_course_ep(course_slug="python-2025",
@@ -73,6 +73,33 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
                    slug_flag=slugs_flags["ep-07"],
                    db=db)
 
+    make_course_ep(course_slug="python-2025",
+                   title="Criano Funções",
+                   youtube_id="JZlJ1otXBD8",
+                   ep_slug="ep-08",
+                   slug_flag=slugs_flags["ep-08"],
+                   db=db)
+
+    make_course_ep(course_slug="python-2025",
+                   title="Módulos",
+                   youtube_id="7U_NG78HuA4",
+                   ep_slug="ep-09",
+                   slug_flag=slugs_flags["ep-09"],
+                   db=db)
+    
+    make_course_ep(course_slug="python-2025",
+                   title="Lidando com Arquivos",
+                   youtube_id="3h15kc10fCY",
+                   ep_slug="ep-10",
+                   slug_flag=slugs_flags["ep-10"],
+                   db=db)
+
+    make_course_ep(course_slug="python-2025",
+                   title="Desafio Loteria da Babilônia",
+                   youtube_id="lIczWRig7S8",
+                   ep_slug="ep-11",
+                   slug_flag=slugs_flags["ep-11"],
+                   db=db)
 
 def curso_pandas(course_eps:pd.DataFrame):
     about = """
