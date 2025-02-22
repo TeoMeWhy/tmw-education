@@ -100,6 +100,13 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
                    ep_slug="ep-11",
                    slug_flag=slugs_flags["ep-11"],
                    db=db)
+    
+    make_course_ep(course_slug="python-2025",
+                   title="Consumindo dados de API",
+                   youtube_id="iBsyZ0RQCqc",
+                   ep_slug="ep-12",
+                   slug_flag=slugs_flags["ep-12"],
+                   db=db)
 
 def curso_pandas(course_eps:pd.DataFrame):
     about = """
