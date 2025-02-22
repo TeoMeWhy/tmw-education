@@ -21,7 +21,7 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
     """
     st.markdown(about)
 
-    slugs_flags = {f"ep-{i:02}": course_eps[course_eps['epSlug']==f"ep-{i:02}"]['epSlug'].count() == 1 for i in range(1,12)}
+    slugs_flags = {f"ep-{i:02}": course_eps[course_eps['epSlug']==f"ep-{i:02}"]['epSlug'].count() == 1 for i in range(1,13)}
         
 
     make_course_ep(course_slug="python-2025",
