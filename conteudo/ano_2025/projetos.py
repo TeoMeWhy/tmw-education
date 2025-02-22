@@ -46,6 +46,10 @@ def ia_para_canal(db: orm.Session, course_eps: pd.DataFrame):
             "title": "Construindo um Sistema de IA - Bancos Vetoriais",
             "youtube_id": "3aMq_5b6DPY",
         },
+        {
+            "title": "Construindo um Sistema de IA - Embeddings",
+            "youtube_id": "_hvw1oYxLoY",
+        },
     ]
 
     slugs_flags = {
