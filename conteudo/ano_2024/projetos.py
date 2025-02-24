@@ -43,6 +43,15 @@ Para Subs da Twitch, vamos deixar o link das playlist para você acompanhar por 
             ],
         )
 
+    with st.expander("TSE Analytics"):
+        tse_analytics(
+            db,
+            courses_progress[
+                courses_progress["courseSlug"] == "tse-analytics-2024"
+            ],
+        )
+
+
     st.markdown("#### Data Engineering")
 
     with st.expander("Lago do Mago"):
@@ -50,6 +59,14 @@ Para Subs da Twitch, vamos deixar o link das playlist para você acompanhar por 
             db,
             courses_progress[
                 courses_progress["courseSlug"] == "lago-mago-2024"
+            ],
+        )
+
+    with st.expander("Trampar de Lakehouse"):
+        trampar_lakehouse(
+            db,
+            courses_progress[
+                courses_progress["courseSlug"] == "trampar-lakehouse-2024"
             ],
         )
 
@@ -229,6 +246,64 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
         )
 
 
+def tse_analytics(db:orm.Session, course_eps:pd.DataFrame):
+    txt = """
+    Análise dos partidos políticos e suas candidaturas para eleições municipais brasileiras em 2024.
+    Todas dados são originários do [TSE](https://dados.gov.br/dados/conjuntos-dados/candidatos-2024).
+    Além da criação do app, migramos toda parte de ingestão e tratamento dos dados para nosso ambiente cloud no Databricks.
+    """
+
+    st.markdown(txt)
+    data = [
+        {
+            "title": "TSE Analytics - Dia 01 parte 01",
+            "youtube_id": "gc6Xy_1cFkU",
+        },
+        {
+            "title": "TSE Analytics - Dia 01 parte 02",
+            "youtube_id": "we0Z2Fiu1TY",
+        },
+        {
+            "title": "TSE Analytics - Dia 02",
+            "youtube_id": "RqkJE4Z4q3o",
+        },
+        {
+            "title": "TSE Analytics - Dia 03",
+            "youtube_id": "osAqr2JGTNU",
+        },
+        {
+            "title": "TSE Analytics - Dia 04",
+            "youtube_id": "N5y_jAzjl3g",
+        },
+        {
+            "title": "TSE Analytics - Dia 05",
+            "youtube_id": "QY2mXevGp5U",
+        },
+        {
+            "title": "TSE Analytics - Dia 06",
+            "youtube_id": "dBetGOdXgDw",
+        },
+        {
+            "title": "TSE Analytics - Dia 07",
+            "youtube_id": "aFtytaIc46w",
+        },
+        
+    ]
+
+    slugs_flags = { f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1) }
+
+    for i in range(len(data)):
+        make_course_ep(
+            course_slug="tse-analytics-2024",
+            title=data[i]["title"],
+            youtube_id=data[i]["youtube_id"],
+            ep_slug=list(slugs_flags.items())[i][0],
+            slug_flag=list(slugs_flags.items())[i][1],
+            db=db,
+        )
+
+
+
 def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
 
     txt = """
@@ -295,3 +370,43 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
             db=db,
         )
 
+
+def trampar_lakehouse(db: orm.Session, course_eps: pd.DataFrame):
+
+    txt = """
+    Dado o bom trabalho que realizamos em conjunto com Trampar de Casa no sistema de recomendação de vagas, surgiu uma nova oportunidade pra construção de um datalake e BI para eles acompanharem as principais métricas da operação que estão tocando. O desenvolvimento consistiu em: criação de um Lakehouse com camadas bronze, silver e gold para criação de relatórios e dashboards. Usamos:
+    - AWS S3 para armazenamento dos dados em Raw
+    - Databricks como plataforma de dados
+    - Apache Spark para leitura, processamento e gravação dos dados
+    - SQL para criação de queries e regras de negócios e qualidade de dados
+    - Python para orquestração das etapas de ETL
+    - Databricks Workflows para orquestração de todas ingestões e transformações de dados
+    """
+
+    st.markdown(txt)
+    data = [
+        {
+            "title": "Trampar de lakehouse - Parte 01",
+            "youtube_id": "3iqHKRjfyA4",
+        },
+        {
+            "title": "Trampar de lakehouse - Parte 02",
+            "youtube_id": "2XQy-UIOyUw",
+        },
+        {
+            "title": "Trampar de lakehouse - Parte 03",
+            "youtube_id": "p2DpMP8oiCw",
+        },
+    ]
+
+    slugs_flags = { f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1) }
+
+    for i in range(len(data)):
+        make_course_ep(
+            course_slug="trampar-lakehouse-2024",
+            title=data[i]["title"],
+            youtube_id=data[i]["youtube_id"],
+            ep_slug=list(slugs_flags.items())[i][0],
+            slug_flag=list(slugs_flags.items())[i][1],
+            db=db,
+        )
