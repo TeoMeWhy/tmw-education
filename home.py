@@ -17,6 +17,19 @@ def home():
         txt = openfile.read()
     st.markdown(txt)
 
+    with st.container(border=True):
+        cols = st.columns(2)
+        with cols[0]:
+            st.markdown("Siga as trilhas de conhecimento que mais tem interesse!")
+            
+        with cols[1]:
+            cols = st.columns(3)
+            with cols[-1]:
+                b1 = st.button("Trilhas")
+                if b1:
+                    st.switch_page("./pages/trilhas.py")
+
+    st.markdown("Você também pode conferir todo material separo anualmente:")
         
     with st.container(border=True):
         cols = st.columns(2)
