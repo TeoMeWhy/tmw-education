@@ -22,8 +22,8 @@ def make_course_ep(course_slug:str, title:str, youtube_id:str, ep_slug:str, slug
     st.markdown(f"#### {ep_title} - {title.title()}")
     html_code = f"""
     <iframe width="560" height="315" src="https://www.youtube.com/embed/{youtube_id}" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
+    frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen loading="lazy"></iframe>
     """
     st.components.v1.html(html_code, height=315)
     label = f"{course_slug.replace("-", " ").title()} {ep_title} Feito!"

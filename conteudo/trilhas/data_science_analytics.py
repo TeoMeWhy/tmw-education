@@ -5,8 +5,13 @@ import streamlit as st
 from ..ano_2024.programacao import curso_pandas
 from ..ano_2024.estatistica import curso_estatistica
 from ..ano_2024.machine_learning import curso_machine_learning
-from ..ano_2024.projetos import data_science_pontos, data_science_databricks, rec_sys_trampar_casa, tse_analytics
+from ..ano_2025.machine_learning import mlflow as curso_mlflow
 
+
+from ..ano_2024.projetos import data_science_pontos
+from ..ano_2024.projetos import data_science_databricks
+from ..ano_2024.projetos import rec_sys_trampar_casa
+from ..ano_2024.projetos import tse_analytics
 
 from ..utils import get_courses_dataframe
     
@@ -39,6 +44,10 @@ def data_science_analytics(db:orm.Session):
 
         with st.expander("Machine Learning para Pôneis"):
             curso_machine_learning(db, courses_progress[courses_progress['courseSlug']=='ml-2024'])
+
+        with st.expander("MLFlow"):
+            curso_mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
+
 
 
     with projetos:
