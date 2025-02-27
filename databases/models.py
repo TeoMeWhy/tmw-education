@@ -51,6 +51,16 @@ class UserSkills(Base):
     createdAt = Column(TIMESTAMP, server_default=func.now())
 
 
+class RoleSkills(Base):
+    __tablename__ = "role_skills"
+
+    ID = Column(Integer, primary_key=True, autoincrement=True)
+    roleName = Column(String(150))
+    roleLevel = Column(String(150))
+    skillName = Column(String(150))
+    level = Column(String(150))
+
+
 def create_tables():
     Base.metadata.create_all(bind=engine)
 
@@ -102,14 +112,31 @@ def delete_user_course_ep(db:orm.Session, user_id:str, course_slug:str, ep_slug:
 
 def ingest_skills(db:orm.Session, skills:pd.DataFrame):
     data = skills.to_dict(orient='records')
-    skillsList = []
+    skills_list = []
     for d in data:
-        skill = Skill(skillName=d["Skill"],
-                      skillDescription=d["Descrição"])
-        skillsList.append(skill)
+        skill = Skill(skillName=d["skill"],
+                      skillDescription=d["descricao"])
+        skills_list.append(skill)
     
-    db.add_all(skillsList)
+    db.add_all(skills_list)
     db.commit()
+
+
+def ingest_role_skill(db:orm.Session, role_skills:pd.DataFrame):
+    data = role_skills.to_dict(orient='records')
+    role_skill_list = []
+    for d in data:
+        role_skill = RoleSkills(
+            roleName=d["role"],
+            roleLevel=d["role_level"],
+            skillName=d["skill"],
+            level=d["level"],
+        )
+        role_skill_list.append(role_skill)
+
+    db.add_all(role_skill_list)
+    db.commit()
+
 
 
 def insert_user_skill(db:orm.Session, userID:str, skill_name:str, level:str):
