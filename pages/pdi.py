@@ -50,7 +50,6 @@ def show_pdi():
                 .all())
     
     skills = []
-
     for role_skill, skill in results:
         line = {"skill": role_skill.skillName, "description": skill.skillDescription, "index":None, "level":role_skill.level}
         skills.append(line)
@@ -61,12 +60,10 @@ def show_pdi():
                          .filter(models.UserSkills.userID==st.session_state["user"].userID)
                          .all())
         
-        all_skills = []
         for s in skills:
             for u in user_skills:
-                if s["skill"] == u.skillName:
+                if s["skill"] == u.skillName and u.level != None:
                     s["index"] = int(u.level.split(".")[0])
-                    all_skills.append(s)
                     user_skills.remove(u)
 
     map_levels = dict()
