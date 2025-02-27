@@ -1,0 +1,276 @@
+role;role_level;skill;level
+Data Analyst;Jr. Data Analyst;Apresentação / Storytelling;02. Iniciante
+Data Analyst;Pl. Data Analyst;Apresentação / Storytelling;03. Profissional
+Data Analyst;Sr. Data Analyst;Apresentação / Storytelling;04. Expert
+Data Analyst;Staff Data Analyst;Apresentação / Storytelling;04. Expert
+Data Analyst;Principal Data Analyst;Apresentação / Storytelling;04. Expert
+Data Analyst;Jr. Data Analyst;Comunicação;02. Iniciante
+Data Analyst;Pl. Data Analyst;Comunicação;03. Profissional
+Data Analyst;Sr. Data Analyst;Comunicação;04. Expert
+Data Analyst;Staff Data Analyst;Comunicação;05. Professor
+Data Analyst;Principal Data Analyst;Comunicação;05. Professor
+Data Analyst;Jr. Data Analyst;Data Visualization;02. Iniciante
+Data Analyst;Pl. Data Analyst;Data Visualization;03. Profissional
+Data Analyst;Sr. Data Analyst;Data Visualization;04. Expert
+Data Analyst;Staff Data Analyst;Data Visualization;04. Expert
+Data Analyst;Principal Data Analyst;Data Visualization;05. Professor
+Data Analyst;Jr. Data Analyst;Estatística descritiva;02. Iniciante
+Data Analyst;Pl. Data Analyst;Estatística descritiva;03. Profissional
+Data Analyst;Sr. Data Analyst;Estatística descritiva;04. Expert
+Data Analyst;Staff Data Analyst;Estatística descritiva;04. Expert
+Data Analyst;Principal Data Analyst;Estatística descritiva;05. Professor
+Data Analyst;Jr. Data Analyst;ETL;01. Aprendiz
+Data Analyst;Pl. Data Analyst;ETL;02. Iniciante
+Data Analyst;Sr. Data Analyst;ETL;03. Profissional
+Data Analyst;Staff Data Analyst;ETL;04. Expert
+Data Analyst;Principal Data Analyst;ETL;05. Professor
+Data Analyst;Jr. Data Analyst;Gestão / Liderança;00. Não esperada
+Data Analyst;Pl. Data Analyst;Gestão / Liderança;00. Não esperada
+Data Analyst;Sr. Data Analyst;Gestão / Liderança;01. Aprendiz
+Data Analyst;Staff Data Analyst;Gestão / Liderança;04. Expert
+Data Analyst;Principal Data Analyst;Gestão / Liderança;01. Aprendiz
+Data Analyst;Jr. Data Analyst;Git / GitHub / GitLab / BitBucket;01. Aprendiz
+Data Analyst;Pl. Data Analyst;Git / GitHub / GitLab / BitBucket;02. Iniciante
+Data Analyst;Sr. Data Analyst;Git / GitHub / GitLab / BitBucket;03. Profissional
+Data Analyst;Staff Data Analyst;Git / GitHub / GitLab / BitBucket;03. Profissional
+Data Analyst;Principal Data Analyst;Git / GitHub / GitLab / BitBucket;04. Expert
+Data Analyst;Jr. Data Analyst;Inteligência Emocional;00. Não esperada
+Data Analyst;Pl. Data Analyst;Inteligência Emocional;03. Profissional
+Data Analyst;Sr. Data Analyst;Inteligência Emocional;04. Expert
+Data Analyst;Staff Data Analyst;Inteligência Emocional;05. Professor
+Data Analyst;Principal Data Analyst;Inteligência Emocional;05. Professor
+Data Analyst;Jr. Data Analyst;Machine Learning - Agrupamento;00. Não esperada
+Data Analyst;Pl. Data Analyst;Machine Learning - Agrupamento;02. Iniciante
+Data Analyst;Sr. Data Analyst;Machine Learning - Agrupamento;03. Profissional
+Data Analyst;Staff Data Analyst;Machine Learning - Agrupamento;03. Profissional
+Data Analyst;Principal Data Analyst;Machine Learning - Agrupamento;04. Expert
+Data Analyst;Jr. Data Analyst;Machine Learning - Associação;01. Aprendiz
+Data Analyst;Pl. Data Analyst;Machine Learning - Associação;02. Iniciante
+Data Analyst;Sr. Data Analyst;Machine Learning - Associação;03. Profissional
+Data Analyst;Staff Data Analyst;Machine Learning - Associação;03. Profissional
+Data Analyst;Principal Data Analyst;Machine Learning - Associação;04. Expert
+Data Analyst;Jr. Data Analyst;Machine Learning - Classificação;00. Não esperada
+Data Analyst;Pl. Data Analyst;Machine Learning - Classificação;01. Aprendiz
+Data Analyst;Sr. Data Analyst;Machine Learning - Classificação;02. Iniciante
+Data Analyst;Staff Data Analyst;Machine Learning - Classificação;03. Profissional
+Data Analyst;Principal Data Analyst;Machine Learning - Classificação;03. Profissional
+Data Analyst;Jr. Data Analyst;Machine Learning - Regressão;00. Não esperada
+Data Analyst;Pl. Data Analyst;Machine Learning - Regressão;01. Aprendiz
+Data Analyst;Sr. Data Analyst;Machine Learning - Regressão;02. Iniciante
+Data Analyst;Staff Data Analyst;Machine Learning - Regressão;03. Profissional
+Data Analyst;Principal Data Analyst;Machine Learning - Regressão;03. Profissional
+Data Analyst;Jr. Data Analyst;Negociação;01. Aprendiz
+Data Analyst;Pl. Data Analyst;Negociação;02. Iniciante
+Data Analyst;Sr. Data Analyst;Negociação;03. Profissional
+Data Analyst;Staff Data Analyst;Negociação;04. Expert
+Data Analyst;Principal Data Analyst;Negociação;04. Expert
+Data Analyst;Jr. Data Analyst;Python / R / Julia;02. Iniciante
+Data Analyst;Pl. Data Analyst;Python / R / Julia;03. Profissional
+Data Analyst;Sr. Data Analyst;Python / R / Julia;04. Expert
+Data Analyst;Staff Data Analyst;Python / R / Julia;04. Expert
+Data Analyst;Principal Data Analyst;Python / R / Julia;05. Professor
+Data Analyst;Jr. Data Analyst;Simplificação;01. Aprendiz
+Data Analyst;Pl. Data Analyst;Simplificação;02. Iniciante
+Data Analyst;Sr. Data Analyst;Simplificação;03. Profissional
+Data Analyst;Staff Data Analyst;Simplificação;04. Expert
+Data Analyst;Principal Data Analyst;Simplificação;05. Professor
+Data Analyst;Jr. Data Analyst;SQL;02. Iniciante
+Data Analyst;Pl. Data Analyst;SQL;03. Profissional
+Data Analyst;Sr. Data Analyst;SQL;04. Expert
+Data Analyst;Staff Data Analyst;SQL;05. Professor
+Data Analyst;Principal Data Analyst;SQL;05. Professor
+Data Analyst;Jr. Data Analyst;Teste de hipótese e Teste A/B;02. Iniciante
+Data Analyst;Pl. Data Analyst;Teste de hipótese e Teste A/B;03. Profissional
+Data Analyst;Sr. Data Analyst;Teste de hipótese e Teste A/B;04. Expert
+Data Analyst;Staff Data Analyst;Teste de hipótese e Teste A/B;05. Professor
+Data Analyst;Principal Data Analyst;Teste de hipótese e Teste A/B;05. Professor
+Data Engineer;Jr. Data Engineer;Apache Spark;02. Iniciante
+Data Engineer;Pl. Data Engineer;Apache Spark;03. Profissional
+Data Engineer;Sr. Data Engineer;Apache Spark;04. Expert
+Data Engineer;Staff Data Engineer;Apache Spark;05. Professor
+Data Engineer;Principal Data Engineer;Apache Spark;05. Professor
+Data Engineer;Jr. Data Engineer;Cloud;02. Iniciante
+Data Engineer;Pl. Data Engineer;Cloud;03. Profissional
+Data Engineer;Sr. Data Engineer;Cloud;04. Expert
+Data Engineer;Staff Data Engineer;Cloud;04. Expert
+Data Engineer;Principal Data Engineer;Cloud;05. Professor
+Data Engineer;Jr. Data Engineer;Comunicação;01. Aprendiz
+Data Engineer;Pl. Data Engineer;Comunicação;02. Iniciante
+Data Engineer;Sr. Data Engineer;Comunicação;03. Profissional
+Data Engineer;Staff Data Engineer;Comunicação;04. Expert
+Data Engineer;Principal Data Engineer;Comunicação;05. Professor
+Data Engineer;Jr. Data Engineer;Docker;02. Iniciante
+Data Engineer;Pl. Data Engineer;Docker;03. Profissional
+Data Engineer;Sr. Data Engineer;Docker;04. Expert
+Data Engineer;Staff Data Engineer;Docker;04. Expert
+Data Engineer;Principal Data Engineer;Docker;05. Professor
+Data Engineer;Jr. Data Engineer;ETL;02. Iniciante
+Data Engineer;Pl. Data Engineer;ETL;03. Profissional
+Data Engineer;Sr. Data Engineer;ETL;04. Expert
+Data Engineer;Staff Data Engineer;ETL;05. Professor
+Data Engineer;Principal Data Engineer;ETL;05. Professor
+Data Engineer;Jr. Data Engineer;Gestão / Liderança;00. Não esperada
+Data Engineer;Pl. Data Engineer;Gestão / Liderança;00. Não esperada
+Data Engineer;Sr. Data Engineer;Gestão / Liderança;01. Aprendiz
+Data Engineer;Staff Data Engineer;Gestão / Liderança;01. Aprendiz
+Data Engineer;Principal Data Engineer;Gestão / Liderança;02. Iniciante
+Data Engineer;Jr. Data Engineer;Git / GitHub / GitLab / BitBucket;02. Iniciante
+Data Engineer;Pl. Data Engineer;Git / GitHub / GitLab / BitBucket;03. Profissional
+Data Engineer;Sr. Data Engineer;Git / GitHub / GitLab / BitBucket;04. Expert
+Data Engineer;Staff Data Engineer;Git / GitHub / GitLab / BitBucket;04. Expert
+Data Engineer;Principal Data Engineer;Git / GitHub / GitLab / BitBucket;05. Professor
+Data Engineer;Jr. Data Engineer;IaC;02. Iniciante
+Data Engineer;Pl. Data Engineer;IaC;03. Profissional
+Data Engineer;Sr. Data Engineer;IaC;04. Expert
+Data Engineer;Staff Data Engineer;IaC;04. Expert
+Data Engineer;Principal Data Engineer;IaC;05. Professor
+Data Engineer;Jr. Data Engineer;Kubernetes;01. Aprendiz
+Data Engineer;Pl. Data Engineer;Kubernetes;02. Iniciante
+Data Engineer;Sr. Data Engineer;Kubernetes;03. Profissional
+Data Engineer;Staff Data Engineer;Kubernetes;04. Expert
+Data Engineer;Principal Data Engineer;Kubernetes;05. Professor
+Data Engineer;Jr. Data Engineer;Machine Learning - Classificação;00. Não esperada
+Data Engineer;Pl. Data Engineer;Machine Learning - Classificação;00. Não esperada
+Data Engineer;Sr. Data Engineer;Machine Learning - Classificação;01. Aprendiz
+Data Engineer;Staff Data Engineer;Machine Learning - Classificação;02. Iniciante
+Data Engineer;Principal Data Engineer;Machine Learning - Classificação;02. Iniciante
+Data Engineer;Jr. Data Engineer;Machine Learning - Regressão;00. Não esperada
+Data Engineer;Pl. Data Engineer;Machine Learning - Regressão;00. Não esperada
+Data Engineer;Sr. Data Engineer;Machine Learning - Regressão;01. Aprendiz
+Data Engineer;Staff Data Engineer;Machine Learning - Regressão;02. Iniciante
+Data Engineer;Principal Data Engineer;Machine Learning - Regressão;02. Iniciante
+Data Engineer;Jr. Data Engineer;Mensageria;00. Não esperada
+Data Engineer;Pl. Data Engineer;Mensageria;01. Aprendiz
+Data Engineer;Sr. Data Engineer;Mensageria;03. Profissional
+Data Engineer;Staff Data Engineer;Mensageria;04. Expert
+Data Engineer;Principal Data Engineer;Mensageria;05. Professor
+Data Engineer;Jr. Data Engineer;Modelagem de dados;01. Aprendiz
+Data Engineer;Pl. Data Engineer;Modelagem de dados;02. Iniciante
+Data Engineer;Sr. Data Engineer;Modelagem de dados;03. Profissional
+Data Engineer;Staff Data Engineer;Modelagem de dados;04. Expert
+Data Engineer;Principal Data Engineer;Modelagem de dados;05. Professor
+Data Engineer;Jr. Data Engineer;Negociação;00. Não esperada
+Data Engineer;Pl. Data Engineer;Negociação;02. Iniciante
+Data Engineer;Sr. Data Engineer;Negociação;03. Profissional
+Data Engineer;Staff Data Engineer;Negociação;03. Profissional
+Data Engineer;Principal Data Engineer;Negociação;04. Expert
+Data Engineer;Jr. Data Engineer;Orquestrador de Pipelines;02. Iniciante
+Data Engineer;Pl. Data Engineer;Orquestrador de Pipelines;03. Profissional
+Data Engineer;Sr. Data Engineer;Orquestrador de Pipelines;04. Expert
+Data Engineer;Staff Data Engineer;Orquestrador de Pipelines;04. Expert
+Data Engineer;Principal Data Engineer;Orquestrador de Pipelines;05. Professor
+Data Engineer;Jr. Data Engineer;Python / R / Julia;02. Iniciante
+Data Engineer;Pl. Data Engineer;Python / R / Julia;03. Profissional
+Data Engineer;Sr. Data Engineer;Python / R / Julia;04. Expert
+Data Engineer;Staff Data Engineer;Python / R / Julia;05. Professor
+Data Engineer;Principal Data Engineer;Python / R / Julia;05. Professor
+Data Engineer;Jr. Data Engineer;Simplificação;02. Iniciante
+Data Engineer;Pl. Data Engineer;Simplificação;03. Profissional
+Data Engineer;Sr. Data Engineer;Simplificação;04. Expert
+Data Engineer;Staff Data Engineer;Simplificação;04. Expert
+Data Engineer;Principal Data Engineer;Simplificação;05. Professor
+Data Engineer;Jr. Data Engineer;SQL;02. Iniciante
+Data Engineer;Pl. Data Engineer;SQL;03. Profissional
+Data Engineer;Sr. Data Engineer;SQL;04. Expert
+Data Engineer;Staff Data Engineer;SQL;05. Professor
+Data Engineer;Principal Data Engineer;SQL;05. Professor
+Data Scientist;Jr. Data Scientist;Apresentação / Storytelling;02. Iniciante
+Data Scientist;Pl. Data Scientist;Apresentação / Storytelling;03. Profissional
+Data Scientist;Sr. Data Scientist;Apresentação / Storytelling;04. Expert
+Data Scientist;Staff Data Scientist;Apresentação / Storytelling;04. Expert
+Data Scientist;Principal Data Scientist;Apresentação / Storytelling;04. Expert
+Data Scientist;Jr. Data Scientist;Cloud;00. Não esperada
+Data Scientist;Pl. Data Scientist;Cloud;01. Aprendiz
+Data Scientist;Sr. Data Scientist;Cloud;02. Iniciante
+Data Scientist;Staff Data Scientist;Cloud;03. Profissional
+Data Scientist;Principal Data Scientist;Cloud;03. Profissional
+Data Scientist;Jr. Data Scientist;Comunicação;01. Aprendiz
+Data Scientist;Pl. Data Scientist;Comunicação;02. Iniciante
+Data Scientist;Sr. Data Scientist;Comunicação;03. Profissional
+Data Scientist;Staff Data Scientist;Comunicação;04. Expert
+Data Scientist;Principal Data Scientist;Comunicação;05. Professor
+Data Scientist;Jr. Data Scientist;Data Visualization;00. Não esperada
+Data Scientist;Pl. Data Scientist;Data Visualization;01. Aprendiz
+Data Scientist;Sr. Data Scientist;Data Visualization;02. Iniciante
+Data Scientist;Staff Data Scientist;Data Visualization;03. Profissional
+Data Scientist;Principal Data Scientist;Data Visualization;04. Expert
+Data Scientist;Jr. Data Scientist;Docker;00. Não esperada
+Data Scientist;Pl. Data Scientist;Docker;01. Aprendiz
+Data Scientist;Sr. Data Scientist;Docker;02. Iniciante
+Data Scientist;Staff Data Scientist;Docker;03. Profissional
+Data Scientist;Principal Data Scientist;Docker;03. Profissional
+Data Scientist;Jr. Data Scientist;Estatística descritiva;02. Iniciante
+Data Scientist;Pl. Data Scientist;Estatística descritiva;03. Profissional
+Data Scientist;Sr. Data Scientist;Estatística descritiva;04. Expert
+Data Scientist;Staff Data Scientist;Estatística descritiva;05. Professor
+Data Scientist;Principal Data Scientist;Estatística descritiva;05. Professor
+Data Scientist;Jr. Data Scientist;ETL;02. Iniciante
+Data Scientist;Pl. Data Scientist;ETL;03. Profissional
+Data Scientist;Sr. Data Scientist;ETL;04. Expert
+Data Scientist;Staff Data Scientist;ETL;05. Professor
+Data Scientist;Principal Data Scientist;ETL;05. Professor
+Data Scientist;Jr. Data Scientist;Gestão / Liderança;00. Não esperada
+Data Scientist;Pl. Data Scientist;Gestão / Liderança;00. Não esperada
+Data Scientist;Sr. Data Scientist;Gestão / Liderança;01. Aprendiz
+Data Scientist;Staff Data Scientist;Gestão / Liderança;01. Aprendiz
+Data Scientist;Principal Data Scientist;Gestão / Liderança;01. Aprendiz
+Data Scientist;Jr. Data Scientist;Git / GitHub / GitLab / BitBucket;01. Aprendiz
+Data Scientist;Pl. Data Scientist;Git / GitHub / GitLab / BitBucket;02. Iniciante
+Data Scientist;Sr. Data Scientist;Git / GitHub / GitLab / BitBucket;03. Profissional
+Data Scientist;Staff Data Scientist;Git / GitHub / GitLab / BitBucket;04. Expert
+Data Scientist;Principal Data Scientist;Git / GitHub / GitLab / BitBucket;05. Professor
+Data Scientist;Jr. Data Scientist;Inteligência Emocional;01. Aprendiz
+Data Scientist;Pl. Data Scientist;Inteligência Emocional;03. Profissional
+Data Scientist;Sr. Data Scientist;Inteligência Emocional;04. Expert
+Data Scientist;Staff Data Scientist;Inteligência Emocional;05. Professor
+Data Scientist;Principal Data Scientist;Inteligência Emocional;05. Professor
+Data Scientist;Jr. Data Scientist;Machine Learning - Agrupamento;02. Iniciante
+Data Scientist;Pl. Data Scientist;Machine Learning - Agrupamento;03. Profissional
+Data Scientist;Sr. Data Scientist;Machine Learning - Agrupamento;04. Expert
+Data Scientist;Staff Data Scientist;Machine Learning - Agrupamento;04. Expert
+Data Scientist;Principal Data Scientist;Machine Learning - Agrupamento;05. Professor
+Data Scientist;Jr. Data Scientist;Machine Learning - Associação;02. Iniciante
+Data Scientist;Pl. Data Scientist;Machine Learning - Associação;03. Profissional
+Data Scientist;Sr. Data Scientist;Machine Learning - Associação;04. Expert
+Data Scientist;Staff Data Scientist;Machine Learning - Associação;04. Expert
+Data Scientist;Principal Data Scientist;Machine Learning - Associação;05. Professor
+Data Scientist;Jr. Data Scientist;Machine Learning - Classificação;02. Iniciante
+Data Scientist;Pl. Data Scientist;Machine Learning - Classificação;03. Profissional
+Data Scientist;Sr. Data Scientist;Machine Learning - Classificação;04. Expert
+Data Scientist;Staff Data Scientist;Machine Learning - Classificação;05. Professor
+Data Scientist;Principal Data Scientist;Machine Learning - Classificação;05. Professor
+Data Scientist;Jr. Data Scientist;Machine Learning - Regressão;02. Iniciante
+Data Scientist;Pl. Data Scientist;Machine Learning - Regressão;03. Profissional
+Data Scientist;Sr. Data Scientist;Machine Learning - Regressão;04. Expert
+Data Scientist;Staff Data Scientist;Machine Learning - Regressão;05. Professor
+Data Scientist;Principal Data Scientist;Machine Learning - Regressão;05. Professor
+Data Scientist;Jr. Data Scientist;Negociação;01. Aprendiz
+Data Scientist;Pl. Data Scientist;Negociação;02. Iniciante
+Data Scientist;Sr. Data Scientist;Negociação;03. Profissional
+Data Scientist;Staff Data Scientist;Negociação;04. Expert
+Data Scientist;Principal Data Scientist;Negociação;04. Expert
+Data Scientist;Jr. Data Scientist;Orquestrador de Pipelines;00. Não esperada
+Data Scientist;Pl. Data Scientist;Orquestrador de Pipelines;01. Aprendiz
+Data Scientist;Sr. Data Scientist;Orquestrador de Pipelines;02. Iniciante
+Data Scientist;Staff Data Scientist;Orquestrador de Pipelines;03. Profissional
+Data Scientist;Principal Data Scientist;Orquestrador de Pipelines;04. Expert
+Data Scientist;Jr. Data Scientist;Python / R / Julia;02. Iniciante
+Data Scientist;Pl. Data Scientist;Python / R / Julia;03. Profissional
+Data Scientist;Sr. Data Scientist;Python / R / Julia;04. Expert
+Data Scientist;Staff Data Scientist;Python / R / Julia;04. Expert
+Data Scientist;Principal Data Scientist;Python / R / Julia;05. Professor
+Data Scientist;Jr. Data Scientist;Simplificação;02. Iniciante
+Data Scientist;Pl. Data Scientist;Simplificação;03. Profissional
+Data Scientist;Sr. Data Scientist;Simplificação;04. Expert
+Data Scientist;Staff Data Scientist;Simplificação;04. Expert
+Data Scientist;Principal Data Scientist;Simplificação;05. Professor
+Data Scientist;Jr. Data Scientist;SQL;02. Iniciante
+Data Scientist;Pl. Data Scientist;SQL;03. Profissional
+Data Scientist;Sr. Data Scientist;SQL;04. Expert
+Data Scientist;Staff Data Scientist;SQL;05. Professor
+Data Scientist;Principal Data Scientist;SQL;05. Professor
+Data Scientist;Jr. Data Scientist;Teste de hipótese e Teste A/B;02. Iniciante
+Data Scientist;Pl. Data Scientist;Teste de hipótese e Teste A/B;03. Profissional
+Data Scientist;Sr. Data Scientist;Teste de hipótese e Teste A/B;04. Expert
+Data Scientist;Staff Data Scientist;Teste de hipótese e Teste A/B;05. Professor
+Data Scientist;Principal Data Scientist;Teste de hipótese e Teste A/B;05. Professor

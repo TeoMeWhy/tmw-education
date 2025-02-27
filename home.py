@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 
 from databases import models
@@ -5,6 +6,16 @@ from login import twitch_login
 
 db = models.SessionLocal()
 models.create_tables()
+
+if db.query(models.Skill).count() == 0:
+    df_skills = pd.read_csv("data/skills.csv", sep=";")
+    models.ingest_skills(db, df_skills)
+
+
+if db.query(models.RoleSkills).count() == 0:
+    df_role_skills = pd.read_csv("data/role_skills.csv", sep=";")
+    models.ingest_role_skill(db, df_role_skills)
+
 
 st.set_page_config(page_title="TMW - Education", page_icon="📘", initial_sidebar_state="collapsed")
 
