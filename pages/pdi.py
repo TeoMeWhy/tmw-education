@@ -21,7 +21,9 @@ def show_pdi():
     twitch_login.twitch_login(db)
 
     st.markdown("""
-    Pra definir um PDI, temos como primeira tarefa, mapear o nível de cada habilidade. Para isso, considere a tabela abaixo com a descrição de cada nível.
+    Pra definir um PDI, temos como primeira tarefa, mapear o nível de cada habilidade.
+                
+    Para isso, considere a tabela abaixo com a descrição de cada nível.
                 
     | Nível            | Descrição                                                    |
     |---               |---                                                           |
@@ -33,11 +35,11 @@ def show_pdi():
     | 05. Professor    | É referência no assunto e compartilha conhecimento           |
 
 
-    Com isso em mente, o próximo passo é escolher qual será a sua jornada. Selecione qual a profissão que seja seguir e o respectivo nível de atuação desejável.
+    Com isso em mente, o próximo passo é escolher qual será a sua jornada. Selecione a profissão que seja seguir e o nível de atuação desejável.
                 
     Isto é, `desejo ser uma pessoa em Data Science, nível Jr.`, portanto, selecione `Data Scientist` em **Carreira** e `Jr.` em **Nível**.
                 
-    Dependendo da carreira e nível escolhido, as habilidades são modificadas, bem como seu respectivo nível esperado.
+    Dependendo da carreira e nível escolhido, as habilidades são modificadas, bem como seu nível esperado de cada habilidade.
     """)
 
     with st.container(border=True):
