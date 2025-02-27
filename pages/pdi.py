@@ -31,7 +31,7 @@ def show_priorities(priorities:list):
 
 
 def show_pdi():
-    st.set_page_config(page_title="Téo Me Why - PDI")
+    st.set_page_config(page_title="Téo Me Why - PDI", page_icon="🧙‍♂️")
     st.title("Téo Me Why - PDI")
     twitch_login.twitch_login(db)
 
@@ -85,7 +85,6 @@ def show_pdi():
                     s["index"] = int(u.level.split(".")[0])
                     user_skills.remove(u)
 
-    map_levels = dict()
 
     st.markdown("""
     Agora vem a parte mais trabalhosa e desafiadora. Para cada habilidade, selecione o nível que você se encontra atualmente.
@@ -93,6 +92,7 @@ def show_pdi():
     Reforço a importância de usar a tabela apresentada anteriormente como refência durante sua reflexão.                
     """)
 
+    map_levels = dict()
     priority = []
 
     for s in skills:
