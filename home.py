@@ -40,6 +40,20 @@ def home():
                 if b1:
                     st.switch_page("./pages/trilhas.py")
 
+
+    with st.container(border=True):
+        cols = st.columns(2)
+        with cols[0]:
+            st.markdown("Caso esteja em dúvida por onde seguir, realize nosso Plano de Desenvolvimento Individual (PDI) para escolher a trilhar correta.")
+        
+        with cols[-1]:
+            cols = st.columns(3)
+            with cols[-1]:
+                b_pdi = st.button("PDI")
+                if b_pdi:
+                    st.switch_page("./pages/pdi.py")
+
+
     st.markdown("Você também pode conferir todo material separo anualmente:")
         
     with st.container(border=True):
@@ -67,14 +81,7 @@ def home():
                     st.switch_page("./pages/material_2024.py")
 
 
-    st.markdown("Caso esteja em dúvida por onde seguir, realize nosso Plano de Desenvolvimento Individual (PDI) para escolher a trilhar correta.")
 
-    html_code = f"""
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/vrbU_08NjKg" 
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-    """
-    st.components.v1.html(html_code, height=315)
 
 def main():
     home()
