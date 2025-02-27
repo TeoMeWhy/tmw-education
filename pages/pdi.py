@@ -17,11 +17,11 @@ def save(db:orm.Session, map_levels:dict):
 
 def show_pdi():
     st.set_page_config(page_title="Téo Me Why - PDI")
-    st.title("Téo Me Why - Plano de Desenvolvimento Individual")
+    st.title("Téo Me Why - PDI")
     twitch_login.twitch_login(db)
 
     st.markdown("""
-    Pra definir um PDI, temos como primeira tarefa, mapear o nível de cada habilidade.
+    Pra definir um Plano de Desenvolvimento Individual (PDI), temos como primeira tarefa, mapear o nível de cada habilidade.
                 
     Para isso, considere a tabela abaixo com a descrição de cada nível.
                 
