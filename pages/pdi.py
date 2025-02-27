@@ -15,6 +15,21 @@ def save(db:orm.Session, map_levels:dict):
     userId = st.session_state["user"].userID
     models.update_or_insert_user_skills(db=db, userID=userId, skills=map_levels)
 
+def show_priorities(priorities:list):
+    if len(priorities) > 0:
+        priorities.sort(key=lambda x: x[-1], reverse=True)
+        priority_txt = "\n".join([f"{i}. {p[0]}" for i, p in enumerate(priorities, start=1)])
+        
+        st.markdown("""
+        ### Prioridades de estudo.
+
+        Essa lista de habilidade é ordenada a partir da maior distância entre seu nível em cada habilidade.
+        Ou seja, quanto maior a distância entre o seu nível e a habilidade desejada, mais prioritária a habilidade se torna, subindo posições.        
+        
+        """)
+        st.code(priority_txt)
+
+
 def show_pdi():
     st.set_page_config(page_title="Téo Me Why - PDI")
     st.title("Téo Me Why - PDI")
@@ -78,20 +93,34 @@ def show_pdi():
     Reforço a importância de usar a tabela apresentada anteriormente como refência durante sua reflexão.                
     """)
 
+    priority = []
+
     for s in skills:
         with st.container(border=True):
             col1, col2, col3 = st.columns(3)
             map_levels[s["skill"]] = col1.selectbox(s["skill"], options=level_options, placeholder="Selecione seu nível", index=s["index"])
             col2.markdown(s["description"])
             
-            if map_levels[s["skill"]] != None and int(map_levels[s["skill"]].split(".")[0]) >= int(s["level"].split(".")[0]):
-                col3.success(s["level"])
-            elif map_levels[s["skill"]] != None:
-                col3.warning(s["level"])
+            if map_levels[s["skill"]] != None:
+
+                user_skill_lvl = int(map_levels[s["skill"]].split(".")[0])
+                role_skill_lvl = int(s["level"].split(".")[0])
+
+                if user_skill_lvl  >= role_skill_lvl:
+                    col3.success(s["level"])
+                
+                else:
+                    col3.warning(s["level"])
+                    priority.append( (s["skill"], role_skill_lvl - user_skill_lvl) )
+            
             else:
                 col3.code(s["level"])
 
     if 'user' in st.session_state:
-        buttom = st.button(label="Salvar", on_click=lambda: save(db, map_levels))
+        st.button(label="Salvar", on_click=lambda: save(db, map_levels))
+
+    show_priorities(priorities=priority)
+
         
 show_pdi()
+
