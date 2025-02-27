@@ -1,0 +1,26 @@
+skill;descricao
+Apache Spark;Uso o Apache Spark para processamento, consulta e escrita de dados. Entendimento de seu funcionamento e particulariadades versus bancos de dados relacionais.
+Apresentação / Storytelling;Preparação e apresentação de material voltado ao público não técnico, com resultados e sugestões de negócios.
+Cloud;Conceitos de arquitetura Cloud voltada à área de dados. Quais componentes são utilizados para cada tipo de iniciativa em diferentes provedores.
+Comunicação;Sabe se expressar, transmitindo com clareza a mensagem necessária no tom desejado, como urgências e feedbacks construtivos.
+Data Visualization;Utilização de ferramenta de BI para apresentação de gráficos, relatórios e dashboards, fazendo escolha dos gráficos que melhores representam o problema de negócio.
+Docker;Utilização de Docker para preparação de ambiente de desenvolvimento e deploy
+Estatística descritiva;Estatística básica, análise univariava e bivariada para geração de insights e tomadas de decisões em negócio.
+ETL;Etapas necessárias e ferramentas utilizadas para entrega de dados trabalhados.
+Gestão / Liderança;Exerce papel de liderança em algum nível dentro da organização, desde projeto, iniciativa, ou tarefa e pessoas
+Git / GitHub / GitLab / BitBucket;Versionamento de código e fluxo de trabalho em equipe.
+IaC;Uso de ferramentas para aplicar Infraestrutura como Código (Terraform, Ansible, AWS SDK, AWS CloudFormation)
+Inteligência Emocional;Capacidade de reconhecer, compreender e gerenciar suas próprias emoções, bem como a habilidade de compreender e influenciar as emoções dos outros.
+Kubernetes;Conhecimento na utilização de Kubernetes voltado à área de dados
+Machine Learning - Agrupamento;Identificação e aplicação de métodos de agrupamento em problemas reais. Não apenas a técnica teórica, mas os mesmo computacionais para tal. (Grupos de Clientes, Produtos, Lojas, Cluster RFV, etc)
+Machine Learning - Associação;Identificação e aplicação de métodos de associação em problemas reais. Não apenas a técnica teórica, mas os mesmo computacionais para tal. (Recomendação de Produto e Conteúdo)
+Machine Learning - Classificação;Identificação e aplicação de métodos de classificação em problemas reais. Não apenas a técnica teórica, mas os mesmo computacionais para tal. (Churn, Risco de Crédito, Biometria, Fraude, Propensão à Conversão, etc.)
+Machine Learning - Regressão;Identificação e aplicação de métodos de regressão em problemas reais. Não apenas a técnica teórica, mas os mesmo computacionais para tal. (Forecast de vendas, Precificação, Satisfação, Tempo de Entrega, etc.)
+Mensageria;Conhecimento em arquitetura de eventos com ferramentas de mensageria como: Kafka, SNS, SQS, Event Hub, etc. Bem como realizar ingestões de dados a partir de tais fontes.
+Modelagem de dados;Conhecimento em modelagem de fato/dimensão para consumo de dados em camada analítica
+Negociação;Habilidade de comunicação para negociação de prazos, requisitos e necessidades de negócio.
+Orquestrador de Pipelines;Conhecimento em ferramentas de orquestração e pipeline de dados como: Airflow, Dagster, Prefect, Databricks Workflows.
+Python / R / Julia;Conhecimento em linguagem de programação voltada à área de dados e suas principais bibliotecas.
+Simplificação;Utiliza a simplificação para entregas técnicas, evitando complexidade, atacando aquilo que gerará maior valor ao negócio com menor esforço.
+SQL;Conhecimento em cláusulas e comandos SQL para execução de consultas e manipulação de dados em banco de dados relacionais.
+Teste de hipótese e Teste A/B;Definição, execução e análise de experimentos e testes para entendimento de produto e negócio.

@@ -6,4 +6,4 @@
 
 # data
 __pycache__
-data
+data/mysql-data/
