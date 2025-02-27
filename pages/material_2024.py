@@ -10,7 +10,7 @@ from login import twitch_login
 db = SessionLocal()
 
 def show_cursos_2024(db:orm.Session):
-    st.set_page_config(page_title="Téo Me Why - 2024")
+    st.set_page_config(page_title="Téo Me Why - 2024", page_icon="🧙‍♂️")
     st.title("Téo Me Why - 2024")
     twitch_login.twitch_login(db)
     

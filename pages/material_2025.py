@@ -9,7 +9,7 @@ from login import twitch_login
 db = SessionLocal()
 
 def show_cursos_2025(db:orm.Session):
-    st.set_page_config(page_title="Téo Me Why - 2025")
+    st.set_page_config(page_title="Téo Me Why - 2025", page_icon="🧙‍♂️")
     st.title("Téo Me Why - 2025")
     twitch_login.twitch_login(db)
     st.markdown("Boas vindas ao nosso calendário de cursos! Por aqui você poderá tanto acompanhar nossa agenda, mas tambem conferir todos conteúdos que geramos em 2025.")

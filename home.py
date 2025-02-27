@@ -17,7 +17,7 @@ if db.query(models.RoleSkills).count() == 0:
     models.ingest_role_skill(db, df_role_skills)
 
 
-st.set_page_config(page_title="TMW - Education", page_icon="📘", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="TMW - Education", page_icon="🧙‍♂️", initial_sidebar_state="collapsed")
 
 
 def home():
