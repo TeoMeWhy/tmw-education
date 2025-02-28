@@ -36,18 +36,10 @@ def data_science_analytics(db:orm.Session):
         Os cursos já estão em ordem de prioridade para fazer sentido seu aprendizado.
         """)
 
-        with st.expander("Pandas"):
-            curso_pandas(db, courses_progress[courses_progress['courseSlug']=='pandas-2024'])
-
-        with st.expander("Estatística"):
-            curso_estatistica(db, courses_progress[courses_progress['courseSlug']=='estatistica-2024'])
-
-        with st.expander("Machine Learning para Pôneis"):
-            curso_machine_learning(db, courses_progress[courses_progress['courseSlug']=='ml-2024'])
-
-        with st.expander("MLFlow"):
-            curso_mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
-
+        curso_pandas(db, courses_progress[courses_progress['courseSlug']=='pandas-2024'])
+        curso_estatistica(db, courses_progress[courses_progress['courseSlug']=='estatistica-2024'])
+        curso_machine_learning(db, courses_progress[courses_progress['courseSlug']=='ml-2024'])
+        curso_mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
 
 
     with projetos:
@@ -58,22 +50,7 @@ def data_science_analytics(db:orm.Session):
         Acompanhe os projetos para entender como é a vida real de uma pessoa que trabalha com Data Science e Analytics.    
         """)
 
-        with st.expander("Data Science e Pontos"):
-            data_science_pontos(
-                db, courses_progress[courses_progress["courseSlug"] == "ds-pontos-2024"]
-            )
-
-        with st.expander("Data Science no Databricks"):
-            data_science_databricks(
-                db, courses_progress[courses_progress["courseSlug"] == "ds-databricks-2024"]
-            )
-
-        with st.expander("Matchmaking de Vagas"):
-            rec_sys_trampar_casa(
-                db,courses_progress[courses_progress["courseSlug"] == "matchmaking-trampar-de-casa-2024"],
-            )
-
-        with st.expander("TSE Analytics"):
-            tse_analytics(
-                db, courses_progress[courses_progress["courseSlug"] == "tse-analytics-2024"],
-            )
+        data_science_pontos(db, courses_progress[courses_progress["courseSlug"] == "ds-pontos-2024"])
+        data_science_databricks(db, courses_progress[courses_progress["courseSlug"] == "ds-databricks-2024"])
+        rec_sys_trampar_casa(db,courses_progress[courses_progress["courseSlug"] == "matchmaking-trampar-de-casa-2024"])
+        tse_analytics(db, courses_progress[courses_progress["courseSlug"] == "tse-analytics-2024"])

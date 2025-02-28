@@ -21,18 +21,5 @@ def data_engineering(db:orm.Session):
     São projetos reais, realizando ingestão de dados em um ambiente cloud com uma das melhores ferramentas do mercado: Databricks.
     """)
 
-    with st.expander("Lago do Mago"):
-        lago_do_mago(
-            db,
-            courses_progress[
-                courses_progress["courseSlug"] == "lago-mago-2024"
-            ],
-        )
-
-    with st.expander("Trampar de Lakehouse"):
-        trampar_lakehouse(
-            db,
-            courses_progress[
-                courses_progress["courseSlug"] == "trampar-lakehouse-2024"
-            ],
-        )
+    lago_do_mago(db,courses_progress[courses_progress["courseSlug"] == "lago-mago-2024"])
+    trampar_lakehouse(db,courses_progress[courses_progress["courseSlug"] == "trampar-lakehouse-2024"])
