@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 from sqlalchemy import orm
 
@@ -43,7 +44,9 @@ def show_priorities(priorities:list):
 
 def show_courses_by_priority(db:orm.Session, priorities:list):
 
-    courses_df = get_courses_dataframe(db, st.session_state["user"].userID)
+    courses_df = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
+    if 'user' in st.session_state:
+        courses_df = get_courses_dataframe(db, st.session_state["user"].userID)
 
     courses = []
     for i in priorities:
