@@ -109,7 +109,7 @@ def show_pdi(db:orm.Session):
     | 05. Professor    | É referência no assunto e compartilha conhecimento           |
 
 
-    Com isso em mente, o próximo passo é escolher qual será a sua jornada. Selecione a profissão que seja seguir e o nível de atuação desejável.
+    Com isso em mente, o próximo passo é escolher qual será a sua jornada. Selecione a profissão que deseja seguir e o nível de atuação desejável.
                 
     Isto é, `desejo ser uma pessoa em Data Science, nível Jr.`, portanto, selecione `Data Scientist` em **Carreira** e `Jr.` em **Nível**.
                 
@@ -148,7 +148,7 @@ def show_pdi(db:orm.Session):
     st.markdown("""
     Agora vem a parte mais trabalhosa e desafiadora. Para cada habilidade, selecione o nível que você se encontra atualmente.
     
-    Reforço a importância de usar a tabela apresentada anteriormente como refência durante sua reflexão.                
+    Reforço a importância de usar a tabela apresentada anteriormente como referência durante sua reflexão.                
     """)
 
     map_levels = dict()
