@@ -292,12 +292,12 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
         st.markdown(txt)
         data = [
             {
-                "title": "Dia 01: Setup DATABRICKS + UNITY CATALOG",
+                "title": "Setup DATABRICKS + UNITY CATALOG",
                 "youtube_id": "a1qACiucvzM",
             },
             {
                 "title": "Lendo aqruivos FULL LOAD + CDC",
-                "youtube_id": "BSdICtxipOc",
+                "youtube_id": "YhgUm9zmhZ8",
             },
             {
                 "title": "CDC com Streaming",
