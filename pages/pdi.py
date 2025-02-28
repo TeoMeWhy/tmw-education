@@ -78,8 +78,12 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
 
         Com base nas prioridades de estudo, os cursos abaixo são recomendados para você.
         """)
+
+        slugs = []
         for course, slug in courses:
-            course(db, courses_df[courses_df['courseSlug']==slug])
+            if slug not in slugs:
+                course(db, courses_df[courses_df['courseSlug']==slug])
+                slugs.append(slug)
 
 
 def show_pdi(db:orm.Session):
