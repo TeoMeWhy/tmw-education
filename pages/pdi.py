@@ -4,6 +4,8 @@ from sqlalchemy import orm
 
 from databases import models
 
+from conteudo.ano_2020 import programacao as programacao_2020
+
 from conteudo.ano_2024 import projetos as projetos_2024
 from conteudo.ano_2024 import estatistica as estatistica_2024
 from conteudo.ano_2024 import machine_learning as ml_2024
@@ -70,7 +72,8 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
         if i[0] in ["Python / R / Julia"]:
             courses.append((programacao_2025.curso_python, "python-2025"))
 
-        # "SQL"
+        if i[0] in "SQL":
+            courses.append((programacao_2020.curso_sql, "sql-2025"))
 
     if len(courses) > 0:
         st.markdown("""
