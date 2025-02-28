@@ -20,24 +20,11 @@ def cursos_2025(db:orm.Session):
                 
 Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.
     """)
-
-    with st.expander("MLFlow"):
-        mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
-
-    with st.expander("Git e GitHub"):
-        git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
-
-    with st.expander("Python"):
-        curso_python(db, courses_progress[courses_progress['courseSlug']=='python-2025'])
-
-    with st.expander("Pandas - 10/03 a 14/03"):
-        curso_pandas(courses_progress[courses_progress['courseSlug']=='pandas'])
-
-    with st.expander("Estatística: Parte 01 - 31/03 a 04/04"):
-        curso_estatistica_pt01(courses_progress[courses_progress['courseSlug']=='estatistica-01'])
-
-    with st.expander("Estatística: Parte 02 - 14/04 a 18/04"):
-        curso_estatistica_pt02(courses_progress[courses_progress['courseSlug']=='estatistica-02'])
-
-    with st.expander("Machine Learning - 05/05 a 16/05"):
-        curso_machine_learning(courses_progress[courses_progress['courseSlug']=='machine-learning'])
+    
+    mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
+    git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
+    curso_python(db, courses_progress[courses_progress['courseSlug']=='python-2025'])
+    curso_pandas(courses_progress[courses_progress['courseSlug']=='pandas'])
+    curso_estatistica_pt01(courses_progress[courses_progress['courseSlug']=='estatistica-01'])
+    curso_estatistica_pt02(courses_progress[courses_progress['courseSlug']=='estatistica-02'])
+    curso_machine_learning(courses_progress[courses_progress['courseSlug']=='machine-learning'])

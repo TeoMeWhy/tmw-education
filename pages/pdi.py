@@ -3,6 +3,15 @@ from sqlalchemy import orm
 
 from databases import models
 
+from conteudo.ano_2024 import projetos as projetos_2024
+from conteudo.ano_2024 import estatistica as estatistica_2024
+from conteudo.ano_2024 import machine_learning as ml_2024
+
+from conteudo.ano_2025 import git_github as git_github_2025
+from conteudo.ano_2025 import programacao as programacao_2025
+
+from conteudo.utils import get_courses_dataframe
+
 
 from databases.models import SessionLocal
 from login import twitch_login
@@ -11,26 +20,66 @@ db = SessionLocal()
 
 level_options = ["00. Não esperada", "01. Aprendiz","02. Iniciante","03. Profissional","04. Expert","05. Professor"]
 
+
 def save(db:orm.Session, map_levels:dict):
     userId = st.session_state["user"].userID
     models.update_or_insert_user_skills(db=db, userID=userId, skills=map_levels)
 
+
 def show_priorities(priorities:list):
-    if len(priorities) > 0:
-        priorities.sort(key=lambda x: x[-1], reverse=True)
-        priority_txt = "\n".join([f"{i}. {p[0]}" for i, p in enumerate(priorities, start=1)])
+    priorities.sort(key=lambda x: x[-1], reverse=True)
+    priority_txt = "\n".join([f"{i}. {p[0]}" for i, p in enumerate(priorities, start=1)])
+    
+    st.markdown("""
+    ### Prioridades de estudo.
+
+    Essa lista de habilidade é ordenada a partir da maior distância entre seu nível em cada habilidade.
+    Ou seja, quanto maior a distância entre o seu nível e a habilidade desejada, mais prioritária a habilidade se torna, subindo posições.        
+    
+    """)
+    st.code(priority_txt)
+    return priorities
+
+
+def show_courses_by_priority(db:orm.Session, priorities:list):
+
+    courses_df = get_courses_dataframe(db, st.session_state["user"].userID)
+
+    courses = []
+    for i in priorities:
+        if i[0] in ["Apache Spark", "Modelagem de dados", "ETL"]:
+            courses.append((projetos_2024.lago_do_mago, "lago-mago-2024"))
+            courses.append((projetos_2024.trampar_lakehouse, "trampar-lakehouse-2024"))
         
+        # "Apresentação / Storytelling"
+
+        if i[0] in ["Estatística descritiva", "Teste de hipótese e Teste A/B"]:
+            courses.append((estatistica_2024.curso_estatistica, "estatistica-2024"))
+        
+        if i[0] in ["Git / GitHub / GitLab / BitBucket"]:
+            courses.append((git_github_2025.git_github, "github-2025"))
+
+        if "Machine Learning" in i[0]:
+            courses.append((ml_2024.curso_machine_learning, "ml-2024"))
+            courses.append((projetos_2024.data_science_pontos, "ds-pontos-2024"))
+            courses.append((projetos_2024.data_science_databricks, "ds-databricks-2024"))
+
+        if i[0] in ["Python / R / Julia"]:
+            courses.append((programacao_2025.curso_python, "python-2025"))
+
+        # "SQL"
+
+    if len(courses) > 0:
         st.markdown("""
-        ### Prioridades de estudo.
+        ### Cursos recomendados
 
-        Essa lista de habilidade é ordenada a partir da maior distância entre seu nível em cada habilidade.
-        Ou seja, quanto maior a distância entre o seu nível e a habilidade desejada, mais prioritária a habilidade se torna, subindo posições.        
-        
+        Com base nas prioridades de estudo, os cursos abaixo são recomendados para você.
         """)
-        st.code(priority_txt)
+        for course, slug in courses:
+            course(db, courses_df[courses_df['courseSlug']==slug])
 
 
-def show_pdi():
+def show_pdi(db:orm.Session):
     st.set_page_config(page_title="Téo Me Why - PDI", page_icon="🧙‍♂️")
     st.title("Téo Me Why - PDI")
     twitch_login.twitch_login(db)
@@ -119,8 +168,9 @@ def show_pdi():
     if 'user' in st.session_state:
         st.button(label="Salvar", on_click=lambda: save(db, map_levels))
 
-    show_priorities(priorities=priority)
+    if len(priority) > 0:
+        priorities = show_priorities(priorities=priority)
+        show_courses_by_priority(db=db, priorities=priorities)
 
         
-show_pdi()
-
+show_pdi(db=db)

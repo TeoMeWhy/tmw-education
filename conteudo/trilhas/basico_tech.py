@@ -21,8 +21,5 @@ def basico_tech(db:orm.Session):
     
     """)
 
-    with st.expander("Git e GitHub"):
-        git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
-
-    with st.expander("Python"):
-        curso_python(db, courses_progress[courses_progress['courseSlug']=='python-2025'])
+    git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
+    curso_python(db, courses_progress[courses_progress['courseSlug']=='python-2025'])
