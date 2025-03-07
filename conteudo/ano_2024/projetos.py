@@ -301,7 +301,7 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "CDC com Streaming",
-                "youtube_id": "kN0eqTp_Fe8",
+                "youtube_id": "1C8rY5g5Cqo",
             },
             {
                 "title": "Criando uma classe de ingestão",
