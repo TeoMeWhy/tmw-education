@@ -317,11 +317,11 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "Change Data Feed",
-                "youtube_id": "PWJp3eujXxQ",
+                "youtube_id": "YY7jJhUlu0k",
             },
             {
                 "title": "Custos e Tipos de Clusters",
-                "youtube_id": "bOJKiwlLKn0",
+                "youtube_id": "C6E2U6U4BCw",
             },
             {
                 "title": "Camada Gold",
