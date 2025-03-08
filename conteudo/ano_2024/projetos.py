@@ -305,15 +305,15 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "Criando uma classe de ingestão",
-                "youtube_id": "j5ew3cwhlDU",
+                "youtube_id": "MpDcDHE93XA",
             },
             {
                 "title": "GitHub Actions para atualizar Worflows",
-                "youtube_id": "ksf89Cl_eCs",
+                "youtube_id": "961sbn71Mqg",
             },
             {
                 "title": "Full-Load em Silver",
-                "youtube_id": "k83hmsXqflg",
+                "youtube_id": "NBfEb2TkRe8",
             },
             {
                 "title": "Change Data Feed",
