@@ -46,7 +46,6 @@ def rec_sys_trampar_casa(db: orm.Session, course_eps: pd.DataFrame):
         Isto é, com base nas skills requisitadas de cada vaga, como podemos recomendar a melhor lista de vagas para o usuário que está procurando vagas para se candidatar?
         Foi com isso em mente que criamos um algoritmos para rankear as melhores vagas para cada usuário da plataforma. Ficou bem legal e tivemos um ótimo feedback!
 
-        Confira esse desenvolvimento: [RecSys de Vagas](https://www.youtube.com/playlist?list=PLvlkVRRKOYFTT7O8f-8oQQ1it3AH1gSfm)
         """
 
         st.markdown(txt)
@@ -90,7 +89,6 @@ def data_science_pontos(db: orm.Session, course_eps: pd.DataFrame):
         Projeto foi completo mesmo! Desde a definição do problema de negócio e features, construção das feature store de diferentes contextos, treinamento de diferentes algoritmos, e deploy realizado utilizando o model registry do MLFlow em nosso BOT com uma API em GoLang.
         E ah, tudo isso com dados reais do nosso sistema de pontos da live!
 
-        Se liga nesse projeto que você pode fazer na sua própria máquina [Sub Twitch](https://www.twitch.tv/collections/jg9itHOO1ReLcw)
         """
 
         st.markdown(txt)
@@ -157,7 +155,6 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
         Esse projeto e uma continuação do Lago do Mago, porém, voltado à Cientista de Dados.
         Uma boa forma de entender isso, é como se fizéssemos o projeto Data Science & Pontos não mais localmente, mas sim, no Databricks.
 
-        Caso seja Sub, aproveite para assistir na Twitch: [Sub Twitch](https://www.twitch.tv/collections/ghcAz7_75hfrgQ)
         """
 
         st.markdown(txt)
@@ -286,7 +283,6 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
         Utilizamos dados reais de nosso sistema de pontos, realizando ingestão na camada RAW. Para consumo e consolidação dos dados em BRONZE, utilizamos leitura dos dados FULL-LOAD e CDC (Change Data Capture) em streaming realizando UPSERT em DELTA. Para camada SILVER, utilizamos novamente Streaming, mas desta vez com CDF (Change Data Feed).
         Em GOLD criamos alguns CUBOS para relatórios em dashboards.
 
-        É Sub da Twitch? Confira aqui: [Sub Twitch](https://www.twitch.tv/collections/2e8D0Vgd3hf04g)
         """
 
         st.markdown(txt)
