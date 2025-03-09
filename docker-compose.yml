@@ -7,7 +7,7 @@ services:
       MYSQL_USER: streamlit
       MYSQL_PASSWORD: streamlit
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - ./data/mysql-data:/var/lib/mysql
     restart: always
