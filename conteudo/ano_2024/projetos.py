@@ -325,11 +325,11 @@ def lago_do_mago(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "Camada Gold",
-                "youtube_id": "xumKY0lb1a4",
+                "youtube_id": "REGzXzp7PSU",
             },
             {
                 "title": "Dash Executivo",
-                "youtube_id": "RL9HuYRxclY",
+                "youtube_id": "uPwtZ9WENfY",
             },
         ]
 
