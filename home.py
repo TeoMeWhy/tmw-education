@@ -24,9 +24,17 @@ def home():
 
     twitch_login.twitch_login(db)
 
-    with open("./home.md") as openfile:
-        txt = openfile.read()
-    st.markdown(txt)
+
+    st.markdown("# Boas vindas")
+
+    st.image("assets/banner_home.png")
+
+    st.markdown("""
+                
+    ## Plataforma de cursos Téo Me Why
+
+    Por aqui você encontrará todo o material que tenho disponível na internet, principalmente em formato de vídeos. Você pode conferir o conteúdo completo, ou navegar entre as diferentes trilhas de conhecimento.
+    """)
 
     with st.container(border=True):
         cols = st.columns(2)
