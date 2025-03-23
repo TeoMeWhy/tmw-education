@@ -164,6 +164,22 @@ def curso_pandas(db:orm.Session, course_eps:pd.DataFrame):
                 "title": "Ensinando Pandas - Ep 10",
                 "youtube_id": "USpeepeztTI",
             },
+            {
+                "title": "Ensinando Pandas - Ep 11",
+                "youtube_id": "OyO7lzlG3r8",
+            },
+            {
+                "title": "Ensinando Pandas - Ep 12",
+                "youtube_id": "VKclVgd7kZw",
+            },
+            {
+                "title": "Ensinando Pandas - Ep 13",
+                "youtube_id": "w5PLsNnUCTA",
+            },
+            {
+                "title": "Ensinando Pandas - Ep 14",
+                "youtube_id": "wOWCd-b8AuE",
+            },
         ]
 
         slugs_flags = { f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1) }
