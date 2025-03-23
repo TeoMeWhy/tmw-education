@@ -79,7 +79,7 @@ def home():
     with st.container(border=True):
         cols = st.columns(2)
         with cols[0]:
-            st.markdown("Aqui você entra tudo que rolou em 2024, cursos e projetos")
+            st.markdown("Aqui você encontra tudo que rolou em 2024, cursos e projetos")
             
         with cols[1]:
             cols = st.columns(3)
