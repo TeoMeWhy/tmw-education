@@ -15,11 +15,13 @@ def projetos_2025(db: orm.Session):
         courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
 
     st.markdown(
-    """### Projetos
+    """
+    ### Projetos
                 
     Acompanhe aqui nossos todos os projetos que estamos relizamos na divididos entre as subárea que temos em Dados. Seja membro do YouTube para conseguir acessar o conteúdo destes materiais.
                     
     Os projetos construídos a partir de 2025, terão as gravações disponíveis exclusivamente no YouTube.
+    
     """)
 
     st.markdown("#### Inteligência Artificial")
