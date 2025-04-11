@@ -22,90 +22,78 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
 
         slugs_flags = {f"ep-{i:02}": course_eps[course_eps['epSlug']==f"ep-{i:02}"]['epSlug'].count() == 1 for i in range(1,13)}
             
+        data = [
+            {
+                "title": "Conceitos de Programação e Instalação",
+                "youtube_id": "OeKzVjiiRm4"
+            },
+            {
+                "title": "Primeiros Comandos",
+                "youtube_id": "wp23DUYKQt4"
+            },
+            {
+                "title": "Recebendo Dados",
+                "youtube_id": "_40Lzu_C_Ko"
+            },
+            {
+                "title": "IF, ELIF, ELSE",
+                "youtube_id": "FV9Pzj3BIuU"
+            },
+            {
+                "title": "Laços de Repetição",
+                "youtube_id": "HcCH_xXwOcA"
+            },
+            {
+                "title": "Listas",
+                "youtube_id": "deWlTenrlv4"
+            },
+            {
+                "title": "Dicionários e Tuplas",
+                "youtube_id": "EueiZ_TXe_c"
+            },
+            {
+                "title": "Criano Funções",
+                "youtube_id": "JZlJ1otXBD8"
+            },
+            {
+                "title": "Módulos",
+                "youtube_id": "7U_NG78HuA4"
+            },
+            {
+                "title": "Lidando com Arquivos",
+                "youtube_id": "3h15kc10fCY"
+            },
+            {
+                "title": "Desafio Loteria da Babilônia",
+                "youtube_id": "lIczWRig7S8"
+            },
+            {
+                "title": "Consumindo dados de API",
+                "youtube_id": "iBsyZ0RQCqc"
+            },
+            {
+                "title": "Ambientes Virtuais: como faze gestão",
+                "youtube_id": "Xa9SSu8qLHs"
+            },
+            {
+                "title": "Mais sobre listas!!",
+                "youtube_id": "QE5_WPaflU0"
+            },
 
-        make_course_ep(course_slug="python-2025",
-                    title="Conceitos de Programação e Instalação",
-                    youtube_id="OeKzVjiiRm4",
-                    ep_slug="ep-01",
-                    slug_flag=slugs_flags["ep-01"],
-                    db=db)
+        ]
 
-        make_course_ep(course_slug="python-2025",
-                    title="Primeiros Comandos",
-                    youtube_id="wp23DUYKQt4",
-                    ep_slug="ep-02",
-                    slug_flag=slugs_flags["ep-02"],
-                    db=db)
+        slugs_flags = { f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1) }
 
-        make_course_ep(course_slug="python-2025",
-                    title="Recebendo Dados",
-                    youtube_id="_40Lzu_C_Ko",
-                    ep_slug="ep-03",
-                    slug_flag=slugs_flags["ep-03"],
-                    db=db)
-    
-        make_course_ep(course_slug="python-2025",
-                    title="IF, ELIF, ELSE",
-                    youtube_id="FV9Pzj3BIuU",
-                    ep_slug="ep-04",
-                    slug_flag=slugs_flags["ep-04"],
-                    db=db)
+        for i in range(len(data)):
+            make_course_ep(
+                course_slug="python-2025",
+                title=data[i]["title"],
+                youtube_id=data[i]["youtube_id"],
+                ep_slug=list(slugs_flags.items())[i][0],
+                slug_flag=list(slugs_flags.items())[i][1],
+                db=db,
+            )
 
-        make_course_ep(course_slug="python-2025",
-                    title="Laços de Repetição",
-                    youtube_id="HcCH_xXwOcA",
-                    ep_slug="ep-05",
-                    slug_flag=slugs_flags["ep-05"],
-                    db=db)
-        
-        make_course_ep(course_slug="python-2025",
-                    title="Listas",
-                    youtube_id="deWlTenrlv4",
-                    ep_slug="ep-06",
-                    slug_flag=slugs_flags["ep-06"],
-                    db=db)
-
-        make_course_ep(course_slug="python-2025",
-                    title="Dicionários e Tuplas",
-                    youtube_id="EueiZ_TXe_c",
-                    ep_slug="ep-07",
-                    slug_flag=slugs_flags["ep-07"],
-                    db=db)
-
-        make_course_ep(course_slug="python-2025",
-                    title="Criano Funções",
-                    youtube_id="JZlJ1otXBD8",
-                    ep_slug="ep-08",
-                    slug_flag=slugs_flags["ep-08"],
-                    db=db)
-
-        make_course_ep(course_slug="python-2025",
-                    title="Módulos",
-                    youtube_id="7U_NG78HuA4",
-                    ep_slug="ep-09",
-                    slug_flag=slugs_flags["ep-09"],
-                    db=db)
-        
-        make_course_ep(course_slug="python-2025",
-                    title="Lidando com Arquivos",
-                    youtube_id="3h15kc10fCY",
-                    ep_slug="ep-10",
-                    slug_flag=slugs_flags["ep-10"],
-                    db=db)
-
-        make_course_ep(course_slug="python-2025",
-                    title="Desafio Loteria da Babilônia",
-                    youtube_id="lIczWRig7S8",
-                    ep_slug="ep-11",
-                    slug_flag=slugs_flags["ep-11"],
-                    db=db)
-        
-        make_course_ep(course_slug="python-2025",
-                    title="Consumindo dados de API",
-                    youtube_id="iBsyZ0RQCqc",
-                    ep_slug="ep-12",
-                    slug_flag=slugs_flags["ep-12"],
-                    db=db)
 
 def curso_pandas(db:orm.Session, course_eps:pd.DataFrame):
 
