@@ -24,9 +24,52 @@ def projetos_2025(db: orm.Session):
     
     """)
 
+    st.markdown("#### Data Engineering")
+    data_platform(db, courses_progress[courses_progress["courseSlug"] == "data-platform-2025"])
+
+
     st.markdown("#### Inteligência Artificial")
     ia_para_canal(db, courses_progress[courses_progress["courseSlug"] == "ia-canal-2025"])
 
+
+def data_platform(db: orm.Session, course_eps: pd.DataFrame):
+
+    with st.expander("Plataforma de dados Open-Source"):
+
+        txt = """
+        Vamos construir uma plataforma de dados do zero!
+
+        A ideia é construir uma plataforma de dados open-source, utilizando as melhores práticas do mercado.
+        Essa plataforma será construída com o objetivo de suportar diferentes tipos de dados e cases, como:
+        
+        - Fórmula 1;
+        - Dota2;
+        - LoL;
+        - Ecossistema Téo Me Why;
+
+        Vamos usar esse repositório como base e refatora-lo, apresentando os detalhes e decisões de cada passo necessário.
+
+        [github.com/TeoMeWhy/tmw-lake](https://github.com/TeoMeWhy/tmw-lake)
+        """
+
+        st.markdown(txt)
+        data = []
+
+        slugs_flags = {
+            f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count()
+            == 1
+            for i in range(1, len(data) + 1)
+        }
+
+        for i in range(len(data)):
+            make_course_ep(
+                course_slug="data-platform-2025",
+                title=data[i]["title"],
+                youtube_id=data[i]["youtube_id"],
+                ep_slug=list(slugs_flags.items())[i][0],
+                slug_flag=list(slugs_flags.items())[i][1],
+                db=db,
+            )
 
 def ia_para_canal(db: orm.Session, course_eps: pd.DataFrame):
 
@@ -51,11 +94,7 @@ def ia_para_canal(db: orm.Session, course_eps: pd.DataFrame):
             },
         ]
 
-        slugs_flags = {
-            f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count()
-            == 1
-            for i in range(1, len(data) + 1)
-        }
+        slugs_flags = {f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1)}
 
         for i in range(len(data)):
             make_course_ep(
