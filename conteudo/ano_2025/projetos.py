@@ -34,7 +34,7 @@ def projetos_2025(db: orm.Session):
 
 def data_platform(db: orm.Session, course_eps: pd.DataFrame):
 
-    with st.expander("Plataforma de dados Open-Source"):
+    with st.expander("Plataforma de dados Open-Source - 04/08"):
 
         txt = """
         Vamos construir uma plataforma de dados do zero!
@@ -50,6 +50,8 @@ def data_platform(db: orm.Session, course_eps: pd.DataFrame):
         Vamos usar esse repositório como base e refatora-lo, apresentando os detalhes e decisões de cada passo necessário.
 
         [github.com/TeoMeWhy/tmw-lake](https://github.com/TeoMeWhy/tmw-lake)
+
+        [Coloque na sua agenda!!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NzhnYXZzaXZoc3B0cjJvNGlob2duc3ZlbTJfMjAyNTA4MDRUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)
         """
 
         st.markdown(txt)
