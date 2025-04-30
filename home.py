@@ -7,23 +7,22 @@ from login import twitch_login
 db = models.SessionLocal()
 models.create_tables()
 
-if db.query(models.Skill).count() == 0:
-    df_skills = pd.read_csv("data/skills.csv", sep=";")
-    models.ingest_skills(db, df_skills)
-
-
-if db.query(models.RoleSkills).count() == 0:
-    df_role_skills = pd.read_csv("data/role_skills.csv", sep=";")
-    models.ingest_role_skill(db, df_role_skills)
-
-
 st.set_page_config(page_title="TMW - Education", page_icon="🧙‍♂️", initial_sidebar_state="collapsed")
+
+st.cache_resource()
+def load_skills():
+    if db.query(models.Skill).count() == 0:
+        df_skills = pd.read_csv("data/skills.csv", sep=";")
+        models.ingest_skills(db, df_skills)
+
+    if db.query(models.RoleSkills).count() == 0:
+        df_role_skills = pd.read_csv("data/role_skills.csv", sep=";")
+        models.ingest_role_skill(db, df_role_skills)
 
 
 def home():
 
     twitch_login.twitch_login(db)
-
 
     st.markdown("# Boas vindas")
 
@@ -92,6 +91,7 @@ def home():
 
 
 def main():
+    load_skills()
     home()
 
 if __name__ == "__main__":
