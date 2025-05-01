@@ -169,7 +169,7 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "Data Science no Databricks: Mais Features",
-                "youtube_id": "MterMkuY6to",
+                "youtube_id": "Sezdg2xuzto",
             },
             {
                 "title": "Data Science no Databricks: Features Lookups",
