@@ -161,11 +161,11 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
         data = [
             {
                 "title": "Data Science no Databricks: Planejamento",
-                "youtube_id": "zwbqdxwV7JU",
+                "youtube_id": "Y-Icfgi7Doc",
             },
             {
                 "title": "Data Science no Databricks: Primeiras Features",
-                "youtube_id": "DUeO5SayXhg",
+                "youtube_id": "gjRJAdGQrmY",
             },
             {
                 "title": "Data Science no Databricks: Mais Features",
