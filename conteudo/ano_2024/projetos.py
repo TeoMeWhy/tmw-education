@@ -189,7 +189,7 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "Data Science no Databricks: Predições",
-                "youtube_id": "6wAzGB7NZ38",
+                "youtube_id": "AhHfbY14BD4",
             },
             {
                 "title": "Data Science no Databricks: Deploy com API em Go",
