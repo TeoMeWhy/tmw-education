@@ -177,19 +177,15 @@ def data_science_databricks(db: orm.Session, course_eps: pd.DataFrame):
             },
             {
                 "title": "Data Science no Databricks: SEMMA",
-                "youtube_id": "kLb6ak54p10",
+                "youtube_id": "rIzJ5MCKsw4",
             },
             {
-                "title": "Data Science no Databricks: MLFlow Parte I",
-                "youtube_id": "Dq7JKI16aRI",
-            },
-            {
-                "title": "Data Science no Databricks: MLFlow Parte II",
-                "youtube_id": "d07mlt4mdv4",
+                "title": "Data Science no Databricks: MLFlow",
+                "youtube_id": "vSzfbG51el4",
             },
             {
                 "title": "Data Science no Databricks: Model Tuning",
-                "youtube_id": "3bfclSSevfk",
+                "youtube_id": "56DhxlqKf1o",
             },
             {
                 "title": "Data Science no Databricks: Predições",
