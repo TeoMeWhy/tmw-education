@@ -25,6 +25,6 @@ Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos esp
     git_github(db, courses_progress[courses_progress['courseSlug']=='github-2025'])
     curso_python(db, courses_progress[courses_progress['courseSlug']=='python-2025'])
     curso_pandas(db, courses_progress[courses_progress['courseSlug']=='pandas-2025'])
-    curso_estatistica(courses_progress[courses_progress['courseSlug']=='estatistica-2025'])
+    curso_estatistica(db, courses_progress[courses_progress['courseSlug']=='estatistica-2025'])
     curso_machine_learning(courses_progress[courses_progress['courseSlug']=='machine-learning-2025'])
     curso_sql(courses_progress[courses_progress['courseSlug']=='sql-2025'])

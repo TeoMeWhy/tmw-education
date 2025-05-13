@@ -52,7 +52,7 @@ def curso_python(db:orm.Session, course_eps:pd.DataFrame):
                 "youtube_id": "EueiZ_TXe_c"
             },
             {
-                "title": "Criano Funções",
+                "title": "Criando Funções",
                 "youtube_id": "JZlJ1otXBD8"
             },
             {
