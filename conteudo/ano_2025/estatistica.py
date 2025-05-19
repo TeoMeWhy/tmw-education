@@ -84,6 +84,34 @@ def curso_estatistica(db:orm.Session, course_eps:pd.DataFrame):
                 "title": "APRENDA ESTATÍSTICA 13: Gráficos",
                 "youtube_id": "BAhz7OgJyAQ"
             },
+            {
+                "title": "APRENDA ESTATÍSTICA 14: Gráficos (PLANILHAS)",
+                "youtube_id": "ZmYG2dPJxfw"
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 15: Gráficos (PYTHON)",
+                "youtube_id": "_PzfSLBn22k"
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 16: Probabilidade",
+                "youtube_id": "cZyp6Tq9V-0"
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 17: Probabilidade (PLANILHAS)",
+                "youtube_id": "P48vFrhhKf0"
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 18: Distribuição Bernoulli",
+                "youtube_id": "QoMwhXw5aD4"
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 19: Distribuição Normal",
+                "youtube_id": "pbN-W7gV_kM"
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 20: Intervalo de Confiança",
+                "youtube_id": "Xy2esjcmcdI"
+            },
 
         ]
 
