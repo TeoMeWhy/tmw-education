@@ -34,83 +34,87 @@ def curso_estatistica(db:orm.Session, course_eps:pd.DataFrame):
         data = [
             {
                 "title": "APRENDA ESTATÍSTICA 01: População e Amostra",
-                "youtube_id": "4CcgZXXIl7o"
+                "youtube_id": "4CcgZXXIl7o",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 02: Tipos de Variáveis",
-                "youtube_id": "FPZBAp8QSRM"
+                "youtube_id": "FPZBAp8QSRM",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 03: Tabela de Frequência",
-                "youtube_id": "qca5fOJ2TTg"
+                "youtube_id": "qca5fOJ2TTg",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 04: Tabela de Frequência na PRÁTICA",
-                "youtube_id": "cVpO7V0fu_s"
+                "youtube_id": "cVpO7V0fu_s",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 05: Somatórios e Média",
-                "youtube_id": "D0hlGcAmc94"
+                "youtube_id": "D0hlGcAmc94",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 06: Mediana e Quartis",
-                "youtube_id": "sL5tbdc2rCE"
+                "youtube_id": "sL5tbdc2rCE",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 07: Medidas de Resumo na Prática (PLANILHAS)",
-                "youtube_id": "hgxLeea6Hr8"
+                "youtube_id": "hgxLeea6Hr8",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 08: Medidas de Resumo na Prática (PYTHON)",
-                "youtube_id": "9D_c_22lRL8"
+                "youtube_id": "9D_c_22lRL8",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 09: Medidas de Resumo na Prática (SQL)",
-                "youtube_id": "eTBXmQmyqMc"
+                "youtube_id": "eTBXmQmyqMc",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 10: Medidas de Dispersão",
-                "youtube_id": "0kdgO0E4Rg8"
+                "youtube_id": "0kdgO0E4Rg8",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 11: Medidas de Dispersão (PLANILHAS)",
-                "youtube_id": "BCAbwdkdfhM"
+                "youtube_id": "BCAbwdkdfhM",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 12: Medidas de Dispersão (PYTHON)",
-                "youtube_id": "aZ7ufhnsblY"
+                "youtube_id": "aZ7ufhnsblY",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 13: Gráficos",
-                "youtube_id": "BAhz7OgJyAQ"
+                "youtube_id": "BAhz7OgJyAQ",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 14: Gráficos (PLANILHAS)",
-                "youtube_id": "ZmYG2dPJxfw"
+                "youtube_id": "ZmYG2dPJxfw",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 15: Gráficos (PYTHON)",
-                "youtube_id": "_PzfSLBn22k"
+                "youtube_id": "_PzfSLBn22k",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 16: Probabilidade",
-                "youtube_id": "cZyp6Tq9V-0"
+                "youtube_id": "cZyp6Tq9V-0",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 17: Probabilidade (PLANILHAS)",
-                "youtube_id": "P48vFrhhKf0"
+                "youtube_id": "P48vFrhhKf0",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 18: Distribuição Bernoulli",
-                "youtube_id": "QoMwhXw5aD4"
+                "youtube_id": "QoMwhXw5aD4",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 19: Distribuição Normal",
-                "youtube_id": "pbN-W7gV_kM"
+                "youtube_id": "pbN-W7gV_kM",
             },
             {
                 "title": "APRENDA ESTATÍSTICA 20: Intervalo de Confiança",
-                "youtube_id": "Xy2esjcmcdI"
+                "youtube_id": "Xy2esjcmcdI",
+            },
+            {
+                "title": "APRENDA ESTATÍSTICA 21: Teste de Hipótese",
+                "youtube_id": "qrv5rFhrM4Q",
             },
 
         ]
