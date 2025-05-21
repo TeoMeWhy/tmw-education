@@ -113,6 +113,10 @@ def curso_estatistica(db:orm.Session, course_eps:pd.DataFrame):
                 "youtube_id": "Xy2esjcmcdI",
             },
             {
+                "title": "APRENDA ESTATÍSTICA 20.1: Intervalo de Confiança (PYTHON)",
+                "youtube_id": "ueFCFsPHRRo",
+            },
+            {
                 "title": "APRENDA ESTATÍSTICA 21: Teste de Hipótese",
                 "youtube_id": "qrv5rFhrM4Q",
             },

@@ -11,7 +11,7 @@ def curso_machine_learning(course_eps:pd.DataFrame):
         about = """
         Curso completo e gratuito de Machine Learning para pessoas iniciantes na área da Ciência de Dados.
 
-        As aulas acontecerão nos dias 09/06 e 20/06, ai vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+        As aulas acontecerão nos dias 09/06 e 20/06 às 9AM, ao vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
 
         O uso de técnicas voltadas à Aprendizado de Máquina tem sido cada dia mais comuns em diferentes mercados e indústricas. Dominar os principais conceitos te ajudará a alcançar não só objetivos da sua empresa, mas também, de crescimento profissional.
         Neste curso, você aprenderá os principais conceitos de Machine Learning, mais do que apenas apertar os botões corretos. Falaremos sobre realmente como a máquina aprender e como podemos avaliar esse aprendizados a partir de diferentes métricas.

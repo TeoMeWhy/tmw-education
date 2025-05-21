@@ -201,7 +201,7 @@ def curso_sql(course_eps:pd.DataFrame):
         about = """
         Curso completo e gratuito de SQL para pessoas iniciantes na área de Dados.
 
-        As aulas acontecerão nos dias 07/07 e 18/07, ai vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+        As aulas acontecerão nos dias 07/07 e 18/07 às 9AM, ao vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
 
         SQL é uma das principais linguagens de consulta para bancos de dados relacionais. Se você deseja trabalhar com dados, é fundamental que você saiba como realizar consultas, inserções, atualizações e exclusões em um banco de dados.
         Além de ser uma das principais ferramentas no dia a dia de qualquer profissional da área de dados. Seja engenharia, ciência ou análise de dados, todos precisam saber SQL.
