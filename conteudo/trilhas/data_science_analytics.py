@@ -2,11 +2,11 @@ import pandas as pd
 from sqlalchemy import orm
 import streamlit as st
 
-from ..ano_2024.estatistica import curso_estatistica
 from ..ano_2024.machine_learning import curso_machine_learning
 
 from ..ano_2025.machine_learning import mlflow as curso_mlflow
 from ..ano_2025.programacao import curso_pandas
+from ..ano_2025.estatistica import curso_estatistica
 
 from ..ano_2024.projetos import data_science_pontos
 from ..ano_2024.projetos import data_science_databricks
@@ -37,7 +37,7 @@ def data_science_analytics(db:orm.Session):
         """)
 
         curso_pandas(db, courses_progress[courses_progress['courseSlug']=='pandas-2025'])
-        curso_estatistica(db, courses_progress[courses_progress['courseSlug']=='estatistica-2024'])
+        curso_estatistica(db, courses_progress[courses_progress['courseSlug']=='estatistica-2025'])
         curso_machine_learning(db, courses_progress[courses_progress['courseSlug']=='ml-2024'])
         curso_mlflow(db, courses_progress[courses_progress['courseSlug']=='mlflow-2025'])
 

@@ -7,11 +7,11 @@ from databases import models
 from conteudo.ano_2020 import programacao as programacao_2020
 
 from conteudo.ano_2024 import projetos as projetos_2024
-from conteudo.ano_2024 import estatistica as estatistica_2024
 from conteudo.ano_2024 import machine_learning as ml_2024
 
 from conteudo.ano_2025 import git_github as git_github_2025
 from conteudo.ano_2025 import programacao as programacao_2025
+from conteudo.ano_2025 import estatistica as estatistica_2025
 
 from conteudo.utils import get_courses_dataframe
 
@@ -59,7 +59,7 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
         # "Apresentação / Storytelling"
 
         if i[0] in ["Estatística descritiva", "Teste de hipótese e Teste A/B"]:
-            courses.append((estatistica_2024.curso_estatistica, "estatistica-2024"))
+            courses.append((estatistica_2025.curso_estatistica, "estatistica-2025"))
         
         if i[0] in ["Git / GitHub / GitLab / BitBucket"]:
             courses.append((git_github_2025.git_github, "github-2025"))
