@@ -29,7 +29,7 @@ def show_profile_infos(db:orm.Session, tmw_id:str)->bool:
     col1, col2 = st.columns(2)
 
     col1.markdown(f"""
-    Saldo de pontos: {data["points"]}
+    Saldo de cubos: {data["points"]}
 
     Última iteração: {date_last}
 
