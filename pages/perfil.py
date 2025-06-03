@@ -49,12 +49,13 @@ def show_profile_infos(db:orm.Session, tmw_id:str)->bool:
     
 
 def integrate_or_create_tmw(user):
-    data = points.points.get_user_points(id_twitch=user.platformUserID)
+    payload = {user.platformName:user.platformUserID}
+    
+    data = points.points.get_user_points(**payload)
     if len(data) == 1:
         models.integrate_tmw_id(db=db, userID=user.userID, tmwID=data[0]["uuid"])
 
     else:
-        payload = {user.platformName:user.platformUserID}
         data = points.points.create_user_points(**payload)
         models.integrate_tmw_id(db=db, userID=user.userID, tmwID=data["uuid"])
 
