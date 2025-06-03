@@ -61,7 +61,7 @@ def home():
                     st.switch_page("./pages/pdi.py")
 
 
-    st.markdown("Você também pode conferir todo material separo anualmente:")
+    st.markdown("Você também pode conferir todo material anual:")
         
     with st.container(border=True):
         cols = st.columns(5)
