@@ -32,7 +32,7 @@ def home():
                 
     ## Plataforma de cursos Téo Me Why
 
-    Por aqui você encontrará todo o material que tenho disponível na internet, principalmente em formato de vídeos. Você pode conferir o conteúdo completo, ou navegar entre as diferentes trilhas de conhecimento.
+    Aqui você encontrará todo o material que tenho disponível na internet em formato de vídeos. Acesse o conteúdo completo, ou navegue entre as diferentes trilhas de conhecimento.
     """)
 
     with st.container(border=True):
@@ -41,9 +41,9 @@ def home():
             st.markdown("Siga as trilhas de conhecimento que mais tem interesse!")
             
         with cols[1]:
-            cols = st.columns(3)
+            cols = st.columns(2)
             with cols[-1]:
-                b1 = st.button("Trilhas")
+                b1 = st.button("Trilhas", use_container_width=True)
                 if b1:
                     st.switch_page("./pages/trilhas.py")
 
@@ -51,12 +51,12 @@ def home():
     with st.container(border=True):
         cols = st.columns(2)
         with cols[0]:
-            st.markdown("Caso esteja em dúvida por onde seguir, realize nosso Plano de Desenvolvimento Individual (PDI) para escolher a trilhar correta.")
+            st.markdown("Não sabe por onde começar? Realize nosso Plano de Desenvolvimento Individual (PDI)!")
         
         with cols[-1]:
-            cols = st.columns(3)
+            cols = st.columns(2)
             with cols[-1]:
-                b_pdi = st.button("PDI")
+                b_pdi = st.button("PDI", use_container_width=True)
                 if b_pdi:
                     st.switch_page("./pages/pdi.py")
 
@@ -64,29 +64,15 @@ def home():
     st.markdown("Você também pode conferir todo material separo anualmente:")
         
     with st.container(border=True):
-        cols = st.columns(2)
-        with cols[0]:
-            st.markdown("Confira nossos cursos futuros e que já aconteceram durante este ano.")
-            
+        cols = st.columns(5)
         with cols[1]:
-            cols = st.columns(3)
-            with cols[-1]:
-                b1 = st.button("2025")
-                if b1:
-                    st.switch_page("./pages/material_2025.py")
-
-    with st.container(border=True):
-        cols = st.columns(2)
-        with cols[0]:
-            st.markdown("Aqui você encontra tudo que rolou em 2024, cursos e projetos")
-            
-        with cols[1]:
-            cols = st.columns(3)
-            with cols[-1]:
-                b2 = st.button("2024")
-                if b2:
-                    st.switch_page("./pages/material_2024.py")
-
+            b2 = st.button("2024", use_container_width=True)
+            if b2:
+                st.switch_page("./pages/material_2024.py")
+        with cols[3]:
+            b1 = st.button("2025", use_container_width=True)
+            if b1:
+                st.switch_page("./pages/material_2025.py")
 
 
 
