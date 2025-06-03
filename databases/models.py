@@ -3,6 +3,7 @@ from configs import settings
 import pandas as pd
 from sqlalchemy import create_engine, Column, String, Integer, TIMESTAMP, ForeignKey, func
 from sqlalchemy import orm, schema
+from sqlalchemy import select, delete
 
 import uuid
 
@@ -11,6 +12,13 @@ engine = create_engine(settings.DB_URI)
 SessionLocal = orm.sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 Base = orm.declarative_base()
+
+
+class UserTMW(Base):
+    __tablename__ = "tmw_users"
+
+    userID = Column(String(150), primary_key=True)
+    tmwID = Column(String(150), primary_key=True)
 
 
 class User(Base):
@@ -162,3 +170,23 @@ def update_or_insert_user_skills(db:orm.Session, userID:str, skills:dict):
     for k, v in skills.items():
         if not update_user_skill(db=db, userID=userID, skill_name=k, level=v):
             insert_user_skill(db=db, userID=userID, skill_name=k, level=v)
+
+
+def integrate_tmw_id(db:orm.Session, userID:str, tmwID:str):
+    user = UserTMW(userID=userID,tmwID=tmwID)
+    db.add(user)
+    db.commit()
+
+
+def get_tmw_id(db:orm.Session, userID:str)->str:
+    userTMW = db.scalar(select(UserTMW).where(UserTMW.userID==userID))
+    if userTMW:
+        return userTMW.tmwID
+    else:
+        return None
+
+
+def remove_tmw_id(db:orm.Session, tmwID:str)->bool:
+    db.execute(delete(UserTMW).where(UserTMW.tmwID == tmwID))
+    db.commit()
+    return True
