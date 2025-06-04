@@ -1,0 +1,67 @@
+slug;ep;title;youtube_id
+estatistica-2025;1;APRENDA ESTATÍSTICA 01: População e Amostra;4CcgZXXIl7o
+estatistica-2025;2;APRENDA ESTATÍSTICA 02: Tipos de Variáveis;FPZBAp8QSRM
+estatistica-2025;3;APRENDA ESTATÍSTICA 03: Tabela de Frequência;qca5fOJ2TTg
+estatistica-2025;4;APRENDA ESTATÍSTICA 04: Tabela de Frequência na PRÁTICA;cVpO7V0fu_s
+estatistica-2025;5;APRENDA ESTATÍSTICA 05: Somatórios e Média;D0hlGcAmc94
+estatistica-2025;6;APRENDA ESTATÍSTICA 06: Mediana e Quartis;sL5tbdc2rCE
+estatistica-2025;7;APRENDA ESTATÍSTICA 07: Medidas de Resumo na Prática (PLANILHAS);hgxLeea6Hr8
+estatistica-2025;8;APRENDA ESTATÍSTICA 08: Medidas de Resumo na Prática (PYTHON);9D_c_22lRL8
+estatistica-2025;9;APRENDA ESTATÍSTICA 09: Medidas de Resumo na Prática (SQL);eTBXmQmyqMc
+estatistica-2025;10;APRENDA ESTATÍSTICA 10: Medidas de Dispersão;0kdgO0E4Rg8
+estatistica-2025;11;APRENDA ESTATÍSTICA 11: Medidas de Dispersão (PLANILHAS);BCAbwdkdfhM
+estatistica-2025;12;APRENDA ESTATÍSTICA 12: Medidas de Dispersão (PYTHON);aZ7ufhnsblY
+estatistica-2025;13;APRENDA ESTATÍSTICA 13: Gráficos;BAhz7OgJyAQ
+estatistica-2025;14;APRENDA ESTATÍSTICA 14: Gráficos (PLANILHAS);ZmYG2dPJxfw
+estatistica-2025;15;APRENDA ESTATÍSTICA 15: Gráficos (PYTHON);_PzfSLBn22k
+estatistica-2025;16;APRENDA ESTATÍSTICA 16: Probabilidade;cZyp6Tq9V-0
+estatistica-2025;17;APRENDA ESTATÍSTICA 17: Probabilidade (PLANILHAS);P48vFrhhKf0
+estatistica-2025;18;APRENDA ESTATÍSTICA 18: Distribuição Bernoulli;QoMwhXw5aD4
+estatistica-2025;19;APRENDA ESTATÍSTICA 19: Distribuição Normal;pbN-W7gV_kM
+estatistica-2025;20;APRENDA ESTATÍSTICA 20: Intervalo de Confiança;Xy2esjcmcdI
+estatistica-2025;21;APRENDA ESTATÍSTICA 20.1: Intervalo de Confiança (PYTHON);ueFCFsPHRRo
+estatistica-2025;22;APRENDA ESTATÍSTICA 21: Teste de Hipótese;qrv5rFhrM4Q
+github-2025;1;Instalação e Primeiros Conceitos;84FhNXNWoig
+github-2025;2;Primeiros Comandos Git;RZ0g18hstwQ
+github-2025;3;Lidando com Branches;pzjdEQOmsLA
+github-2025;4;Resolvendo Conflitos;IRmjluONHxU
+github-2025;5;Realizando Pull Requests;Y_fFZjzw-D4
+github-2025;6;Criando FORK;vWtrTmjis2w
+github-2025;7;Integração com Visual Studio Code;M-mBmYj7Jh4
+github-2025;8;Git Flow;l44uGe-sxgM
+github-2025;9;Gitignore e Gitkeep;spoUnf34R4A
+mlflow-2025;1;O que é MLFlow e como Instalar;W8bxk42C9UE
+mlflow-2025;2;Tracking de Modelos com MLFlow;V-Zc_T6iuJc
+mlflow-2025;3;Registrando e consumindo modelos no MLFlow;K2MYiW5m5Ug
+mlflow-2025;4;Atualização automática de modelos com MLFlow;KdnRZSH6Drk
+python-2025;1;Conceitos de Programação e Instalação;OeKzVjiiRm4
+python-2025;2;Primeiros Comandos;wp23DUYKQt4
+python-2025;3;Recebendo Dados;_40Lzu_C_Ko
+python-2025;4;IF, ELIF, ELSE;FV9Pzj3BIuU
+python-2025;5;Laços de Repetição;HcCH_xXwOcA
+python-2025;6;Listas;deWlTenrlv4
+python-2025;7;Dicionários e Tuplas;EueiZ_TXe_c
+python-2025;8;Criando Funções;JZlJ1otXBD8
+python-2025;9;Módulos;7U_NG78HuA4
+python-2025;10;Lidando com Arquivos;3h15kc10fCY
+python-2025;11;Desafio Loteria da Babilônia;lIczWRig7S8
+python-2025;12;Consumindo dados de API;iBsyZ0RQCqc
+python-2025;13;Ambientes Virtuais: como faze gestão;Xa9SSu8qLHs
+python-2025;14;Mais sobre listas!!;QE5_WPaflU0
+pandas-2025;1;Ensinando Pandas - Ep 01;9Cw7iIjFlBc
+pandas-2025;2;Ensinando Pandas - Ep 02;mAR5V-22oA4
+pandas-2025;3;Ensinando Pandas - Ep 03;7E5Cr9lMdpU
+pandas-2025;4;Ensinando Pandas - Ep 04;bMEXh1K17eg
+pandas-2025;5;Ensinando Pandas - Ep 05;GNX0Bvo40M0
+pandas-2025;6;Ensinando Pandas - Ep 06;Tg3NVMbcgHs
+pandas-2025;7;Ensinando Pandas - Ep 07;NluSWHRZPFY
+pandas-2025;8;Ensinando Pandas - Ep 08;fWy5cNTWTeM
+pandas-2025;9;Ensinando Pandas - Ep 09;nN3MmJGDNxM
+pandas-2025;10;Ensinando Pandas - Ep 10;USpeepeztTI
+pandas-2025;11;Ensinando Pandas - Ep 11;OyO7lzlG3r8
+pandas-2025;12;Ensinando Pandas - Ep 12;VKclVgd7kZw
+pandas-2025;13;Ensinando Pandas - Ep 13;w5PLsNnUCTA
+pandas-2025;14;Ensinando Pandas - Ep 14;wOWCd-b8AuE
+pandas-2025;15;Ensinando Pandas - Ep 15;u_K93Ry04U4
+pandas-2025;16;Ensinando Pandas - Ep 16;YxfYe2NeFAI
+pandas-2025;17;Ensinando Pandas - Ep 17;e3j9PTAjqAk

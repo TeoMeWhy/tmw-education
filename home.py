@@ -13,11 +13,25 @@ st.cache_resource()
 def load_skills():
     if db.query(models.Skill).count() == 0:
         df_skills = pd.read_csv("data/skills.csv", sep=";")
-        models.ingest_skills(db, df_skills)
+        if not models.ingest_skills(db, df_skills):
+            return False
 
     if db.query(models.RoleSkills).count() == 0:
         df_role_skills = pd.read_csv("data/role_skills.csv", sep=";")
-        models.ingest_role_skill(db, df_role_skills)
+        if not models.ingest_role_skill(db, df_role_skills):
+            return False
+
+    if db.query(models.Course).count() == 0:
+        df_courses = pd.read_csv("data/courses.csv", sep=";")
+        if not models.ingest_courses(db, df_courses):
+            return False
+        
+    if db.query(models.CourseEps).count() == 0:
+        df_courses_eps = pd.read_csv("data/courses_eps.csv", sep=";")
+        if not models.ingest_courses_eps(db, df_courses_eps):
+            return False
+    
+    return True
 
 
 def home():
@@ -77,9 +91,9 @@ def home():
 
 
 def main():
-    load_skills()
+    if not load_skills():
+        return
     home()
 
 if __name__ == "__main__":
     main()
-    

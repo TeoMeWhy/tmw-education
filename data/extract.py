@@ -1,6 +1,31 @@
 # %%
 import pandas as pd
 
+class CourseImporter:
+    def __init__(self, sheet_id:str, gids:dict):
+        self.base_URL = "https://docs.google.com/spreadsheets/d/{sheet_id}/export?gid={gid}&format=csv"
+        self.sheet_id = sheet_id
+        self.gids = gids
+
+    def get_data(self, gid):
+        url = self.base_URL.format(sheet_id=self.sheet_id, gid=gid)
+        df = pd.read_csv(url)
+        return df
+    
+    def get_all(self):
+        dfs = {}
+        for i in self.gids:
+            dfs[i] = self.get_data(self.gids[i])
+        return dfs
+    
+    def save_all(self, dfs):
+        for i in dfs:
+            dfs[i].to_csv(f"{i}.csv", sep=";", index=False)
+
+    def process(self):
+        dfs = self.get_all()
+        self.save_all(dfs)
+
 
 class SkillImporter:
     
@@ -53,4 +78,17 @@ gids = {
 skill_importer = SkillImporter(sheet_id=sheet_id, gids=gids)
 skill_importer.get_bd_skills()
 skill_importer.get_all_roles_skills()
+
+
 # %%
+
+# Dados dos cursos
+sheet_id_courses = "1Dc8LF5GWBd7VEbTB9wLxK5h12z_7s7VbDSKYdjgxuUE"
+gids_courses = {
+    "courses":0,
+    "courses_eps":1927140059,
+}
+
+course_importer = CourseImporter(sheet_id=sheet_id_courses, gids=gids_courses)
+course_importer.process()
+

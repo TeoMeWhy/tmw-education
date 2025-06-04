@@ -1,0 +1,47 @@
+slug;name;description;year
+estatistica-2025;Aprenda Estatística Básica;" Curso gratuido de Estatística (Parte I) para pessoas iniciantes na área de dados.
+
+Essas aulas acontecerão ao vivo entre os dias 05/05 e 16/05, na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+
+Estatística é uma das principais disciplinas para a área de dados. Desde análise simples, mas tambem, toda base para avançarmos em aprendizado de máquina, se faz necessário o conhecimento de métodos e modelos estatísticos.
+        
+Vamos fornecer o conhecimento sobre Estatística de forma introdutória. Mas não subestime nosso material. Cobriremos:
+
+        - Conceitos de população (parâmetro) e amostra (estimadores);
+        - Estatística descritiva;
+        - Representações gráficas;
+        - Probabilidade;
+        - Intervalo de confiânça;
+        - Testes de hipótese;
+
+Depois de passarmos por todos esses conceitos teóricos, vamos aplica-los via programação em Python.";2025
+github-2025;Git e GitHub;"Curso completo e gratuito de Git e Github para pessoas iniciantes na área da programação.
+
+O material e aulas foram realizadas ao vivo na [Twitch](https://twitch.tv/teomewhy) entre os dias 27/01 e 30/01, onde também está disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+
+Se você tem interesse pela área de tecnologia ou dados, Git será uma ferramenta bastante companheira. Tenho certeza que nosso material poderá te ajudar nessa tragetória.
+
+Começamos do básico, conhecendo os comandos de `bash` no terminal, bem como as primeiras operações de Git (add, commit, status, etc), até realizarmos contribuições em repositórios remotos abertos para a comunidade.
+
+Confira o material da [apresentação aqui](https://docs.google.com/presentation/d/1a2tlT1-EtM8m_8NPvrU6rGpzFXROl_5e/edit?usp=sharing&ouid=109225010112567180899&rtpof=true&sd=true)
+
+Ao final de cada dia, há um checkbox para você salvar seu progresso durante este curso.";2025
+mlflow-2025;MLFlow;"MLFlow é uma peça fundamental para se ganhar produtividade em projetos de Machine Learning e Inteligência Artificial.
+
+Com esse poderoso framework, se pode fazer uma ótima gestão de seus modelos preditivos, LLMs e demais algoritmos de aprendizado de máquina.";2025
+python-2025;Python;"Curso completo e gratuito de Python para pessoas iniciantes na área da programação.
+
+Python é uma das linguagens mais utilizadas no mundo da computação. Não apenas para criar sites, mas também para análise, engenha e ciência de dados.
+
+Bem como, tem grande aplicações científicas no meio acadêmico, além, é claro de vasta aplicação com inteligência artificial.
+
+A ideia principal deste curso é fornecer o conhecimento mínimo sobre lógica de programação, sintaxe da linguagem Python e suas principais estruturas de dados e controle de fluxo, como laços de repetição e operadores lógicos/condicionais.";2025
+pandas-2025;Pandas;" Curso completo e gratuito de Pandas para pessoas iniciantes na área de dados.
+
+Pandas é uma biblioteca do ecossistema Python, uma das mais utilizadas e melhores documentadas para se trabalhar com processamento e análise de dados.
+
+Ela é o primeiro passo para qualquer pessoa que tem interesse pela área de dados poder realizar manipulações de dados de maneira digital e automalizar processos.
+
+Durante este curso, navegaremos entre os principais tipos de objetos do Pandas (Series e Dataframes), bem como seus métodos para relizar uma análise completa a partir de dados reais.
+
+Usamos formatos de arquivos csv, parquet e excel, bem como integrações com bancos de dados SQL para ingestão, coleta e processamento de dados usando queries. ";2025

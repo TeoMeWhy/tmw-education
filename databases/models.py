@@ -1,7 +1,9 @@
 from configs import settings
 
 import pandas as pd
-from sqlalchemy import create_engine, Column, String, Integer, TIMESTAMP, ForeignKey, func
+from sqlalchemy import create_engine
+from sqlalchemy import Text, Column, String, Integer, TIMESTAMP
+from sqlalchemy import ForeignKeyConstraint, ForeignKey, PrimaryKeyConstraint, func
 from sqlalchemy import orm, schema
 from sqlalchemy import select, delete
 
@@ -29,6 +31,23 @@ class User(Base):
     platformUserID = Column(String(150), nullable=False)
     createdAt = Column(TIMESTAMP, server_default=func.now())
     lastSeenAt = Column(TIMESTAMP, onupdate=func.now(), server_default=func.now())
+
+class Course(Base):
+    __tablename__ = "courses"
+
+    slug = Column(String(150), primary_key=True)
+    name = Column(String(150), nullable=False)
+    description = Column(Text, nullable=False)
+    year = Column(Integer, nullable=False)
+
+
+class CourseEps(Base):
+    __tablename__ = "courses_eps"
+
+    slug = Column(String(150), primary_key=True)
+    ep = Column(Integer, primary_key=True)
+    title = Column(String(250), nullable=False)
+    youtube_id = Column(String(150), nullable=False)
 
 
 class CourseCompletion(Base):
@@ -117,6 +136,20 @@ def delete_user_course_ep(db:orm.Session, user_id:str, course_slug:str, ep_slug:
         db.delete(completion)
         db.commit()
 
+def ingest_courses(db:orm.Session, df):
+    data = df.to_dict(orient='records')
+    courses = [Course(**i) for i in data]
+    db.add_all(courses)
+    db.commit()
+
+
+def ingest_courses_eps(db:orm.Session, df):
+    data = df.to_dict(orient='records')
+    courses_eps = [CourseEps(**i) for i in data]
+    db.add_all(courses_eps)
+    db.commit()
+    return True
+
 
 def ingest_skills(db:orm.Session, skills:pd.DataFrame):
     data = skills.to_dict(orient='records')
@@ -128,7 +161,8 @@ def ingest_skills(db:orm.Session, skills:pd.DataFrame):
     
     db.add_all(skills_list)
     db.commit()
-
+    return True
+    
 
 def ingest_role_skill(db:orm.Session, role_skills:pd.DataFrame):
     data = role_skills.to_dict(orient='records')
@@ -144,13 +178,14 @@ def ingest_role_skill(db:orm.Session, role_skills:pd.DataFrame):
 
     db.add_all(role_skill_list)
     db.commit()
-
+    return True
 
 
 def insert_user_skill(db:orm.Session, userID:str, skill_name:str, level:str):
     user_skill = UserSkills(userID=userID, skillName=skill_name, level=level)
     db.add(user_skill)
     db.commit()
+    return True
 
 
 def update_user_skill(db:orm.Session, userID:str, skill_name:str, level:str):
