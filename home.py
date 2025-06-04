@@ -10,7 +10,7 @@ models.create_tables()
 st.set_page_config(page_title="TMW - Education", page_icon="🧙‍♂️", initial_sidebar_state="collapsed")
 
 st.cache_resource()
-def load_skills():
+def load_skills(ttl='1d'):
     if db.query(models.Skill).count() == 0:
         df_skills = pd.read_csv("data/skills.csv", sep=";")
         if not models.ingest_skills(db, df_skills):
