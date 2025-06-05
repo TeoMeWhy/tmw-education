@@ -2,17 +2,17 @@ import pandas as pd
 from sqlalchemy import orm
 import streamlit as st
 
-from ..utils import get_courses_dataframe, make_course_ep
+from ..utils import get_courses_dataframe, load_and_show_course
 
 
 def projetos_2025(db: orm.Session):
 
-    courses_progress = pd.DataFrame(
+    user_courses_progress = pd.DataFrame(
         columns=["userID", "courseSlug", "epSlug", "createdAt"]
     )
 
     if "user" in st.session_state:
-        courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
+        user_courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
 
     st.markdown(
     """
@@ -25,85 +25,9 @@ def projetos_2025(db: orm.Session):
     """)
 
     st.markdown("#### Data Engineering")
-    data_platform(db, courses_progress[courses_progress["courseSlug"] == "data-platform-2025"])
+    load_and_show_course(db=db, course_slug="data-platform-2025", user_courses_progress=user_courses_progress)
 
 
     st.markdown("#### Inteligência Artificial")
-    ia_para_canal(db, courses_progress[courses_progress["courseSlug"] == "ia-canal-2025"])
+    load_and_show_course(db=db, course_slug="ia-canal-2025", user_courses_progress=user_courses_progress)
 
-
-def data_platform(db: orm.Session, course_eps: pd.DataFrame):
-
-    with st.expander("Plataforma de dados Open-Source - 04/08"):
-
-        txt = """
-        Vamos construir uma plataforma de dados do zero!
-
-        A ideia é construir uma plataforma de dados open-source, utilizando as melhores práticas do mercado.
-        Essa plataforma será construída com o objetivo de suportar diferentes tipos de dados e cases, como:
-        
-        - Fórmula 1;
-        - Dota2;
-        - LoL;
-        - Ecossistema Téo Me Why;
-
-        Vamos usar esse repositório como base e refatora-lo, apresentando os detalhes e decisões de cada passo necessário.
-
-        [github.com/TeoMeWhy/tmw-lake](https://github.com/TeoMeWhy/tmw-lake)
-
-        [Coloque na sua agenda!!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NzhnYXZzaXZoc3B0cjJvNGlob2duc3ZlbTJfMjAyNTA4MDRUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)
-        """
-
-        st.markdown(txt)
-        data = []
-
-        slugs_flags = {
-            f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count()
-            == 1
-            for i in range(1, len(data) + 1)
-        }
-
-        for i in range(len(data)):
-            make_course_ep(
-                course_slug="data-platform-2025",
-                title=data[i]["title"],
-                youtube_id=data[i]["youtube_id"],
-                ep_slug=list(slugs_flags.items())[i][0],
-                slug_flag=list(slugs_flags.items())[i][1],
-                db=db,
-            )
-
-def ia_para_canal(db: orm.Session, course_eps: pd.DataFrame):
-
-    with st.expander("Uma IA para o canal"):
-
-        txt = """
-        Temos o interesse de tornar a experiência de quem nos acompanha ainda melhor. Para isso, estamos criando um sistema de Inteligência Artificial usando LLM e RAG com um banco vetorizado (QDrant).
-        A ideia é integrar o no nosso chat da Twitch com esse sistema, respondendo de maneira automática algumas perguntas comuns de nossos participantes.
-
-        no futuro, pretendemos estender essa ideia para a nossa plataforma de educação, realizando buscas inteligentes em nosso material didático.
-        """
-
-        st.markdown(txt)
-        data = [
-            {
-                "title": "Construindo um Sistema de IA - Bancos Vetoriais",
-                "youtube_id": "3aMq_5b6DPY",
-            },
-            {
-                "title": "Construindo um Sistema de IA - Embeddings",
-                "youtube_id": "_hvw1oYxLoY",
-            },
-        ]
-
-        slugs_flags = {f"ep-{i:02}": course_eps[course_eps["epSlug"] == f"ep-{i:02}"]["epSlug"].count() == 1 for i in range(1, len(data) + 1)}
-
-        for i in range(len(data)):
-            make_course_ep(
-                course_slug="ia-canal-2025",
-                title=data[i]["title"],
-                youtube_id=data[i]["youtube_id"],
-                ep_slug=list(slugs_flags.items())[i][0],
-                slug_flag=list(slugs_flags.items())[i][1],
-                db=db,
-            )

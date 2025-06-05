@@ -12,7 +12,7 @@ from databases import models
 from login import twitch_login
 
 
-def show_profile_infos(db:orm.Session, tmw_id:str)->bool:
+def show_points_infos(db:orm.Session, tmw_id:str)->bool:
 
     if not tmw_id:
         return False
@@ -64,9 +64,7 @@ def integrate_or_create_tmw(user):
     st.rerun()
 
 
-
 db = models.SessionLocal()
-
 
 st.set_page_config(page_title="Téo Me Why - Perfil", page_icon="🧙‍♂️")
 twitch_login.twitch_login(db)
@@ -82,16 +80,13 @@ if 'user' not in st.session_state:
     st.error("Você não está logado. Por favor, faça login para acessar seu perfil.")
     st.stop()
 
+
 user = st.session_state["user"]
 platform_name = user.platformName
 platform_user_id = user.platformUserID
 
 tmw_id = models.get_tmw_id(db, user.userID)
 
-if show_profile_infos(db, tmw_id):
-    pass
+if not show_points_infos(db, tmw_id):
+    b = st.button("Clique aqui para vincular seu perfil ao ecossistema", on_click=lambda: integrate_or_create_tmw(user))
 
-else:
-    b = st.button("Clique aqui para vincular seu perfil ao ecossistema")
-    if b:
-        integrate_or_create_tmw(user)

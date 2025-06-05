@@ -1,0 +1,150 @@
+slug;ep;title;youtube_id
+estatistica-2025;1;APRENDA ESTATÍSTICA 01: População e Amostra;4CcgZXXIl7o
+estatistica-2025;2;APRENDA ESTATÍSTICA 02: Tipos de Variáveis;FPZBAp8QSRM
+estatistica-2025;3;APRENDA ESTATÍSTICA 03: Tabela de Frequência;qca5fOJ2TTg
+estatistica-2025;4;APRENDA ESTATÍSTICA 04: Tabela de Frequência na PRÁTICA;cVpO7V0fu_s
+estatistica-2025;5;APRENDA ESTATÍSTICA 05: Somatórios e Média;D0hlGcAmc94
+estatistica-2025;6;APRENDA ESTATÍSTICA 06: Mediana e Quartis;sL5tbdc2rCE
+estatistica-2025;7;APRENDA ESTATÍSTICA 07: Medidas de Resumo na Prática (PLANILHAS);hgxLeea6Hr8
+estatistica-2025;8;APRENDA ESTATÍSTICA 08: Medidas de Resumo na Prática (PYTHON);9D_c_22lRL8
+estatistica-2025;9;APRENDA ESTATÍSTICA 09: Medidas de Resumo na Prática (SQL);eTBXmQmyqMc
+estatistica-2025;10;APRENDA ESTATÍSTICA 10: Medidas de Dispersão;0kdgO0E4Rg8
+estatistica-2025;11;APRENDA ESTATÍSTICA 11: Medidas de Dispersão (PLANILHAS);BCAbwdkdfhM
+estatistica-2025;12;APRENDA ESTATÍSTICA 12: Medidas de Dispersão (PYTHON);aZ7ufhnsblY
+estatistica-2025;13;APRENDA ESTATÍSTICA 13: Gráficos;BAhz7OgJyAQ
+estatistica-2025;14;APRENDA ESTATÍSTICA 14: Gráficos (PLANILHAS);ZmYG2dPJxfw
+estatistica-2025;15;APRENDA ESTATÍSTICA 15: Gráficos (PYTHON);_PzfSLBn22k
+estatistica-2025;16;APRENDA ESTATÍSTICA 16: Probabilidade;cZyp6Tq9V-0
+estatistica-2025;17;APRENDA ESTATÍSTICA 17: Probabilidade (PLANILHAS);P48vFrhhKf0
+estatistica-2025;18;APRENDA ESTATÍSTICA 18: Distribuição Bernoulli;QoMwhXw5aD4
+estatistica-2025;19;APRENDA ESTATÍSTICA 19: Distribuição Normal;pbN-W7gV_kM
+estatistica-2025;20;APRENDA ESTATÍSTICA 20: Intervalo de Confiança;Xy2esjcmcdI
+estatistica-2025;21;APRENDA ESTATÍSTICA 20.1: Intervalo de Confiança (PYTHON);ueFCFsPHRRo
+estatistica-2025;22;APRENDA ESTATÍSTICA 21: Teste de Hipótese;qrv5rFhrM4Q
+github-2025;1;Instalação e Primeiros Conceitos;84FhNXNWoig
+github-2025;2;Primeiros Comandos Git;RZ0g18hstwQ
+github-2025;3;Lidando com Branches;pzjdEQOmsLA
+github-2025;4;Resolvendo Conflitos;IRmjluONHxU
+github-2025;5;Realizando Pull Requests;Y_fFZjzw-D4
+github-2025;6;Criando FORK;vWtrTmjis2w
+github-2025;7;Integração com Visual Studio Code;M-mBmYj7Jh4
+github-2025;8;Git Flow;l44uGe-sxgM
+github-2025;9;Gitignore e Gitkeep;spoUnf34R4A
+mlflow-2025;1;O que é MLFlow e como Instalar;W8bxk42C9UE
+mlflow-2025;2;Tracking de Modelos com MLFlow;V-Zc_T6iuJc
+mlflow-2025;3;Registrando e consumindo modelos no MLFlow;K2MYiW5m5Ug
+mlflow-2025;4;Atualização automática de modelos com MLFlow;KdnRZSH6Drk
+python-2025;1;Conceitos de Programação e Instalação;OeKzVjiiRm4
+python-2025;2;Primeiros Comandos;wp23DUYKQt4
+python-2025;3;Recebendo Dados;_40Lzu_C_Ko
+python-2025;4;IF, ELIF, ELSE;FV9Pzj3BIuU
+python-2025;5;Laços de Repetição;HcCH_xXwOcA
+python-2025;6;Listas;deWlTenrlv4
+python-2025;7;Dicionários e Tuplas;EueiZ_TXe_c
+python-2025;8;Criando Funções;JZlJ1otXBD8
+python-2025;9;Módulos;7U_NG78HuA4
+python-2025;10;Lidando com Arquivos;3h15kc10fCY
+python-2025;11;Desafio Loteria da Babilônia;lIczWRig7S8
+python-2025;12;Consumindo dados de API;iBsyZ0RQCqc
+python-2025;13;Ambientes Virtuais: como faze gestão;Xa9SSu8qLHs
+python-2025;14;Mais sobre listas!!;QE5_WPaflU0
+pandas-2025;1;Ensinando Pandas - Ep 01;9Cw7iIjFlBc
+pandas-2025;2;Ensinando Pandas - Ep 02;mAR5V-22oA4
+pandas-2025;3;Ensinando Pandas - Ep 03;7E5Cr9lMdpU
+pandas-2025;4;Ensinando Pandas - Ep 04;bMEXh1K17eg
+pandas-2025;5;Ensinando Pandas - Ep 05;GNX0Bvo40M0
+pandas-2025;6;Ensinando Pandas - Ep 06;Tg3NVMbcgHs
+pandas-2025;7;Ensinando Pandas - Ep 07;NluSWHRZPFY
+pandas-2025;8;Ensinando Pandas - Ep 08;fWy5cNTWTeM
+pandas-2025;9;Ensinando Pandas - Ep 09;nN3MmJGDNxM
+pandas-2025;10;Ensinando Pandas - Ep 10;USpeepeztTI
+pandas-2025;11;Ensinando Pandas - Ep 11;OyO7lzlG3r8
+pandas-2025;12;Ensinando Pandas - Ep 12;VKclVgd7kZw
+pandas-2025;13;Ensinando Pandas - Ep 13;w5PLsNnUCTA
+pandas-2025;14;Ensinando Pandas - Ep 14;wOWCd-b8AuE
+pandas-2025;15;Ensinando Pandas - Ep 15;u_K93Ry04U4
+pandas-2025;16;Ensinando Pandas - Ep 16;YxfYe2NeFAI
+pandas-2025;17;Ensinando Pandas - Ep 17;e3j9PTAjqAk
+ia-canal-2025;1;Construindo um Sistema de IA - Bancos Vetoriais;3aMq_5b6DPY
+ia-canal-2025;2;Construindo um Sistema de IA - Embeddings;_hvw1oYxLoY
+estatistica-2024;1;Estatística Básica - Introdução e tabelas de frequência;onOgEotiuMw
+estatistica-2024;2;Tabela de frequencia no SQL;HZH3OWLq7Ew
+estatistica-2024;3;Estatística Básica - Medidas de Posição e Dispersão;ZOvIGIBmHyo
+estatistica-2024;4;Medidas de Resumo no SQL;9XUJ5PNj9tw
+estatistica-2024;5;Estatística Básica - Gráficos e Probabilidade;8rgAG58SJS8
+estatistica-2024;6;Estatística Básica - Probabilidade;9Lbvj6JzgII
+estatistica-2024;7;Estatística Básica - Intervalo de Confiança;-IMEseOJs2c
+github-2024;1;Introdução ao Git e GitHub;napLViBKAtA
+github-2024;2;Introdução ao Git e GitHub - Dia 02;n58LxenCnYs
+github-2024;3;Introdução ao Git e GitHub - Gitignore Gitkeep;AljGpIviLyE
+ml-2024;1;Machine Learning - Como ensinar a máquina;oj0ACpEHpS0
+ml-2024;2;Machine Learning - Classificação e Regressão;N5ZNjET5GQc
+ml-2024;3;Machine Learning - Classificação;13Ba9mEndgU
+ml-2024;4;Machine Learning - Métricas de Performance;q7O-H96rp1o
+ml-2024;5;Machine Learning - Projeto Sistema de Pontos;glXCHPy2-cE
+ml-2024;6;Machine Learning - Métrica de KS;V1QWx3KZ9AA
+ml-2024;7;Machine Learning - Recomendação de Produtos;IseLPDxkh88
+python-2024;1;Introdução à Programação com Python - Dia 01;asUCVFBUyfY
+python-2024;2;Introdução à Programação com Python - Dia 02;hOuiT8Oby6c
+python-2024;3;Introdução à Programação com Python - Dia 03;gA4inE1n1SI
+python-2024;4;Introdução à Programação com Python - Dia 04;BUmXQUA12KU
+python-2024;5;Introdução à Programação com Python - Dia 05;SXTXuCPPuxo
+pandas-2024;1;Desbravando Pandas - Dia 01;fLvMKsgHP0o
+pandas-2024;2;Desbravando Pandas - Dia 02;CgkM0FQ-wuk
+pandas-2024;3;Desbravando Pandas - Dia 03;8pEkvlQtwBk
+pandas-2024;4;Desbravando Pandas - Dia 04;ebuEZrE9OEo
+pandas-2024;5;Desbravando Pandas - Dia 05;LbO5xQouOEw
+pandas-2024;6;Desbravando Pandas - Stack e Unstack;x1MWHD9dfqU
+pandas-2024;7;Desbravando Pandas - Explode;VDL-1yIvNkE
+coleta-dados-2024;1;Coleta de dados - Resident Evil Database;K-bIZt_hSBo
+coleta-dados-2024;2;Coleta de dados - TabNews e Jovem Nerd;JqBLUi9vqgM
+coleta-dados-2024;3;Coleta de dados - Datalake Databricks;cnbw1ySYOOs
+coleta-dados-2024;4;Coleta de dados - Pokemon e Databricks;QyiItDCqClU
+matchmaking-trampar-de-casa-2024;1;Matchmaking de Vagas - Parte I;STI-WMd7APY
+matchmaking-trampar-de-casa-2024;2;Matchmaking de Vagas - Parte II;uiAIVGg3k8U
+matchmaking-trampar-de-casa-2024;3;API para Matchmaking de Vagas;tjlUJG1sVks
+ds-pontos-2024;1;DS e Pontos - Qual o Problema de Negócio?;3HijJaRhPP0
+ds-pontos-2024;2;DS e Pontos - Primeira Feature Store;KC-P8DwffA0
+ds-pontos-2024;3;DS e Pontos - Últimas Feature Store;qoOzKaCr1Rk
+ds-pontos-2024;4;DS e Pontos - Criação da ABT;VzcQvGyeAO0
+ds-pontos-2024;5;DS e Pontos - Treinamento e Deploy;1TcFBmjwYlk
+ds-pontos-2024;6;DS e Pontos - Integrando com MLFlow;v5b66aO3PHw
+ds-pontos-2024;7;DS e Pontos - O que e SEMMA?;kyj8oY3d7oM
+ds-pontos-2024;8;DS e Pontos - Segmentação RFV;8hjRYjgrivA
+ds-databricks-2024;1;Data Science no Databricks: Planejamento;Y-Icfgi7Doc
+ds-databricks-2024;2;Data Science no Databricks: Primeiras Features;gjRJAdGQrmY
+ds-databricks-2024;3;Data Science no Databricks: Mais Features;Sezdg2xuzto
+ds-databricks-2024;4;Data Science no Databricks: Features Lookups;vV9kQpKK_DI
+ds-databricks-2024;5;Data Science no Databricks: SEMMA;rIzJ5MCKsw4
+ds-databricks-2024;6;Data Science no Databricks: MLFlow;vSzfbG51el4
+ds-databricks-2024;7;Data Science no Databricks: Model Tuning;56DhxlqKf1o
+ds-databricks-2024;8;Data Science no Databricks: Predições;AhHfbY14BD4
+ds-databricks-2024;9;Data Science no Databricks: Deploy com API em Go;YbZcLUQdDcg
+tse-analytics-2024;1;TSE Analytics - Dia 01 parte 01;gc6Xy_1cFkU
+tse-analytics-2024;2;TSE Analytics - Dia 01 parte 02;we0Z2Fiu1TY
+tse-analytics-2024;3;TSE Analytics - Dia 02;RqkJE4Z4q3o
+tse-analytics-2024;4;TSE Analytics - Dia 03;osAqr2JGTNU
+tse-analytics-2024;5;TSE Analytics - Dia 04;N5y_jAzjl3g
+tse-analytics-2024;6;TSE Analytics - Dia 05;QY2mXevGp5U
+tse-analytics-2024;7;TSE Analytics - Dia 06;dBetGOdXgDw
+tse-analytics-2024;8;TSE Analytics - Dia 07;aFtytaIc46w
+lago-mago-2024;1;Setup DATABRICKS + UNITY CATALOG;a1qACiucvzM
+lago-mago-2024;2;Lendo aqruivos FULL LOAD + CDC;YhgUm9zmhZ8
+lago-mago-2024;3;CDC com Streaming;1C8rY5g5Cqo
+lago-mago-2024;4;Criando uma classe de ingestão;MpDcDHE93XA
+lago-mago-2024;5;GitHub Actions para atualizar Worflows;961sbn71Mqg
+lago-mago-2024;6;Full-Load em Silver;NBfEb2TkRe8
+lago-mago-2024;7;Change Data Feed;YY7jJhUlu0k
+lago-mago-2024;8;Custos e Tipos de Clusters;C6E2U6U4BCw
+lago-mago-2024;9;Camada Gold;REGzXzp7PSU
+lago-mago-2024;10;Dash Executivo;uPwtZ9WENfY
+trampar-lakehouse-2024;1;Trampar de lakehouse - Parte 01;3iqHKRjfyA4
+trampar-lakehouse-2024;2;Trampar de lakehouse - Parte 02;2XQy-UIOyUw
+trampar-lakehouse-2024;3;Trampar de lakehouse - Parte 03;p2DpMP8oiCw
+sql-2020;1;SELECT FROM WHERE;PXftBr56Tow
+sql-2020;2;GROUP BY;BPwGCEsPxMI
+sql-2020;3;CASE WHEN COALESCE;7Ikyb5-5gOQ
+sql-2020;4;Como fazer JOINS;jJxC0i6OtQQ
+sql-2020;5;Como funciona SUBQUERIES;1ulTb3u8aPk
+sql-2020;6;O que são WINDOW FUNCTIONS;v3U5ViG-rkc
+sql-2020;7;Como fazer CREATE TABLE;K2V0ZJA3yK0

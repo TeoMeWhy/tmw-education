@@ -4,17 +4,7 @@ from sqlalchemy import orm
 
 from databases import models
 
-from conteudo.ano_2020 import programacao as programacao_2020
-
-from conteudo.ano_2024 import projetos as projetos_2024
-from conteudo.ano_2024 import machine_learning as ml_2024
-
-from conteudo.ano_2025 import git_github as git_github_2025
-from conteudo.ano_2025 import programacao as programacao_2025
-from conteudo.ano_2025 import estatistica as estatistica_2025
-
-from conteudo.utils import get_courses_dataframe
-
+from conteudo.utils import get_courses_dataframe, load_and_show_course
 
 from databases.models import SessionLocal
 from login import twitch_login
@@ -46,34 +36,35 @@ def show_priorities(priorities:list):
 
 def show_courses_by_priority(db:orm.Session, priorities:list):
 
-    courses_df = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
+    user_courses_progress = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
     if 'user' in st.session_state:
-        courses_df = get_courses_dataframe(db, st.session_state["user"].userID)
+        user_courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
 
     courses = []
     for i in priorities:
-        if i[0] in ["Apache Spark", "Modelagem de dados", "ETL"]:
-            courses.append((projetos_2024.lago_do_mago, "lago-mago-2024"))
-            courses.append((projetos_2024.trampar_lakehouse, "trampar-lakehouse-2024"))
-        
         # "Apresentação / Storytelling"
 
         if i[0] in ["Estatística descritiva", "Teste de hipótese e Teste A/B"]:
-            courses.append((estatistica_2025.curso_estatistica, "estatistica-2025"))
+            courses.append("estatistica-2025")
         
         if i[0] in ["Git / GitHub / GitLab / BitBucket"]:
-            courses.append((git_github_2025.git_github, "github-2025"))
+            courses.append("github-2025")
+        
+        if i[0] in ["Python / R / Julia"]:
+            courses.append("python-2025")
+
+        if i[0] in ["SQL"]:
+            courses.append("sql-2020")
 
         if "Machine Learning" in i[0]:
-            courses.append((ml_2024.curso_machine_learning, "ml-2024"))
-            courses.append((projetos_2024.data_science_pontos, "ds-pontos-2024"))
-            courses.append((projetos_2024.data_science_databricks, "ds-databricks-2024"))
+            courses.append("ml-2024")
+            courses.append("ds-pontos-2024")
+            courses.append("ds-databricks-2024")
 
-        if i[0] in ["Python / R / Julia"]:
-            courses.append((programacao_2025.curso_python, "python-2025"))
-
-        if i[0] in "SQL":
-            courses.append((programacao_2020.curso_sql, "sql-2025"))
+        if i[0] in ["Apache Spark", "Modelagem de dados", "ETL"]:
+            courses.append("lago-mago-2024")
+            courses.append("trampar-lakehouse-2024")
+        
 
     if len(courses) > 0:
         st.markdown("""
@@ -82,11 +73,9 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
         Com base nas prioridades de estudo, os cursos abaixo são recomendados para você.
         """)
 
-        slugs = []
-        for course, slug in courses:
-            if slug not in slugs:
-                course(db, courses_df[courses_df['courseSlug']==slug])
-                slugs.append(slug)
+        for c in courses:
+            load_and_show_course(db=db, course_slug=c, user_courses_progress=user_courses_progress)
+
 
 
 def show_pdi(db:orm.Session):

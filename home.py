@@ -9,15 +9,25 @@ models.create_tables()
 
 st.set_page_config(page_title="TMW - Education", page_icon="🧙‍♂️", initial_sidebar_state="collapsed")
 
-st.cache_resource()
+st.cache_resource(ttl='1d')
 def load_skills():
     if db.query(models.Skill).count() == 0:
         df_skills = pd.read_csv("data/skills.csv", sep=";")
-        models.ingest_skills(db, df_skills)
+        if not models.ingest_skills(db, df_skills):
+            return False
 
     if db.query(models.RoleSkills).count() == 0:
         df_role_skills = pd.read_csv("data/role_skills.csv", sep=";")
-        models.ingest_role_skill(db, df_role_skills)
+        if not models.ingest_role_skill(db, df_role_skills):
+            return False
+
+    df_courses = pd.read_csv("data/courses.csv", sep=";")
+    models.ingest_courses(db, df_courses, True)
+        
+    df_courses_eps = pd.read_csv("data/courses_eps.csv", sep=";")
+    models.ingest_courses_eps(db, df_courses_eps, True)
+
+    return True
 
 
 def home():
@@ -82,4 +92,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

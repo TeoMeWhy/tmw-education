@@ -2,7 +2,34 @@ import pandas as pd
 from sqlalchemy import orm
 import streamlit as st
 
+from sqlalchemy import orm, select
+
+from databases.models import Course, CourseEps
 from databases import models
+
+
+def load_and_show_course(db:orm.Session, course_slug:str, user_courses_progress:pd.DataFrame):
+
+    course = db.scalar(select(Course).where(Course.slug==course_slug))
+    course_eps = db.scalars(select(CourseEps).where(CourseEps.slug==course_slug))
+    user_course_data = user_courses_progress[user_courses_progress['courseSlug']==course_slug]
+
+    with st.expander(course.name):
+        st.markdown(course.description)
+
+        for c in course_eps:
+            ep_slug = f'ep-{c.ep:02}'
+            ep_slug_flag = ep_slug in user_course_data['epSlug'].tolist()
+
+            make_course_ep(
+                course_slug=c.slug ,
+                title=c.title,
+                youtube_id=c.youtube_id,
+                ep_slug=ep_slug,
+                slug_flag=ep_slug_flag,
+                db=db,
+            )
+
 
 def get_courses_dataframe(db:orm.Session, user_id:str)->pd.DataFrame:
     courses_progress = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])

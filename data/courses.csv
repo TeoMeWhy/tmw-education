@@ -1,0 +1,158 @@
+slug;name;description;year
+estatistica-2025;Aprenda Estatística Básica;"Curso gratuido de Estatística (Parte I) para pessoas iniciantes na área de dados.
+
+Essas aulas acontecerão ao vivo entre os dias 05/05 e 16/05, na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+
+Estatística é uma das principais disciplinas para a área de dados. Desde análise simples, mas tambem, toda base para avançarmos em aprendizado de máquina, se faz necessário o conhecimento de métodos e modelos estatísticos.
+        
+Vamos fornecer o conhecimento sobre Estatística de forma introdutória. Mas não subestime nosso material. Cobriremos:
+
+- Conceitos de população (parâmetro) e amostra (estimadores);
+- Estatística descritiva;
+- Representações gráficas;
+- Probabilidade;
+- Intervalo de confiânça;
+- Testes de hipótese;
+
+Depois de passarmos por todos esses conceitos teóricos, vamos aplica-los via programação em Python.";2025
+github-2025;Git e GitHub;"Curso completo e gratuito de Git e Github para pessoas iniciantes na área da programação.
+
+O material e aulas foram realizadas ao vivo na [Twitch](https://twitch.tv/teomewhy) entre os dias 27/01 e 30/01, onde também está disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+
+Se você tem interesse pela área de tecnologia ou dados, Git será uma ferramenta bastante companheira. Tenho certeza que nosso material poderá te ajudar nessa tragetória.
+
+Começamos do básico, conhecendo os comandos de `bash` no terminal, bem como as primeiras operações de Git (add, commit, status, etc), até realizarmos contribuições em repositórios remotos abertos para a comunidade.
+
+Confira o material da [apresentação aqui](https://docs.google.com/presentation/d/1a2tlT1-EtM8m_8NPvrU6rGpzFXROl_5e/edit?usp=sharing&ouid=109225010112567180899&rtpof=true&sd=true)
+
+Ao final de cada dia, há um checkbox para você salvar seu progresso durante este curso.";2025
+mlflow-2025;MLFlow;"MLFlow é uma peça fundamental para se ganhar produtividade em projetos de Machine Learning e Inteligência Artificial.
+
+Com esse poderoso framework, se pode fazer uma ótima gestão de seus modelos preditivos, LLMs e demais algoritmos de aprendizado de máquina.";2025
+python-2025;Python;"Curso completo e gratuito de Python para pessoas iniciantes na área da programação.
+
+Python é uma das linguagens mais utilizadas no mundo da computação. Não apenas para criar sites, mas também para análise, engenha e ciência de dados.
+
+Bem como, tem grande aplicações científicas no meio acadêmico, além, é claro de vasta aplicação com inteligência artificial.
+
+A ideia principal deste curso é fornecer o conhecimento mínimo sobre lógica de programação, sintaxe da linguagem Python e suas principais estruturas de dados e controle de fluxo, como laços de repetição e operadores lógicos/condicionais.";2025
+pandas-2025;Pandas;"Curso completo e gratuito de Pandas para pessoas iniciantes na área de dados.
+
+Pandas é uma biblioteca do ecossistema Python, uma das mais utilizadas e melhores documentadas para se trabalhar com processamento e análise de dados.
+
+Ela é o primeiro passo para qualquer pessoa que tem interesse pela área de dados poder realizar manipulações de dados de maneira digital e automalizar processos.
+
+Durante este curso, navegaremos entre os principais tipos de objetos do Pandas (Series e Dataframes), bem como seus métodos para relizar uma análise completa a partir de dados reais.
+
+Usamos formatos de arquivos csv, parquet e excel, bem como integrações com bancos de dados SQL para ingestão, coleta e processamento de dados usando queries. ";2025
+machine-learning-2025;Machine Learning - 09/06 a 20/06;"Curso completo e gratuito de Machine Learning para pessoas iniciantes na área da Ciência de Dados.
+
+As aulas acontecerão nos dias 09/06 e 20/06 às 9AM, ao vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+
+O uso de técnicas voltadas à Aprendizado de Máquina tem sido cada dia mais comuns em diferentes mercados e indústricas. Dominar os principais conceitos te ajudará a alcançar não só objetivos da sua empresa, mas também, de crescimento profissional.
+
+Neste curso, você aprenderá os principais conceitos de Machine Learning, mais do que apenas apertar os botões corretos. Falaremos sobre realmente como a máquina aprender e como podemos avaliar esse aprendizados a partir de diferentes métricas.
+
+Você entenderá de uma vez por todas como cada técnica funciona, e as métricas de performance. Quando falarem sobre curva ROC, você terá condições de explicar como funciona e porque normalmente é uma métrica melhor que a acurácia. 
+
+[Adicione na sua agenda](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M2Fqc2hkajVxazhsOHFkNDFxdG4yOTg1aGZfMjAyNTA2MDlUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL) para participar conosco ao vivo.";2025
+sql-2025;SQL - 07/07 a 18/07;"Curso completo e gratuito de SQL para pessoas iniciantes na área de Dados.
+
+As aulas acontecerão nos dias 07/07 e 18/07 às 9AM, ao vivo na [Twitch](https://twitch.tv/teomewhy), onde, posteriormente será disponibilizado no [YouTube](https://youtube.com/@teomewhy).
+
+SQL é uma das principais linguagens de consulta para bancos de dados relacionais. Se você deseja trabalhar com dados, é fundamental que você saiba como realizar consultas, inserções, atualizações e exclusões em um banco de dados.
+
+Além de ser uma das principais ferramentas no dia a dia de qualquer profissional da área de dados. Seja engenharia, ciência ou análise de dados, todos precisam saber SQL.
+
+Vamos pegar na sua mão e ensinar do básico até consultas mais complexas!
+
+[Adicione na sua agenda](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M2Fqc2hkajVxazhsOHFkNDFxdG4yOTg1aGZfMjAyNTA2MDlUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL) para participar conosco ao vivo.";2025
+data-platform-2025;Plataforma de dados Open-Source - 04/08;"Vamos construir uma plataforma de dados do zero!
+
+A ideia é construir uma plataforma de dados open-source, utilizando as melhores práticas do mercado.
+
+Essa plataforma será construída com o objetivo de suportar diferentes tipos de dados e cases, como:
+        
+- Fórmula 1;
+- Dota2;
+- LoL;
+- Ecossistema Téo Me Why;
+
+Vamos usar esse repositório como base e refatora-lo, apresentando os detalhes e decisões de cada passo necessário.
+
+[github.com/TeoMeWhy/tmw-lake](https://github.com/TeoMeWhy/tmw-lake)
+
+[Coloque na sua agenda!!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NzhnYXZzaXZoc3B0cjJvNGlob2duc3ZlbTJfMjAyNTA4MDRUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)";2025
+ia-canal-2025;Uma IA para o canal;"Temos o interesse de tornar a experiência de quem nos acompanha ainda melhor. Para isso, estamos criando um sistema de Inteligência Artificial usando LLM e RAG com um banco vetorizado (QDrant).
+
+A ideia é integrar o no nosso chat da Twitch com esse sistema, respondendo de maneira automática algumas perguntas comuns de nossos participantes.
+
+No futuro, pretendemos estender essa ideia para a nossa plataforma de educação, realizando buscas inteligentes em nosso material didático.";2025
+estatistica-2024;Estatística Básica;"Avançandos nos pilares de Data Science, a disciplina de Estatística não poderia ficar de fora.
+
+Realizamos cinco lives apresentando os principais conceitos, desde tabelas de frequência, medidas de posição e dispersão, conceitos de amostragem vs população, probabilidade, inferência de parâmetros e testes de hipóteses.";2024
+github-2024;Git e GitHub;"Dando início às nossas atividades na trilha de dados, começamos com Git & GitHub para versionamento e organização de nossos códigos Abordamos tanto no ambiente local, como repositórios remotos.
+
+Foram dois dias intensos aprendendo sobre essa ferramenta muito utilizada no dia a dia na área de dados e tecnologia.";2024
+ml-2024;Machine Learning para Poneis;"Com a base estatística e computacional, podemos apresentar os principais modelos de Machine Learning, bem como as métricas de ajuste.
+
+De maneira bem didática e divertida, aprendemos a fazer alguns modelos ""na mão"" para depois aplicar utilizando o `scikit-learn` com várias dicas de utilização, como a estrutura de pipelines e transformadores de variáveis para pre-processamento dos dados.";2024
+python-2024;Python;"Realizamos um curso de Python Básico, aprendendo os primeiros passos na área de Lógica e Programação.
+
+Conhecemos a sintaxe da linguagem mais utilizada na área de dados. Ensinamos desde a instalação, principais estruturas de dados, laços de repetição, função, importação e instalação de pacotes.";2024
+pandas-2024;Desbravando Pandas;"Para manipulação de dados, por hora, não ha biblioteca mais popular do que Pandas! Por isso ministramos um treinamento com 15hr dessa biblioteca.
+
+Começamos com o básico, navegando em Series e Dataframes, para depois realizar manipulações mais complexas para nossas análises.";2024
+coleta-dados-2024;Coleta de Dados;"Agora, como sabemos o mínimo de como manipular dados no computador utilizando uma linguagem de programação, vamos coletar dados!
+
+Essa playlist trouxe algumas alternativas de como podemos obter dados na internet: crawlers, APIs, FTP. Como exemplo, consumimos dados do [Resident Evil Database](https://www.residentevildatabase.com/), [Pokemon API](https://pokeapi.co/), [TabNews](https://www.tabnews.com.br/), etc.
+
+Além disso, demos uma breve introdução de como essas ingestão podem ser realizadas em um Datalake com Databricks.";2024
+matchmaking-trampar-de-casa-2024;Matchmaking de Vagas;"Graças a visibilidade com o apoio da comunidade, fomos convidados a realizar nosso primeiro freelance!
+
+A iniciativa [Trampar de Casa](https://www.trampardecasa.com.br/) necessitava de uma upgrade para seu sistema de recomendações das vagas.
+
+Isto é, com base nas skills requisitadas de cada vaga, como podemos recomendar a melhor lista de vagas para o usuário que está procurando vagas para se candidatar?
+
+Foi com isso em mente que criamos um algoritmos para rankear as melhores vagas para cada usuário da plataforma. Ficou bem legal e tivemos um ótimo feedback!";2024
+ds-pontos-2024;Data Science e Pontos;"Para colocar em prática tudo que aprendemos até aqui, criamos um projeto de Data Science completo, de início ao fim em ambiente local.
+
+Projeto foi completo mesmo! Desde a definição do problema de negócio e features, construção das feature store de diferentes contextos, treinamento de diferentes algoritmos, e deploy realizado utilizando o model registry do MLFlow em nosso BOT com uma API em GoLang.
+
+E ah, tudo isso com dados reais do nosso sistema de pontos da live!";2024
+ds-databricks-2024;Data Science no Databricks;"Construção completa de um projeto de Data Science do início ao fim em ambiente cloud!
+
+Vamos usar as principais ferramentas de Data Science no Databricks, como Feature Store, 
+
+Workflows e MLFlow para ciclo de vida dos modelos.
+
+Tudo isso utilizando o Unity Catalog para tracking dos dados e modelos.
+
+Esse projeto e uma continuação do Lago do Mago, porém, voltado à Cientista de Dados.
+
+Uma boa forma de entender isso, é como se fizéssemos o projeto Data Science & Pontos não mais localmente, mas sim, no Databricks.";2024
+tse-analytics-2024;TSE Analytics;"Análise dos partidos políticos e suas candidaturas para eleições municipais brasileiras em 2024.
+
+Todas dados são originários do [TSE](https://dados.gov.br/dados/conjuntos-dados/candidatos-2024).
+
+Além da criação do app, migramos toda parte de ingestão e tratamento dos dados para nosso ambiente cloud no Databricks.";2024
+lago-mago-2024;Lago do Mago;"Construção de um Datalake e Lake house completamente do zero, desde a criação do ambiente na AWS e Databricks até a criação de dashboard.
+
+Utilizamos dados reais de nosso sistema de pontos, realizando ingestão na camada RAW.
+
+Para consumo e consolidação dos dados em BRONZE, utilizamos leitura dos dados FULL-LOAD e CDC (Change Data Capture) em streaming realizando UPSERT em DELTA. Para camada SILVER, utilizamos novamente Streaming, mas desta vez com CDF (Change Data Feed).
+
+Em GOLD criamos alguns CUBOS para relatórios em dashboards.";2024
+trampar-lakehouse-2024;Trampar de Lakehouse;"Dado o bom trabalho que realizamos em conjunto com Trampar de Casa no sistema de recomendação de vagas, surgiu uma nova oportunidade pra construção de um datalake e BI para eles acompanharem as principais métricas da operação que estão tocando.
+
+O desenvolvimento consistiu em: criação de um Lakehouse com camadas bronze, silver e gold para criação de relatórios e dashboards.
+
+Usamos:
+
+- AWS S3 para armazenamento dos dados em Raw
+- Databricks como plataforma de dados
+- Apache Spark para leitura, processamento e gravação dos dados
+- SQL para criação de queries e regras de negócios e qualidade de dados
+- Python para orquestração das etapas de ETL
+- Databricks Workflows para orquestração de todas ingestões e transformações de dados";2024
+sql-2020;SQL;Curso completo e gratuito de SQL para pessoas iniciantes na área de Tecnologia e Dados.;2020
