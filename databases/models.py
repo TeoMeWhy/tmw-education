@@ -32,6 +32,7 @@ class User(Base):
     createdAt = Column(TIMESTAMP, server_default=func.now())
     lastSeenAt = Column(TIMESTAMP, onupdate=func.now(), server_default=func.now())
 
+
 class Course(Base):
     __tablename__ = "courses"
 
@@ -127,7 +128,7 @@ def insert_user_course_ep(db:orm.Session, user_id:str, course_slug:str, ep_slug:
 
 def delete_user_course_ep(db:orm.Session, user_id:str, course_slug:str, ep_slug:str):
     completion = (db.query(CourseCompletion)
-                   .filter_by(
+                    .filter_by(
                         userID=user_id,
                         courseSlug=course_slug,
                         epSlug=ep_slug)
@@ -136,16 +137,24 @@ def delete_user_course_ep(db:orm.Session, user_id:str, course_slug:str, ep_slug:
         db.delete(completion)
         db.commit()
 
-def ingest_courses(db:orm.Session, df):
+def ingest_courses(db:orm.Session, df:pd.DataFrame, delete=False):
     data = df.to_dict(orient='records')
     courses = [Course(**i) for i in data]
+    
+    if delete:
+        db.query(Course).delete()
+    
     db.add_all(courses)
     db.commit()
 
 
-def ingest_courses_eps(db:orm.Session, df):
+def ingest_courses_eps(db:orm.Session, df:pd.DataFrame, delete=False):
     data = df.to_dict(orient='records')
     courses_eps = [CourseEps(**i) for i in data]
+    
+    if delete:
+        db.query(CourseEps).delete()
+    
     db.add_all(courses_eps)
     db.commit()
     return True

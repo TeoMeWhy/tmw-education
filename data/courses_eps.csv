@@ -65,3 +65,86 @@ pandas-2025;14;Ensinando Pandas - Ep 14;wOWCd-b8AuE
 pandas-2025;15;Ensinando Pandas - Ep 15;u_K93Ry04U4
 pandas-2025;16;Ensinando Pandas - Ep 16;YxfYe2NeFAI
 pandas-2025;17;Ensinando Pandas - Ep 17;e3j9PTAjqAk
+ia-canal-2025;1;Construindo um Sistema de IA - Bancos Vetoriais;3aMq_5b6DPY
+ia-canal-2025;2;Construindo um Sistema de IA - Embeddings;_hvw1oYxLoY
+estatistica-2024;1;Estatística Básica - Introdução e tabelas de frequência;onOgEotiuMw
+estatistica-2024;2;Tabela de frequencia no SQL;HZH3OWLq7Ew
+estatistica-2024;3;Estatística Básica - Medidas de Posição e Dispersão;ZOvIGIBmHyo
+estatistica-2024;4;Medidas de Resumo no SQL;9XUJ5PNj9tw
+estatistica-2024;5;Estatística Básica - Gráficos e Probabilidade;8rgAG58SJS8
+estatistica-2024;6;Estatística Básica - Probabilidade;9Lbvj6JzgII
+estatistica-2024;7;Estatística Básica - Intervalo de Confiança;-IMEseOJs2c
+github-2024;1;Introdução ao Git e GitHub;napLViBKAtA
+github-2024;2;Introdução ao Git e GitHub - Dia 02;n58LxenCnYs
+github-2024;3;Introdução ao Git e GitHub - Gitignore Gitkeep;AljGpIviLyE
+ml-2024;1;Machine Learning - Como ensinar a máquina;oj0ACpEHpS0
+ml-2024;2;Machine Learning - Classificação e Regressão;N5ZNjET5GQc
+ml-2024;3;Machine Learning - Classificação;13Ba9mEndgU
+ml-2024;4;Machine Learning - Métricas de Performance;q7O-H96rp1o
+ml-2024;5;Machine Learning - Projeto Sistema de Pontos;glXCHPy2-cE
+ml-2024;6;Machine Learning - Métrica de KS;V1QWx3KZ9AA
+ml-2024;7;Machine Learning - Recomendação de Produtos;IseLPDxkh88
+python-2024;1;Introdução à Programação com Python - Dia 01;asUCVFBUyfY
+python-2024;2;Introdução à Programação com Python - Dia 02;hOuiT8Oby6c
+python-2024;3;Introdução à Programação com Python - Dia 03;gA4inE1n1SI
+python-2024;4;Introdução à Programação com Python - Dia 04;BUmXQUA12KU
+python-2024;5;Introdução à Programação com Python - Dia 05;SXTXuCPPuxo
+pandas-2024;1;Desbravando Pandas - Dia 01;fLvMKsgHP0o
+pandas-2024;2;Desbravando Pandas - Dia 02;CgkM0FQ-wuk
+pandas-2024;3;Desbravando Pandas - Dia 03;8pEkvlQtwBk
+pandas-2024;4;Desbravando Pandas - Dia 04;ebuEZrE9OEo
+pandas-2024;5;Desbravando Pandas - Dia 05;LbO5xQouOEw
+pandas-2024;6;Desbravando Pandas - Stack e Unstack;x1MWHD9dfqU
+pandas-2024;7;Desbravando Pandas - Explode;VDL-1yIvNkE
+coleta-dados-2024;1;Coleta de dados - Resident Evil Database;K-bIZt_hSBo
+coleta-dados-2024;2;Coleta de dados - TabNews e Jovem Nerd;JqBLUi9vqgM
+coleta-dados-2024;3;Coleta de dados - Datalake Databricks;cnbw1ySYOOs
+coleta-dados-2024;4;Coleta de dados - Pokemon e Databricks;QyiItDCqClU
+matchmaking-trampar-de-casa-2024;1;Matchmaking de Vagas - Parte I;STI-WMd7APY
+matchmaking-trampar-de-casa-2024;2;Matchmaking de Vagas - Parte II;uiAIVGg3k8U
+matchmaking-trampar-de-casa-2024;3;API para Matchmaking de Vagas;tjlUJG1sVks
+ds-pontos-2024;1;DS e Pontos - Qual o Problema de Negócio?;3HijJaRhPP0
+ds-pontos-2024;2;DS e Pontos - Primeira Feature Store;KC-P8DwffA0
+ds-pontos-2024;3;DS e Pontos - Últimas Feature Store;qoOzKaCr1Rk
+ds-pontos-2024;4;DS e Pontos - Criação da ABT;VzcQvGyeAO0
+ds-pontos-2024;5;DS e Pontos - Treinamento e Deploy;1TcFBmjwYlk
+ds-pontos-2024;6;DS e Pontos - Integrando com MLFlow;v5b66aO3PHw
+ds-pontos-2024;7;DS e Pontos - O que e SEMMA?;kyj8oY3d7oM
+ds-pontos-2024;8;DS e Pontos - Segmentação RFV;8hjRYjgrivA
+ds-databricks-2024;1;Data Science no Databricks: Planejamento;Y-Icfgi7Doc
+ds-databricks-2024;2;Data Science no Databricks: Primeiras Features;gjRJAdGQrmY
+ds-databricks-2024;3;Data Science no Databricks: Mais Features;Sezdg2xuzto
+ds-databricks-2024;4;Data Science no Databricks: Features Lookups;vV9kQpKK_DI
+ds-databricks-2024;5;Data Science no Databricks: SEMMA;rIzJ5MCKsw4
+ds-databricks-2024;6;Data Science no Databricks: MLFlow;vSzfbG51el4
+ds-databricks-2024;7;Data Science no Databricks: Model Tuning;56DhxlqKf1o
+ds-databricks-2024;8;Data Science no Databricks: Predições;AhHfbY14BD4
+ds-databricks-2024;9;Data Science no Databricks: Deploy com API em Go;YbZcLUQdDcg
+tse-analytics-2024;1;TSE Analytics - Dia 01 parte 01;gc6Xy_1cFkU
+tse-analytics-2024;2;TSE Analytics - Dia 01 parte 02;we0Z2Fiu1TY
+tse-analytics-2024;3;TSE Analytics - Dia 02;RqkJE4Z4q3o
+tse-analytics-2024;4;TSE Analytics - Dia 03;osAqr2JGTNU
+tse-analytics-2024;5;TSE Analytics - Dia 04;N5y_jAzjl3g
+tse-analytics-2024;6;TSE Analytics - Dia 05;QY2mXevGp5U
+tse-analytics-2024;7;TSE Analytics - Dia 06;dBetGOdXgDw
+tse-analytics-2024;8;TSE Analytics - Dia 07;aFtytaIc46w
+lago-mago-2024;1;Setup DATABRICKS + UNITY CATALOG;a1qACiucvzM
+lago-mago-2024;2;Lendo aqruivos FULL LOAD + CDC;YhgUm9zmhZ8
+lago-mago-2024;3;CDC com Streaming;1C8rY5g5Cqo
+lago-mago-2024;4;Criando uma classe de ingestão;MpDcDHE93XA
+lago-mago-2024;5;GitHub Actions para atualizar Worflows;961sbn71Mqg
+lago-mago-2024;6;Full-Load em Silver;NBfEb2TkRe8
+lago-mago-2024;7;Change Data Feed;YY7jJhUlu0k
+lago-mago-2024;8;Custos e Tipos de Clusters;C6E2U6U4BCw
+lago-mago-2024;9;Camada Gold;REGzXzp7PSU
+lago-mago-2024;10;Dash Executivo;uPwtZ9WENfY
+trampar-lakehouse-2024;1;Trampar de lakehouse - Parte 01;3iqHKRjfyA4
+trampar-lakehouse-2024;2;Trampar de lakehouse - Parte 02;2XQy-UIOyUw
+trampar-lakehouse-2024;3;Trampar de lakehouse - Parte 03;p2DpMP8oiCw
+sql-2020;1;SELECT FROM WHERE;PXftBr56Tow
+sql-2020;2;GROUP BY;BPwGCEsPxMI
+sql-2020;3;CASE WHEN COALESCE;7Ikyb5-5gOQ
+sql-2020;4;Como fazer JOINS;jJxC0i6OtQQ
+sql-2020;5;Como funciona SUBQUERIES;1ulTb3u8aPk
+sql-2020;6;O que são WINDOW FUNCTIONS;v3U5ViG-rkc
+sql-2020;7;Como fazer CREATE TABLE;K2V0ZJA3yK0

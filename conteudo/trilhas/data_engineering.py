@@ -2,16 +2,13 @@ import pandas as pd
 from sqlalchemy import orm
 import streamlit as st
 
-from ..ano_2024.projetos import lago_do_mago, trampar_lakehouse
-
-
-from ..utils import get_courses_dataframe
+from ..utils import get_courses_dataframe, load_and_show_course
     
 
 def data_engineering(db:orm.Session):
-    courses_progress = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
+    user_courses_progress = pd.DataFrame(columns=["userID","courseSlug","epSlug","createdAt"])
     if 'user' in st.session_state:
-        courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
+        user_courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
 
     st.markdown("""
     ### Data Engineering!
@@ -21,5 +18,5 @@ def data_engineering(db:orm.Session):
     São projetos reais, realizando ingestão de dados em um ambiente cloud com uma das melhores ferramentas do mercado: Databricks.
     """)
 
-    lago_do_mago(db,courses_progress[courses_progress["courseSlug"] == "lago-mago-2024"])
-    trampar_lakehouse(db,courses_progress[courses_progress["courseSlug"] == "trampar-lakehouse-2024"])
+    load_and_show_course(db=db,course_slug="lago-mago-2024", user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db,course_slug="trampar-lakehouse-2024", user_courses_progress=user_courses_progress)
