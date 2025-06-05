@@ -1,4 +1,5 @@
 # %%
+import argparse
 import pandas as pd
 
 class CourseImporter:
@@ -62,33 +63,44 @@ class SkillImporter:
         df.to_csv("role_skills.csv", index=False, sep=";")
 
 
-# %%
 
-sheet_id = "1RpGhP2MDjTiyc7TgnrTHCLKMigEvn2x_tGJw8HDkj24"
+def extract_skills():
+    sheet_id = "1RpGhP2MDjTiyc7TgnrTHCLKMigEvn2x_tGJw8HDkj24"
 
-gids = {
-    "skills": 1223057358,
-    "roles":{
-        "Data Analyst":   0,
-        "Data Engineer":  766909586,
-        "Data Scientist": 2098008799,
+    gids = {
+        "skills": 1223057358,
+        "roles":{
+            "Data Analyst":   0,
+            "Data Engineer":  766909586,
+            "Data Scientist": 2098008799,
+        }
     }
-}
 
-skill_importer = SkillImporter(sheet_id=sheet_id, gids=gids)
-skill_importer.get_bd_skills()
-skill_importer.get_all_roles_skills()
+    skill_importer = SkillImporter(sheet_id=sheet_id, gids=gids)
+    skill_importer.get_bd_skills()
+    skill_importer.get_all_roles_skills()
 
 
-# %%
+def extract_courses():
+    sheet_id_courses = "1Dc8LF5GWBd7VEbTB9wLxK5h12z_7s7VbDSKYdjgxuUE"
+    gids_courses = {
+        "courses":0,
+        "courses_eps":1927140059,
+    }
 
-# Dados dos cursos
-sheet_id_courses = "1Dc8LF5GWBd7VEbTB9wLxK5h12z_7s7VbDSKYdjgxuUE"
-gids_courses = {
-    "courses":0,
-    "courses_eps":1927140059,
-}
+    course_importer = CourseImporter(sheet_id=sheet_id_courses, gids=gids_courses)
+    course_importer.process()
 
-course_importer = CourseImporter(sheet_id=sheet_id_courses, gids=gids_courses)
-course_importer.process()
 
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--skills","-s", action='store_true')
+    parser.add_argument("--courses","-c", action='store_true')
+    args = parser.parse_args()
+
+    if args.skills:
+        extract_skills()
+
+    if args.courses:
+        extract_courses()

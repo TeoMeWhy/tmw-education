@@ -84,12 +84,12 @@ Data Analyst;Pl. Data Analyst;Teste de hipótese e Teste A/B;03. Profissional
 Data Analyst;Sr. Data Analyst;Teste de hipótese e Teste A/B;04. Expert
 Data Analyst;Staff Data Analyst;Teste de hipótese e Teste A/B;05. Professor
 Data Analyst;Principal Data Analyst;Teste de hipótese e Teste A/B;05. Professor
-Data Engineer;Jr. Data Engineer;Apache Spark;02. Iniciante
+Data Engineer;Jr. Data Engineer;Apache Spark;01. Aprendiz
 Data Engineer;Pl. Data Engineer;Apache Spark;03. Profissional
 Data Engineer;Sr. Data Engineer;Apache Spark;04. Expert
 Data Engineer;Staff Data Engineer;Apache Spark;05. Professor
 Data Engineer;Principal Data Engineer;Apache Spark;05. Professor
-Data Engineer;Jr. Data Engineer;Cloud;02. Iniciante
+Data Engineer;Jr. Data Engineer;Cloud;01. Aprendiz
 Data Engineer;Pl. Data Engineer;Cloud;03. Profissional
 Data Engineer;Sr. Data Engineer;Cloud;04. Expert
 Data Engineer;Staff Data Engineer;Cloud;04. Expert
@@ -99,12 +99,12 @@ Data Engineer;Pl. Data Engineer;Comunicação;02. Iniciante
 Data Engineer;Sr. Data Engineer;Comunicação;03. Profissional
 Data Engineer;Staff Data Engineer;Comunicação;04. Expert
 Data Engineer;Principal Data Engineer;Comunicação;05. Professor
-Data Engineer;Jr. Data Engineer;Docker;02. Iniciante
+Data Engineer;Jr. Data Engineer;Docker;01. Aprendiz
 Data Engineer;Pl. Data Engineer;Docker;03. Profissional
 Data Engineer;Sr. Data Engineer;Docker;04. Expert
 Data Engineer;Staff Data Engineer;Docker;04. Expert
 Data Engineer;Principal Data Engineer;Docker;05. Professor
-Data Engineer;Jr. Data Engineer;ETL;02. Iniciante
+Data Engineer;Jr. Data Engineer;ETL;01. Aprendiz
 Data Engineer;Pl. Data Engineer;ETL;03. Profissional
 Data Engineer;Sr. Data Engineer;ETL;04. Expert
 Data Engineer;Staff Data Engineer;ETL;05. Professor
@@ -119,9 +119,9 @@ Data Engineer;Pl. Data Engineer;Git / GitHub / GitLab / BitBucket;03. Profission
 Data Engineer;Sr. Data Engineer;Git / GitHub / GitLab / BitBucket;04. Expert
 Data Engineer;Staff Data Engineer;Git / GitHub / GitLab / BitBucket;04. Expert
 Data Engineer;Principal Data Engineer;Git / GitHub / GitLab / BitBucket;05. Professor
-Data Engineer;Jr. Data Engineer;IaC;02. Iniciante
-Data Engineer;Pl. Data Engineer;IaC;03. Profissional
-Data Engineer;Sr. Data Engineer;IaC;04. Expert
+Data Engineer;Jr. Data Engineer;IaC;01. Aprendiz
+Data Engineer;Pl. Data Engineer;IaC;02. Iniciante
+Data Engineer;Sr. Data Engineer;IaC;03. Profissional
 Data Engineer;Staff Data Engineer;IaC;04. Expert
 Data Engineer;Principal Data Engineer;IaC;05. Professor
 Data Engineer;Jr. Data Engineer;Kubernetes;01. Aprendiz
