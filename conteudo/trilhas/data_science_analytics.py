@@ -41,5 +41,5 @@ def data_science_analytics(db:orm.Session):
 
         load_and_show_course(db=db,course_slug="ds-pontos-2024", user_courses_progress=user_courses_progress)
         load_and_show_course(db=db,course_slug="ds-databricks-2024", user_courses_progress=user_courses_progress)
-        load_and_show_course(db=db,course_slug="matchmaking-trampar-de-,casa-2024", user_courses_progress=user_courses_progress)
+        load_and_show_course(db=db,course_slug="matchmaking-trampar-de-casa-2024", user_courses_progress=user_courses_progress)
         load_and_show_course(db=db,course_slug="tse-analytics-2024", user_courses_progress=user_courses_progress)
