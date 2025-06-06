@@ -8,13 +8,13 @@ from databases.models import Course, CourseEps
 from databases import models
 
 
-def load_and_show_course(db:orm.Session, course_slug:str, user_courses_progress:pd.DataFrame):
+def load_and_show_course(db:orm.Session, course_slug:str, user_courses_progress:pd.DataFrame, alt_text=""):
 
     course = db.scalar(select(Course).where(Course.slug==course_slug))
     course_eps = db.scalars(select(CourseEps).where(CourseEps.slug==course_slug))
     user_course_data = user_courses_progress[user_courses_progress['courseSlug']==course_slug]
 
-    with st.expander(course.name):
+    with st.expander(course.name + alt_text):
         st.markdown(course.description)
 
         for c in course_eps:
