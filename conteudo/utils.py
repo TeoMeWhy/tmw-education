@@ -10,30 +10,21 @@ from databases import models
 
 def load_and_show_course(db:orm.Session, course_slug:str, user_courses_progress:pd.DataFrame, alt_text=""):
 
-    stmt = (select(Course, CourseEps)
-            .join(CourseEps, Course.slug==CourseEps.slug)
-            .where(Course.slug==course_slug)
-            .where(CourseEps.slug==course_slug))
-
-    rows = db.execute(stmt).all()
-    course = rows[0][0]
-
+    course = db.scalar(select(Course).where(Course.slug==course_slug))
+    course_eps = db.scalars(select(CourseEps).where(CourseEps.slug==course_slug))
     user_course_data = user_courses_progress[user_courses_progress['courseSlug']==course_slug]
 
     with st.expander(course.name + alt_text):
         st.markdown(course.description)
 
-        for r in rows:
-
-            course_ep = r[-1]
-
-            ep_slug = f'ep-{course_ep.ep:02}'
+        for c in course_eps:
+            ep_slug = f'ep-{c.ep:02}'
             ep_slug_flag = ep_slug in user_course_data['epSlug'].tolist()
 
             make_course_ep(
-                course_slug=course_ep.slug,
-                title=course_ep.title,
-                youtube_id=course_ep.youtube_id,
+                course_slug=c.slug ,
+                title=c.title,
+                youtube_id=c.youtube_id,
                 ep_slug=ep_slug,
                 slug_flag=ep_slug_flag,
                 db=db,
