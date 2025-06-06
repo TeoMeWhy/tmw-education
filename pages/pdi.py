@@ -66,6 +66,8 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
             courses.append("trampar-lakehouse-2024")
         
 
+    courses = list(set(courses))
+
     if len(courses) > 0:
         st.markdown("""
         ### Cursos recomendados
