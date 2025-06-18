@@ -13,13 +13,11 @@ st.cache_resource(ttl='1d')
 def load_skills():
     if db.query(models.Skill).count() == 0:
         df_skills = pd.read_csv("data/skills.csv", sep=";")
-        if not models.ingest_skills(db, df_skills):
-            return False
+        models.ingest_skills(db, df_skills)
 
     if db.query(models.RoleSkills).count() == 0:
         df_role_skills = pd.read_csv("data/role_skills.csv", sep=";")
-        if not models.ingest_role_skill(db, df_role_skills):
-            return False
+        models.ingest_role_skill(db, df_role_skills)
 
     df_courses = pd.read_csv("data/courses.csv", sep=";")
     models.ingest_courses(db, df_courses, True)

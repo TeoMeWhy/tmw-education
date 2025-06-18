@@ -27,7 +27,7 @@ def data_science_analytics(db:orm.Session):
 
         load_and_show_course(db=db, course_slug='pandas-2025', user_courses_progress=user_courses_progress)
         load_and_show_course(db=db, course_slug='estatistica-2025', user_courses_progress=user_courses_progress)
-        load_and_show_course(db, course_slug='ml-2024', user_courses_progress=user_courses_progress)
+        load_and_show_course(db, course_slug='machine-learning-2025', user_courses_progress=user_courses_progress)
         load_and_show_course(db=db, course_slug='mlflow-2025', user_courses_progress=user_courses_progress)
 
 
