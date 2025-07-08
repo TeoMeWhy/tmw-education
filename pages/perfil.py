@@ -5,6 +5,7 @@ from sqlalchemy import orm, select, func
 
 from points import points
 from conteudo import utils
+from heroes import heroes
 
 import streamlit as st
 import pandas as pd
@@ -65,6 +66,22 @@ def integrate_or_create_tmw(user):
     st.success("Perfil vinculado com sucesso!")
     time.sleep(1)
     st.rerun()
+
+def show_rpg(tmw_id:str):
+
+    if tmw_id is None:
+        st.error("Você precisa vincular seu perfil ao ecossistema para jogar RPG.")
+        return
+    
+    with st.expander("Personagem RPG", expanded=False):
+        char = heroes.get_creature(tmw_id)
+        if "error" in char:
+            st.error("Você ainda não possui um personagem criado. Deseja criar um?")
+            
+            races = heroes.get_races()["races"]
+            heroes.show_races(races)
+
+            return
 
 
 def show_uncompleted_courses(courses_eps, user_courses_progress):
@@ -129,7 +146,6 @@ def show_user_progress_courses(db:orm.Session, user_id):
 
 db = models.SessionLocal()
 
-st.set_page_config(page_title="Téo Me Why - Perfil", page_icon="🧙‍♂️")
 twitch_login.twitch_login(db)
 
 st.markdown(
@@ -149,4 +165,7 @@ tmw_id = models.get_tmw_id(db, user.userID)
 if not show_points_infos(db, tmw_id):
     b = st.button("Clique aqui para vincular seu perfil ao ecossistema", on_click=lambda: integrate_or_create_tmw(user))
 
+# show_rpg(tmw_id=tmw_id)
+
 show_user_progress_courses(db=db, user_id=user.userID)
+

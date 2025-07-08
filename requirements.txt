@@ -8,3 +8,4 @@ requests_oauthlib==2.0.0
 SQLAlchemy==2.0.37
 streamlit==1.41.1
 streamlit-multipage==0.0.18
+st-pages==1.0.1

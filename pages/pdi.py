@@ -81,8 +81,6 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
 
 
 def show_pdi(db:orm.Session):
-    st.set_page_config(page_title="Téo Me Why - PDI", page_icon="🧙‍♂️")
-    st.title("Téo Me Why - PDI")
     twitch_login.twitch_login(db)
 
     st.markdown("""

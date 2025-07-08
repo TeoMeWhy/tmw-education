@@ -1,0 +1,33 @@
+[[pages]]
+path = "home.py"
+name = "Início"
+icon = "🧙‍♂️"
+
+[[pages]]
+path = "pages/perfil.py"
+name = "Seu Perfil"
+icon = "🏆"
+
+[[pages]]
+path = "pages/pdi.py"
+name = "Monte o PDI"
+icon = "📝"
+
+[[pages]]
+path = "pages/trilhas.py"
+name = "Trilhas de Estudos"
+icon = "📚"
+
+
+[[pages]]
+name = "Conteúdo por Ano"
+icon = "🗓️"
+is_section = true
+
+[[pages]]
+name = "2024"
+path = "pages/material_2024.py"
+
+[[pages]]
+name = "2025"
+path = "pages/material_2025.py"

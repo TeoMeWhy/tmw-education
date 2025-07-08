@@ -7,8 +7,6 @@ from login import twitch_login
 db = models.SessionLocal()
 models.create_tables()
 
-st.set_page_config(page_title="TMW - Education", page_icon="🧙‍♂️", initial_sidebar_state="collapsed")
-
 st.cache_resource(ttl='1d')
 def load_skills():
     if db.query(models.Skill).count() == 0:
@@ -88,5 +86,4 @@ def main():
     load_skills()
     home()
 
-if __name__ == "__main__":
-    main()
+main()
