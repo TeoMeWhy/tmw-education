@@ -67,21 +67,17 @@ def integrate_or_create_tmw(user):
     time.sleep(1)
     st.rerun()
 
-def show_rpg(tmw_id:str):
+def show_rpg(tmw_id:str, twitch_name:str):
 
-    if tmw_id is None:
-        st.error("Você precisa vincular seu perfil ao ecossistema para jogar RPG.")
-        return
-    
     with st.expander("Personagem RPG", expanded=False):
         char = heroes.get_creature(tmw_id)
+        
         if "error" in char:
-            st.error("Você ainda não possui um personagem criado. Deseja criar um?")
-            
-            races = heroes.get_races()["races"]
-            heroes.show_races(races)
-
+            heroes.show_create(tmw_id=tmw_id, twitch_name=name)
             return
+
+        heroes.show_char(char)
+        return
 
 
 def show_uncompleted_courses(courses_eps, user_courses_progress):
@@ -158,14 +154,19 @@ if 'user' not in st.session_state:
     st.error("Você não está logado. Por favor, faça login para acessar seu perfil.")
     st.stop()
 
-
 user = st.session_state["user"]
 tmw_id = models.get_tmw_id(db, user.userID)
+
+twitch_data = twitch_login.get_twitch_infos(st.session_state['token'])
+if "data" in twitch_data and len(twitch_data["data"]) > 0:
+    name = twitch_data["data"][0]["display_name"]
+else:
+    st.error("Não foi possível obter o nome do usuário da Twitch.")
 
 if not show_points_infos(db, tmw_id):
     b = st.button("Clique aqui para vincular seu perfil ao ecossistema", on_click=lambda: integrate_or_create_tmw(user))
 
-# show_rpg(tmw_id=tmw_id)
+show_rpg(tmw_id=tmw_id, twitch_name=name)
 
 show_user_progress_courses(db=db, user_id=user.userID)
 
