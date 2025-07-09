@@ -24,11 +24,13 @@ def show_points_infos(db:orm.Session, tmw_id:str)->bool:
     data = points.get_user_points(uuid=tmw_id)[0]
     st.session_state["tmw_user"] = data
 
-    date = datetime.datetime.strptime(data["created_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
-    date_start = date.strftime("%Y-%m-%d %H:%M:%S")
+    date_start = data["created_at"]
+    # date_start = datetime.datetime.strptime(data_start, "%Y-%m-%dT%H:%M:%S.%fZ")
+    # date_start = date_start.strftime("%Y-%m-%d %H:%M:%S")
 
-    date = datetime.datetime.strptime(data["updated_at"], "%Y-%m-%dT%H:%M:%S.%fZ")
-    date_last = date.strftime("%Y-%m-%d %H:%M:%S")
+    date_last = data["updated_at"]
+    # date_last = datetime.datetime.strptime(date_last, "%Y-%m-%dT%H:%M:%S.%fZ")
+    # date_last = date_last.strftime("%Y-%m-%d %H:%M:%S")
 
     col1, col2 = st.columns(2)
 
@@ -76,7 +78,16 @@ def show_rpg(tmw_id:str, twitch_name:str):
             heroes.show_create(tmw_id=tmw_id, twitch_name=name)
             return
 
-        heroes.show_char(char)
+        tab_char, tab_inventory, tab_store = st.tabs(["Personagem", "Inventário", "Loja"])
+        with tab_char:
+            heroes.show_char(char)
+        
+        with tab_inventory:
+            heroes.show_inventory(char)
+
+        with tab_store:
+            heroes.show_store(char)
+        
         return
 
 
@@ -143,12 +154,6 @@ def show_user_progress_courses(db:orm.Session, user_id):
 db = models.SessionLocal()
 
 twitch_login.twitch_login(db)
-
-st.markdown(
-"""
-# Seu perfil aqui!
-"""
-)
 
 if 'user' not in st.session_state:
     st.error("Você não está logado. Por favor, faça login para acessar seu perfil.")

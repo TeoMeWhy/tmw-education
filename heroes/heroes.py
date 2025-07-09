@@ -1,52 +1,82 @@
 # %%
-import os
-import requests
 import streamlit as st
+
+import pandas as pd
 
 import time
 
-HEROES_CUBE_URI = os.getenv("HEROES_CUBE_URI", "http://heroes-cube:8080")
+from points import points
 
-def get_races():
-    url = f"{HEROES_CUBE_URI}/api/v1/races"
-    return requests.get(url).json()
+from .api import *
 
-def get_classes():
-    url = f"{HEROES_CUBE_URI}/api/v1/classes"
-    return requests.get(url).json()
 
-def get_items():
-    url = f"{HEROES_CUBE_URI}/api/v1/items"
-    return requests.get(url).json()
+def validate_item_inventory(items:pd.DataFrame, inventory:pd.DataFrame):
+    group_items = items.groupby("type")["id"].count().reset_index()
+    items_double = group_items[group_items["id"] > 1]["type"].tolist()
+    items_double = ",".join(items_double)
+    if len(items_double) > 0:
+        txt = "Você está selecionando mais de um item do mesmo tipo: " + items_double
+        return txt    
 
-def post_creature(**params):
-    if "class_" in params:
-        params["class"] = params.pop("class_")
-
-    url = f"{HEROES_CUBE_URI}/api/v1/creatures"
-    response = requests.post(url, json=params)
-    if response.status_code == 201:
-        return response.json()
-    else:
-        return {"error": response.text}
+    if inventory.empty:
+        return ""
     
-def get_creature(id):
-    url = f"{HEROES_CUBE_URI}/api/v1/creatures/{id}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return {"error": response.text}
+    df_join = pd.merge(inventory, items, how='inner', on="type")
+    inventory_double = ",".join(df_join["type"].tolist())
+    if len(inventory_double) > 0:
+        txt = f"Você já possui itens desses tipos: {inventory_double}. Você só pode ter um item de cada tipo no inventário."
+        return txt
+    
+    return ""
 
-def delete_creature(id):
-    url = f"{HEROES_CUBE_URI}/api/v1/creatures/{id}"
-    response = requests.delete(url)
-    if response.status_code == 200:
-        return {"success": "Creature deleted successfully"}
-    else:
-        return {"error": response.text}
 
-# %%
+def exec_store_sell(tmw_id, items):
+    data = points.make_rpg_store_transaction(tmw_id=tmw_id,
+                                             items=items)
+    
+    resp = points.post_transaction(**data)
+    if "error" in resp:
+        st.error(f"Erro ao realizar a transação: {resp['error']}")
+    
+    else:
+        for i in items:
+            if create_inventory_item(tmw_id, str(i["id"])):
+                continue
+            else:
+                data = points.make_rpg_store_transaction_refound(tmw_id=tmw_id, items=items)
+                resp = points.post_transaction(**data)
+                st.error(f"Erro ao adicionar item {i['name']} ao inventário: {resp['error']}")
+                return False
+
+        st.success("Transação realizada com sucesso!")
+        return True
+
+
+def exec_inventory_sell(tmw_id, items):
+    data = points.make_rpg_store_transaction(tmw_id=tmw_id,
+                                             items=items,
+                                             buyer=False)
+    
+    resp = points.post_transaction(**data)
+    if "error" in resp:
+        st.error(f"Erro ao realizar a transação: {resp['error']}")
+        return False
+    
+    for i in items:
+        if remove_item_inventory(tmw_id, str(i["id"])):
+            continue
+        else:
+            data = points.make_rpg_store_transaction(tmw_id=tmw_id,
+                                             items=items,
+                                             buyer=True)
+    
+            resp = points.post_transaction(**data)
+            st.error(f"Erro ao remover item {i['name']} do inventário: {resp['error']}")
+            return False
+
+    st.success("Venda realizada com sucesso!")
+    return True
+
 
 def show_races(races):
     
@@ -121,7 +151,7 @@ def show_create(tmw_id, twitch_name):
             st.error(f"Erro ao criar personagem: {response}")
         else:
             st.success("Personagem criado com sucesso!")
-            time.sleep(2)
+            time.sleep(1)
             st.rerun()
 
 
@@ -157,7 +187,80 @@ def show_char(char):
         resp = delete_creature(char['id'])
         if "success" in resp:
             st.success("Personagem excluído com sucesso!")
-            time.sleep(2)
+            time.sleep(1)
             st.rerun()
         else:
             st.error(f"Erro ao excluir personagem: {resp['error']}")
+
+
+def show_inventory(char):
+    st.markdown("### Inventário")
+    df = pd.DataFrame(char["inventory"]['items'])
+    if df.empty:
+        st.markdown("Você ainda não possui itens no inventário.")
+    else:
+        show_items(char["inventory"]['items'])
+        names = df["name"].tolist()
+        items_selected = st.multiselect("Selecione os itens que deseja comprar:", names)
+        df_items_selected = df[df["name"].isin(items_selected)].copy()
+        total_price = df_items_selected["price"].sum()
+        st.markdown(f"**Preço total:** {total_price} cubos")
+
+        if not df_items_selected.empty:
+            if st.button("Vender"):
+                if exec_inventory_sell(char["id"], df_items_selected.to_dict(orient="records")):
+                    time.sleep(1)
+                    st.rerun()
+
+
+def show_store(char):
+    st.markdown("### Loja de Itens")
+    items = get_items()["items"]
+
+    show_items(items)
+
+    df = pd.DataFrame(items)
+    names = df["name"].tolist()
+    items_selected = st.multiselect("Selecione os itens que deseja comprar:", names)
+
+
+    df_items_selected = df[df["name"].isin(items_selected)].copy()
+    total_price = df_items_selected["price"].sum()
+    st.markdown(f"**Preço total:** {total_price} cubos")
+
+    txt = validate_item_inventory(df_items_selected, pd.DataFrame(char["inventory"]['items']))
+    if txt != "":
+        st.error(txt)
+    
+    elif total_price > st.session_state["tmw_user"]["points"]:
+        st.error("Você não possui cubos suficientes para comprar esses itens.")
+
+    elif not df_items_selected.empty:
+        if st.button("Comprar"):
+            items_payload = df_items_selected.to_dict(orient="records")
+            if exec_store_sell(char["id"], items_payload):
+                time.sleep(1)
+                st.rerun()
+
+
+def show_items(items):
+    df = pd.DataFrame(items)
+    df["id"] = df["id"].astype(int)
+    df.sort_values(by="id", inplace=True)
+
+    df.columns = ["ID",
+                    "Nome",
+                    "Descrição",
+                    "Categoria",
+                    "Tipo",
+                    "Peso",
+                    "Preço",
+                    "Dano",
+                    "Força",
+                    "Destreza",
+                    "Inteligência",
+                    "Sabedoria"]
+    
+    df = df.drop("ID", axis=1)
+    
+    st.dataframe(df, hide_index=True, use_container_width=True)
