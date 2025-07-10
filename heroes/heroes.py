@@ -157,6 +157,8 @@ def show_create(tmw_id, twitch_name):
 
 def show_char(char):
     st.markdown(f"#### {char['name']}")
+
+    damage = get_creature_damage(char['id'])
     
     col1, col2, col3 = st.columns(3)
 
@@ -171,16 +173,26 @@ def show_char(char):
     ⭐ **Experiência**: {char['pts_experience']}
     
     ✨ **Pontos Habilidade Livres**: {char['pts_skill']}
+
+    ⚔️ **Dano Básico**: {damage['base_damage']}
+
+    💫 **Dano Especial**: {damage['special_damage']}
     ''')
 
+
+    mod_strength = char['race']['mod_strength'] + sum(item['mod_strength'] for item in char['inventory']['items'])
+    mod_dexterity = char['race']['mod_dexterity'] + sum(item['mod_dexterity'] for item in char['inventory']['items'])
+    mod_intelligence = char['race']['mod_intelligence'] + sum(item['mod_intelligence'] for item in char['inventory']['items'])
+    mod_wisdom = char['race']['mod_wisdom'] + sum(item['mod_wisdom'] for item in char['inventory']['items'])
+
     col3.markdown(f'''    
-    💪 **Força**: {char['pts_strength']} (+{char['race']['mod_strength']})
+    💪 **Força**: {char['pts_strength']} (+{mod_strength})
     
-    🎯 **Destreza**: {char['pts_dexterity']} (+{char['race']['mod_dexterity']})
+    🎯 **Destreza**: {char['pts_dexterity']} (+{mod_dexterity})
     
-    🧠 **Inteligência**: {char['pts_intelligence']} (+{char['race']['mod_intelligence']})
+    🧠 **Inteligência**: {char['pts_intelligence']} (+{mod_intelligence})
     
-    📖 **Sabedoria**: {char['pts_wisdom']} (+{char['race']['mod_wisdom']})
+    📖 **Sabedoria**: {char['pts_wisdom']} (+{mod_wisdom})
     ''')
 
     if st.button("Excluir personagem"):

@@ -36,6 +36,15 @@ def get_creature(id):
     else:
         return {"error": response.text}
 
+def get_creature_damage(id):
+    url = f"{HEROES_CUBE_URI}/api/v1/creatures/{id}/damage"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {"error": response.text}
+
+
 def delete_creature(id):
     url = f"{HEROES_CUBE_URI}/api/v1/creatures/{id}"
     response = requests.delete(url)
