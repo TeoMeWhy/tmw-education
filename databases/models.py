@@ -89,6 +89,14 @@ class RoleSkills(Base):
     level = Column(String(150))
 
 
+class UserRewards(Base):
+    __tablename__ = "user_rewards"
+
+    userID = Column(String(150), primary_key=True)
+    rewardID = Column(String(150), primary_key=True)
+    createdAt = Column(TIMESTAMP, server_default=func.now())
+
+
 def create_tables():
     Base.metadata.create_all(bind=engine)
 
@@ -232,5 +240,16 @@ def get_tmw_id(db:orm.Session, userID:str)->str:
 
 def remove_tmw_id(db:orm.Session, tmwID:str)->bool:
     db.execute(delete(UserTMW).where(UserTMW.tmwID == tmwID))
+    db.commit()
+    return True
+
+
+def get_user_rewards(db:orm.Session, user_id:str):
+    return db.query(UserRewards).filter(UserRewards.userID==user_id).all()
+
+
+def insert_user_reward(db:orm.Session, user_id:str, reward_id:str):
+    user_reward = UserRewards(userID=user_id, rewardID=reward_id)
+    db.add(user_reward)
     db.commit()
     return True

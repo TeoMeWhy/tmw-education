@@ -74,6 +74,24 @@ def make_rpg_store_transaction_refound(tmw_id, items):
     data["products"] = data_items
     return data
 
+def make_reward_transaction(tmw_id, reward_ids):
+    data = {
+        "transaction_id": str(uuid.uuid4()),
+        "customer_id": tmw_id,
+        "system_origin": "cursos",
+        "points": 1000 * len(reward_ids),
+    }
+
+    data_items = [{
+        "id": str(uuid.uuid4()),
+        "IdTransaction": data["transaction_id"],
+        "CodProduct": reward_id,
+        "QtdeProduct": 1,
+        "VlProduct": 1000
+    } for reward_id in reward_ids]
+
+    data["products"] = data_items
+    return data
 
 def post_transaction(**kwargs):
     url = f"{POINTS_URI}/transactions"
