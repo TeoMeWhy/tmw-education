@@ -16,7 +16,7 @@ def data_science_analytics(db:orm.Session):
     Vamos aprender sobre a área de dados, suas principais bibliotecas e conceitos.
     """)
 
-    cursos, projetos = st.tabs(["Cursos", "Projetos"])
+    cursos,cursos_complementares, projetos = st.tabs(["Cursos", "Cursos Complementares", "Projetos"])
 
     with cursos:
         st.markdown("""
@@ -30,6 +30,16 @@ def data_science_analytics(db:orm.Session):
         load_and_show_course(db, course_slug='machine-learning-2025', user_courses_progress=user_courses_progress)
         load_and_show_course(db=db, course_slug='mlflow-2025', user_courses_progress=user_courses_progress)
 
+
+    with cursos_complementares:
+        st.markdown("""
+        #### Cursos Complementares
+
+        Esses cursos são complementares aos cursos principais, e podem ser feitos em paralelo ou depois dos cursos principais.
+        """)
+
+        load_and_show_course(db=db, course_slug='streamlit-2025', user_courses_progress=user_courses_progress)
+        
 
     with projetos:
 
