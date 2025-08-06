@@ -30,15 +30,17 @@ def home():
 
     twitch_login.twitch_login(db)
 
-    st.markdown("# Boas vindas")
-
     st.image("assets/banner_home.png")
 
     st.markdown("""
                 
-    ## Plataforma de cursos Téo Me Why
+    ## Educação que liberta!
 
-    Aqui você encontrará todo o material que tenho disponível na internet em formato de vídeos. Acesse o conteúdo completo, ou navegue entre as diferentes trilhas de conhecimento.
+    Você acabou de encontrar um espaço dedicado para aprendizado na área de **dados** e **tecnologia**.
+
+    Nossa missão é emancipar o conhecimento, oferencendo cursos gratuitos e projetos práticos para quem nos apoia.
+                
+    Conheça nossas trilhas de conhecimento e comece sua jornada de aprendizado já!
     """)
 
     with st.container(border=True):
