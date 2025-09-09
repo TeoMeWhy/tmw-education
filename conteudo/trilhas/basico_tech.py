@@ -17,5 +17,5 @@ def basico_tech(db:orm.Session):
 
     load_and_show_course(db=db, course_slug='github-2025', user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug='python-2025', user_courses_progress=user_courses_progress)
-    load_and_show_course(db=db, course_slug='sql-2020', user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug='sql-2025', user_courses_progress=user_courses_progress)
 
