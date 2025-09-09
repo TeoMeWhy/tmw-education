@@ -3,7 +3,7 @@ cryptography>=44.0.1
 pycparser==2.22
 pymysql==1.1.1
 python-dotenv==1.0.1
-Requests==2.32.3
+Requests==2.32.4
 requests_oauthlib==2.0.0
 SQLAlchemy==2.0.37
 streamlit==1.41.1
