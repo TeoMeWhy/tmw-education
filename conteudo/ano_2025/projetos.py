@@ -23,6 +23,10 @@ def projetos_2025(db: orm.Session):
     Os projetos construídos a partir de 2025, terão as gravações disponíveis exclusivamente no YouTube.
     
     """)
+    
+    st.markdown("#### Data Science e Machine Learning")
+    load_and_show_course(db=db, course_slug="loyalty-predict-2025", user_courses_progress=user_courses_progress)
+    
 
     st.markdown("#### Data Engineering")
     load_and_show_course(db=db, course_slug="data-platform-2025", user_courses_progress=user_courses_progress)
