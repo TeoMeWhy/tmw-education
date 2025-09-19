@@ -64,11 +64,11 @@ def make_rpg_store_transaction_refound(tmw_id, items):
 
     for i in items:
         data_items.append({
-            "id": str(uuid.uuid4()),
-            "IdTransaction": data["transaction_id"],
-            "CodProduct": f"{i['id']:0>3} - {i['name']} - refound",
-            "QtdeProduct": 1,
-            "VlProduct": i["price"]
+            "transaction_product_id": str(uuid.uuid4()),
+            "transaction_id": data["transaction_id"],
+            "product_id": f"{i['id']:0>3} - {i['name']} - refound",
+            "product_qtd": 1,
+            "points": i["price"]
         })
 
     data["products"] = data_items
@@ -83,11 +83,11 @@ def make_reward_transaction(tmw_id, reward_ids):
     }
 
     data_items = [{
-        "id": str(uuid.uuid4()),
-        "IdTransaction": data["transaction_id"],
-        "CodProduct": reward_id,
-        "QtdeProduct": 1,
-        "VlProduct": 1000
+        "transaction_product_id": str(uuid.uuid4()),
+        "transaction_id": data["transaction_id"],
+        "product_id": reward_id,
+        "product_qtd": 1,
+        "points": 1000
     } for reward_id in reward_ids]
 
     data["products"] = data_items
