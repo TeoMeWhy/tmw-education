@@ -41,11 +41,11 @@ def make_rpg_store_transaction(tmw_id, items, buyer=True):
 
     for i in items:
         data_items.append({
-            "id": str(uuid.uuid4()),
-            "IdTransaction": data["transaction_id"],
-            "CodProduct": f"{i['id']:0>3} - {i['name']}",
-            "QtdeProduct": 1,
-            "VlProduct": i["price"]
+            "transaction_product_id": str(uuid.uuid4()),
+            "transaction_id": data["transaction_id"],
+            "product_id": f"{i['id']:0>3} - {i['name']}",
+            "product_qtd": 1,
+            "points": i["price"]
         })
 
     data["products"] = data_items

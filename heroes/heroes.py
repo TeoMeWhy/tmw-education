@@ -34,6 +34,9 @@ def exec_store_sell(tmw_id, items):
     data = points.make_rpg_store_transaction(tmw_id=tmw_id,
                                              items=items)
     
+    st.write(data)
+    print(data)
+    
     resp = points.post_transaction(**data)
     if "error" in resp:
         st.error(f"Erro ao realizar a transação: {resp['error']}")
