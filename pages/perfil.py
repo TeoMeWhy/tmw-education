@@ -27,12 +27,7 @@ def show_points_infos(db:orm.Session)->bool:
     st.session_state["tmw_user"] = data
 
     date_start = data["created_at"]
-    # date_start = datetime.datetime.strptime(data_start, "%Y-%m-%dT%H:%M:%S.%fZ")
-    # date_start = date_start.strftime("%Y-%m-%d %H:%M:%S")
-
     date_last = data["updated_at"]
-    # date_last = datetime.datetime.strptime(date_last, "%Y-%m-%dT%H:%M:%S.%fZ")
-    # date_last = date_last.strftime("%Y-%m-%d %H:%M:%S")
 
     col1, col2 = st.columns(2)
 
@@ -106,7 +101,7 @@ def show_rpg():
 def show_uncompleted_courses(courses_eps, user_courses_progress):
     courses = courses_eps[courses_eps['pctCompleted'] < 1]
     if courses.shape[0]:
-        st.markdown("""## Cursos iniciados""")
+        st.markdown("""### Cursos iniciados""")
         
         for i in courses.index:
             line = courses.loc[i]
@@ -168,7 +163,7 @@ def show_completed_courses(courses_eps:pd.DataFrame, user_courses_progress):
     courses = courses_eps[courses_eps['pctCompleted'] == 1]
     if not courses.empty:
         
-        st.markdown("""## Cursos finalizados""")
+        st.markdown("""### Cursos finalizados""")
         for s in courses['courseSlug']:
             utils.load_and_show_course(db, s, user_courses_progress)
         show_rewards(courses)
