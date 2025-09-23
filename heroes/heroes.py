@@ -81,25 +81,35 @@ def exec_inventory_sell(tmw_id, items):
     return True
 
 
+def show_race(race):
+    st.markdown(f'##### {race["name"]}')
+    st.markdown(race["description"])
+    st.markdown("""
+|Força|Destreza|Inteligência|Sabedoria|
+|:---:|:---:|:---:|:---:|
+| {mod_strength} | {mod_dexterity} | {mod_intelligence} | {mod_wisdom} | 
+        """.format(**race))
+
+
 def show_races(races):
-    
-    cols = st.columns(len(races))
     for i in range(len(races)):
-        with cols[i].container(border=True, height=300):
+        st.markdown(f'##### {races[i]["name"]}')
+        st.markdown(races[i]["description"])
+        st.markdown("""
+|Força|Destreza|Inteligência|Sabedoria|
+|:---:|:---:|:---:|:---:|
+| {mod_strength} | {mod_dexterity} | {mod_intelligence} | {mod_wisdom} | 
+        """.format(**races[i]))
+       
+def show_class(classe):
+    st.markdown(f'##### {classe["name"]}')
+    st.markdown(classe["description"])
+    st.markdown("""
+|Força|Destreza|Inteligência|Sabedoria|
+|:---:|:---:|:---:|:---:|
+| {init_strength} | {init_dexterity} | {init_intelligence} | {init_wisdom} | 
+        """.format(**classe))
 
-            row1 = st.columns(1)[0]
-            row2 = st.columns(1)[0]
-            row3 = st.columns(1)[0]
-
-            row1.markdown(f'### {races[i]["name"]}')
-            row2.markdown(races[i]["description"])
-            row3.markdown("""
-            - **Força**: {mod_strength}
-            - **Destreza**: {mod_dexterity}
-            - **Inteligência**: {mod_intelligence}
-            - **Sabedoria**: {mod_wisdom}
-            """.format(**races[i]))
-            
 
 def show_classes(classes):
     cols = st.columns(len(classes))
@@ -128,25 +138,23 @@ def show_create(tmw_id, twitch_name):
     races = get_races()["races"]
     classes = get_classes()["classes"]
 
-    tab_race, tab_class = st.tabs(["Raças", "Classes"])
-    with tab_race:
-        show_races(races)
-
-    with tab_class:
-        show_classes(classes)
-
-    col1, col2, _, col4 = st.columns(4)
+    
+    col1, col2 = st.columns(2)
     raca = col1.selectbox("Escolha uma raça", races, format_func=lambda x: x['name'])
     classe = col2.selectbox("Escolha uma classe", classes, format_func=lambda x: x['name'])
-    col4.text("Confirme a criação do personagem:")
-    criacao = col4.button("Criar")
+    
+    show_race(raca)
+    show_class(classe)
+    
+    criacao = st.button("Criar", help="Criar personagem com a raça e classe selecionadas")
 
     if criacao:
         data = {
             "id":tmw_id,
             "race":raca["name"],
             "class":classe["name"],
-            "name":twitch_name,}
+            "name":twitch_name,
+        }
         
         response = post_creature(**data)
 
