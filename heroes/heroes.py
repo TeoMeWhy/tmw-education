@@ -136,6 +136,8 @@ def show_create(tmw_id, twitch_name):
     st.error("Você ainda não possui um personagem criado. Deseja criar um?")
             
     races = get_races()["races"]
+    races = [r for r in races if r['name'] in ['Humano', 'Elfo', 'Anão', 'Hobbit']]
+
     classes = get_classes()["classes"]
 
     
