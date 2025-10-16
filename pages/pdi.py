@@ -58,6 +58,7 @@ def show_courses_by_priority(db:orm.Session, priorities:list):
 
         if "Machine Learning" in i[0]:
             courses.append("machine-learning-2025")
+            courses.append("loyalty-predict-2025")
             courses.append("ds-pontos-2024")
             courses.append("ds-databricks-2024")
 

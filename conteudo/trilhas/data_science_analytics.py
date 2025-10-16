@@ -49,6 +49,7 @@ def data_science_analytics(db:orm.Session):
         Acompanhe os projetos para entender como é a vida real de uma pessoa que trabalha com Data Science e Analytics.    
         """)
 
+        load_and_show_course(db=db,course_slug="loyalty-predict-2025", user_courses_progress=user_courses_progress)
         load_and_show_course(db=db,course_slug="ds-pontos-2024", user_courses_progress=user_courses_progress)
         load_and_show_course(db=db,course_slug="ds-databricks-2024", user_courses_progress=user_courses_progress)
         load_and_show_course(db=db,course_slug="matchmaking-trampar-de-casa-2024", user_courses_progress=user_courses_progress)
