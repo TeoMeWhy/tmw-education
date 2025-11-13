@@ -28,7 +28,7 @@ def projetos_2025(db: orm.Session):
     load_and_show_course(db=db, course_slug="loyalty-predict-2025", user_courses_progress=user_courses_progress)
     
 
-    st.markdown("#### Data Engineering")
+    st.markdown("#### Nekt - A nova morada do mago")
     load_and_show_course(db=db, course_slug="data-platform-2025", user_courses_progress=user_courses_progress)
 
 
