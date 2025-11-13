@@ -56,22 +56,16 @@ Neste curso, você aprenderá os principais conceitos de Machine Learning, mais 
 Você entenderá de uma vez por todas como cada técnica funciona, e as métricas de performance. Quando falarem sobre curva ROC, você terá condições de explicar como funciona e porque normalmente é uma métrica melhor que a acurácia. 
 
 [Adicione na sua agenda](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M2Fqc2hkajVxazhsOHFkNDFxdG4yOTg1aGZfMjAyNTA2MDlUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL) para participar conosco ao vivo.";2025
-data-platform-2025;Plataforma de dados Open-Source - Em breve;"Vamos construir uma plataforma de dados do zero!
+data-platform-2025;Nekt: a nova morada do mago;"Estamos mudando de ambiente!! Todo nosso ecossistema analítico está de casa nova! Vamos conhecer a Nekt!
 
-A ideia é construir uma plataforma de dados open-source, utilizando as melhores práticas do mercado.
+Logo no primeiro projeto vamos trazer nossos dados abertos para dentro da plataforma, consumindo os dados em .parquet de um object storage (S3). E temos muitos planos para o futuro:
 
-Essa plataforma será construída com o objetivo de suportar diferentes tipos de dados e cases, como:
-        
 - Fórmula 1;
 - Dota2;
 - LoL;
-- Ecossistema Téo Me Why;
+- Dados abertos do governo;
 
-Vamos usar esse repositório como base e refatora-lo, apresentando os detalhes e decisões de cada passo necessário.
-
-[github.com/TeoMeWhy/tmw-lake](https://github.com/TeoMeWhy/tmw-lake)
-
-[Coloque na sua agenda!!](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NzhnYXZzaXZoc3B0cjJvNGlob2duc3ZlbTJfMjAyNTA4MDRUMTEwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)";2025
+A partir do dia 17/11, ao vivo na [Twitch.tv/teomewhy](https://twitch.tv/teomewhy)";2025
 ia-canal-2025;Uma IA para o canal;"Temos o interesse de tornar a experiência de quem nos acompanha ainda melhor. Para isso, estamos criando um sistema de Inteligência Artificial usando LLM e RAG com um banco vetorizado (QDrant).
 
 A ideia é integrar o no nosso chat da Twitch com esse sistema, respondendo de maneira automática algumas perguntas comuns de nossos participantes.
