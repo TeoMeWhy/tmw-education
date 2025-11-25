@@ -26,61 +26,8 @@ def show_trilhas(db:orm.Session):
 
     st.markdown(txt)
 
-
     with st.expander("Roadmap", expanded=False):
-
-        def mermaid(code):
-            html(
-                f"""
-                <pre class="mermaid">
-                    {code}
-                </pre>
-
-                <script type="module">
-                    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-                    mermaid.initialize({{ startOnLoad: true }});
-                </script>
-                """,
-                width=3000,
-                height=650
-            )
-
-        mermaid("""
-flowchart LR
-
-    A[Python] --> E[Pandas];
-    E --> F[Streamlit];
-    E --> B[Estatística];
-    B --> G[Machine Learning];
-    C[SQL] --> B;
-    G --> H[MLFlow];
-
-    D[Git/GitHub] --> E
-    D --> C
-
-    H --> I{Projetos DS}
-    F --> I
-
-    I --> M[Loyalty Predict]
-    I --> N[Data Science e Pontos]
-    I --> O[Data Science Databricks]
-    I --> P[Matchmaking de Vagas]
-
-    C --> K[Apache Spark]
-    A --> K
-
-    K --> J{Projetos DE}
-    L[Docker] --> J
-
-    J --> R[Lago do mago]
-    J --> S[Trampar de Lakehouse]
-
-    I --> Q[TSE Analytics]
-    J --> Q
-    J --> T[F1]
-    I --> T
-""")
-    
+        st.image("assets/fluxograma.png")
 
     with st.container(border=True):
         basico_tech.basico_tech(db)
