@@ -29,7 +29,7 @@ def projetos_2025(db: orm.Session):
     
 
     st.markdown("#### Nekt - A nova morada do mago")
-    load_and_show_course(db=db, course_slug="data-platform-2025", user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug="nekt-2025", user_courses_progress=user_courses_progress)
 
 
     st.markdown("#### Inteligência Artificial")

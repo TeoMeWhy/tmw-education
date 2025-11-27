@@ -19,5 +19,6 @@ def data_engineering(db:orm.Session):
     """)
 
     load_and_show_course(db=db,course_slug="speed-f1", user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug="nekt-2025", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db,course_slug="lago-mago-2024", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db,course_slug="trampar-lakehouse-2024", user_courses_progress=user_courses_progress)
