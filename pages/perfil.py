@@ -49,8 +49,7 @@ def show_points_infos(db:orm.Session)->bool:
                 time.sleep(1)
                 st.rerun()
 
-    show_retro()
-
+    show_retro(userid=tmw_id, name=data['twitch'])
     return True
     
 
