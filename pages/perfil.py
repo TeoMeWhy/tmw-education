@@ -6,6 +6,7 @@ from sqlalchemy import orm, select, func
 from points import points
 from conteudo import utils
 from heroes import heroes
+from retro import retro
 
 import streamlit as st
 import pandas as pd
@@ -38,7 +39,7 @@ def show_points_infos(db:orm.Session)->bool:
 
     Acumula pontos desde: {date_start}
     """)
-        
+
     with col2:
         remove_buttom = col2.button("Clique para desvincular seu perfil do ecosistema")
         if remove_buttom:
@@ -47,6 +48,8 @@ def show_points_infos(db:orm.Session)->bool:
                 del st.session_state["tmw_user"]
                 time.sleep(1)
                 st.rerun()
+
+    show_retro()
 
     return True
     
@@ -201,6 +204,13 @@ def show_user_progress_courses(db:orm.Session):
     if user_courses_complete.shape[0]> 0:
         show_uncompleted_courses(courses_eps=user_courses_complete, user_courses_progress=user_courses_progress)
         show_completed_courses(courses_eps=user_courses_complete, user_courses_progress=user_courses_progress)
+
+
+def show_retro(userid, username):
+    st.success("Sua retrospectiva 2025 está pronta! Confira!")
+    txt_retro  = retro.get_retro(uuid=userid, name=username)
+    st.markdown(txt_retro)
+    return None
 
 
 db = models.SessionLocal()
