@@ -50,6 +50,7 @@ def show_points_infos(db:orm.Session)->bool:
                 st.rerun()
 
     show_retro(userid=tmw_id, username=data['twitch'])
+    
     return True
     
 
@@ -207,6 +208,7 @@ def show_user_progress_courses(db:orm.Session):
 
 def show_retro(userid, username):
     txt_retro  = retro.get_retro(uuid=userid, name=username)
+    st.text(txt_retro)
     if txt_retro:
         st.success("Sua retrospectiva 2025 está pronta! Confira!")
         st.markdown(txt_retro)
