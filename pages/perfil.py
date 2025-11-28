@@ -207,11 +207,11 @@ def show_user_progress_courses(db:orm.Session):
 
 
 def show_retro(userid, username):
-    txt_retro  = retro.get_retro(uuid=userid, name=username)
-    st.text(txt_retro)
-    if txt_retro:
+    resp  = retro.get_retro(uuid=userid, name=username)
+    if resp:
         st.success("Sua retrospectiva 2025 está pronta! Confira!")
-        st.markdown(txt_retro)
+        st.markdown(resp['report'])
+
     return None
 
 
