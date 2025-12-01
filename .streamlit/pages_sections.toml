@@ -18,6 +18,10 @@ path = "pages/trilhas.py"
 name = "Trilhas de Estudos"
 icon = "📚"
 
+[[pages]]
+path = "pages/eventos.py"
+name = "Eventos"
+icon = "🎉"
 
 [[pages]]
 name = "Conteúdo por Ano"
