@@ -83,6 +83,27 @@ def home():
                 st.switch_page("./pages/material_2025.py")
 
 
+    col1, _, col2 = st.columns([1,1,1])
+    col1.markdown("""
+    ## Apoie quem ensina de graça
+
+    - **Chave Pix**: pix@teomewhy.org
+    - **LivePix**: [livepix.gg/teomewhy](https://livepix.gg/teomewhy)
+    - **GitHub Sponsors**: [github.com/sponsors/TeoMeWhy](https://github.com/sponsors/TeoMeWhy)
+    - **ApoiaSe**: [apoia.se/teomewhy](apoia.se/teomewhy)
+    - **Membro no YouTube**: [youtube.com/@teomewhy/membership](https://youtube.com/@teomewhy/membership)
+    - **Sub na Twitch**: [twitch.tv/teomewhy](https://twitch.tv/teomewhy)
+    - **Newsletter**: [teomewhy.substack.com](https://teomewhy.substack.com)
+    - **Lojinha na Amazon**: [amazon.com.br/shop/teo.calvo](https://www.amazon.com.br/shop/teo.calvo?ref_=cm_sw_r_cp_ud_aipsfshop_MS3WV3HX76NT92FNB5BC)
+    """)
+
+    col2.markdown("""
+    \\
+    \\
+    **QR Code para doação via Pix:**
+    """)
+    col2.image("assets/pix.png", width=200)
+
 
 def main():
     load_skills()
