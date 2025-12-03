@@ -83,7 +83,7 @@ def home():
                 st.switch_page("./pages/material_2025.py")
 
 
-    col1, _, col2 = st.columns([1,1,1])
+    col1, col2 = st.columns([2,1])
     col1.markdown("""
     ## Apoie quem ensina de graça
 
