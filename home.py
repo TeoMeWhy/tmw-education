@@ -87,7 +87,7 @@ def home():
     col1.markdown("""
     ## Apoie quem ensina de graça
 
-    - **Chave Pix**: pix@teomewhy.org
+    - **Chave Pix**: `pix@teomewhy.org`
     - **LivePix**: [livepix.gg/teomewhy](https://livepix.gg/teomewhy)
     - **GitHub Sponsors**: [github.com/sponsors/TeoMeWhy](https://github.com/sponsors/TeoMeWhy)
     - **ApoiaSe**: [apoia.se/teomewhy](apoia.se/teomewhy)

@@ -4,6 +4,7 @@ from streamlit.components.v1 import html
 from sqlalchemy import orm
 
 from conteudo.trilhas import basico_tech, data_science_analytics, data_engineering
+from conteudo import livros
 
 from databases.models import SessionLocal
 from login import twitch_login
@@ -29,14 +30,26 @@ def show_trilhas(db:orm.Session):
     with st.expander("Roadmap", expanded=False):
         st.image("assets/fluxograma.png")
 
-    with st.container(border=True):
-        basico_tech.basico_tech(db)
+    videos, books = st.tabs(["Vídeos", "Livros"])
 
-    with st.container(border=True):
-        data_science_analytics.data_science_analytics(db)
+    with videos:
+        with st.container(border=True):
+            basico_tech.basico_tech(db)
 
-    with st.container(border=True):
-        data_engineering.data_engineering(db)
+        with st.container(border=True):
+            data_science_analytics.data_science_analytics(db)
+
+        with st.container(border=True):
+            data_engineering.data_engineering(db)
+    
+    with books:
+        livros.livros_bd()
+        livros.livros_programacao()
+        livros.livros_estat()
+        livros.livros_ml()
+        livros.livros_de()
+        livros.livros_cultura()
+
 
 
 show_trilhas(db)
