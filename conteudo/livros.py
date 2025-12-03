@@ -28,12 +28,12 @@ def livros_ml():
 def livros_programacao():
     with st.expander("Programação", expanded=False):
         st.markdown("""
-        -[Pense em Python – 3ª Edição: Pense como um cientista da computação](https://amzn.to/49PY08d)
-        -[Introdução à Programação com Python – 4ª Edição: Algoritmos e lógica de programação para iniciantes](https://amzn.to/4pGBz9X)
-        -[Aprenda Python 3 do Jeito Certo: uma Introdução Muito Simples ao Incrível Mundo dos Computadores e da Codificação](https://amzn.to/3KknujH)
-        -[Guia Do Python Para Data Science - Tradução da Segunda Edição: Ferramentas Essenciais Para Trabalhar com Dados](https://amzn.to/48NUkmm)
-        -[Python para Análise de Dados - 3ª Edição: Tratamento de dados com pandas, NumPy & Jupyter](https://amzn.to/48xZNwe)
-        -[Python Fluente 2a Edição](https://pythonfluente.com/2/)
+        - [Pense em Python – 3ª Edição: Pense como um cientista da computação](https://amzn.to/49PY08d)
+        - [Introdução à Programação com Python – 4ª Edição: Algoritmos e lógica de programação para iniciantes](https://amzn.to/4pGBz9X)
+        - [Aprenda Python 3 do Jeito Certo: uma Introdução Muito Simples ao Incrível Mundo dos Computadores e da Codificação](https://amzn.to/3KknujH)
+        - [Guia Do Python Para Data Science - Tradução da Segunda Edição: Ferramentas Essenciais Para Trabalhar com Dados](https://amzn.to/48NUkmm)
+        - [Python para Análise de Dados - 3ª Edição: Tratamento de dados com pandas, NumPy & Jupyter](https://amzn.to/48xZNwe)
+        - [Python Fluente 2a Edição](https://pythonfluente.com/2/)
     """)
         
 def livros_bd():
