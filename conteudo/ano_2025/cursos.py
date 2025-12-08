@@ -16,11 +16,10 @@ def cursos_2025(db:orm.Session):
 Acompanhe aqui nossos cursos realizados conforme avançamos e tudo o que nos espera durante este ano.
     """)
     
-    load_and_show_course(db=db, course_slug='mlflow-2025', user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug='github-2025', user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug='python-2025', user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug='pandas-2025', user_courses_progress=user_courses_progress)
-    load_and_show_course(db=db, course_slug='estatistica-2025', user_courses_progress=user_courses_progress)
-
-    load_and_show_course(db=db, course_slug='machine-learning-2025', user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug='sql-2025', user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug='estatistica-2025', user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug='machine-learning-2025', user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug='mlflow-2025', user_courses_progress=user_courses_progress)

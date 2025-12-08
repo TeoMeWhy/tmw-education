@@ -35,3 +35,7 @@ path = "pages/material_2024.py"
 [[pages]]
 name = "2025"
 path = "pages/material_2025.py"
+
+[[pages]]
+name = "2026"
+path = "pages/material_2026.py"

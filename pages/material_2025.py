@@ -10,7 +10,13 @@ db = SessionLocal()
 
 def show_cursos_2025(db:orm.Session):
     twitch_login.twitch_login(db)
-    st.markdown("Boas vindas ao nosso calendário de cursos! Por aqui você poderá tanto acompanhar nossa agenda, mas tambem conferir todos conteúdos que geramos em 2025.")
+    st.markdown("""
+                
+    Nosso foco em 2025 foi trazer material didático para sua formação na área de dados.
+                
+    Seguindo esse material você terá todas as habilidades necessárias para realizar projetos que envolver Análise, Ciência e Engenharia de Dados.
+    """)
+    
     cursos_2025(db)
     projetos_2025(db)
 
