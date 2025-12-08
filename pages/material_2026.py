@@ -1,6 +1,9 @@
 import streamlit as st
 from sqlalchemy import orm
 
+from streamlit.components.v1 import html
+
+
 from databases.models import SessionLocal
 from login import twitch_login
 
@@ -21,5 +24,6 @@ def show_cursos_2026(db:orm.Session):
     |Projeto de IoT | Projeto para coleta de dados usando dispositivos como esp32 e raspberry pi | Projeto | - |
                 
     """)
+
     
 show_cursos_2026(db)
