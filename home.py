@@ -73,14 +73,18 @@ def home():
         
     with st.container(border=True):
         cols = st.columns(5)
-        with cols[1]:
+        with cols[0]:
             b2 = st.button("2024", use_container_width=True)
             if b2:
                 st.switch_page("./pages/material_2024.py")
-        with cols[3]:
+        with cols[2]:
             b1 = st.button("2025", use_container_width=True)
             if b1:
                 st.switch_page("./pages/material_2025.py")
+        with cols[4]:
+            b1 = st.button("2026", use_container_width=True)
+            if b1:
+                st.switch_page("./pages/material_2026.py")
 
 
     col1, col2 = st.columns([2,1])
