@@ -6,6 +6,7 @@ def livros_estat():
 
         st.markdown("""
         - [Estatística Básica](https://amzn.to/3EWm9HV)
+        - [Estatística: O que é, para que serve, como funciona](https://amzn.to/4biD1LM)
         - [Pense em Estatística - 3ª Edição: Análise Exploratória de Dados](https://amzn.to/4ruiCZT)
         - [Probabilidade - Aplicações à Estatística](https://amzn.to/48OL0yw)
         - [Probabilidade: Um Curso Moderno com Aplicações](https://amzn.to/4pfiEDl)
