@@ -7,7 +7,7 @@ POINTS_URI = os.getenv("POINTS_URI")
 def get_user_points(**kwargs):
     url = f"{POINTS_URI}/customers"
     resp = requests.get(url, params=kwargs)
-    
+
     if resp.status_code == 200:
         return resp.json()
     
@@ -24,6 +24,13 @@ def create_user_points(**kwargs):
     
     else:
         return resp.json()
+
+
+def update_user_points(**kwargs):
+    userid = kwargs['uuid']
+    url = f"{POINTS_URI}/customers/{userid}"
+    resp = requests.put(url, json=kwargs)
+    return resp
 
 
 def make_rpg_store_transaction(tmw_id, items, buyer=True):

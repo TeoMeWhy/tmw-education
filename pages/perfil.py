@@ -30,7 +30,7 @@ def show_points_infos(db:orm.Session)->bool:
     date_start = data["created_at"]
     date_last = data["updated_at"]
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns([2,1,1])
 
     col1.markdown(f"""
     Saldo de cubos: {data["points"]}
@@ -40,14 +40,45 @@ def show_points_infos(db:orm.Session)->bool:
     Acumula pontos desde: {date_start}
     """)
 
-    with col2:
-        remove_buttom = col2.button("Clique para desvincular seu perfil do ecosistema")
+    with col2.container(border=True):
+        st.success("Ecossistema vinculado!")
+        remove_buttom = st.button("Desvincular ecosistema")
         if remove_buttom:
             if models.remove_tmw_id(db, tmw_id):
                 st.success("Usuário desvinculado com sucesso!")
                 del st.session_state["tmw_user"]
                 time.sleep(1)
                 st.rerun()
+
+    with col3.container(border=True):
+        if st.user.is_logged_in and st.session_state["tmw_user"]:
+            
+            if st.session_state["tmw_user"]['email'] == st.user.email:
+                st.success("Conta Google vinculada!")
+                logout_google = st.button("Desvincular Google")
+                if logout_google:
+                    new_tmw_user = st.session_state["tmw_user"]
+                    new_tmw_user["email"] = ""
+                    new_tmw_user['youtube'] = ""
+                    new_tmw_user['customer_name'] = ""
+                    resp = points.update_user_points(**new_tmw_user)
+                    if resp.status_code == 200:
+                        st.logout()
+                        st.success("Conta google desvinculada com sucesso.")
+
+            else:            
+                new_tmw_user = st.session_state["tmw_user"]
+                new_tmw_user["email"] = st.user.email
+                new_tmw_user['youtube'] = st.user.sub
+                new_tmw_user['customer_name'] = st.user.name
+                resp = points.update_user_points(**new_tmw_user)
+                if resp.status_code == 200:
+                    st.success("Conta google vinculada com sucesso.")
+                    
+        else:
+            login_youtube = st.button("Vincule sua conta Google", help="Após realizar o login via Google, a página será recarregada e você precisará logar novamente na Twitch.")
+            if login_youtube:
+                st.login()
 
     show_retro(userid=tmw_id, username=data['twitch'])
     
