@@ -35,6 +35,7 @@ def livros_programacao():
         - [Guia Do Python Para Data Science - Tradução da Segunda Edição: Ferramentas Essenciais Para Trabalhar com Dados](https://amzn.to/48NUkmm)
         - [Python para Análise de Dados - 3ª Edição: Tratamento de dados com pandas, NumPy & Jupyter](https://amzn.to/48xZNwe)
         - [Python Fluente 2a Edição](https://pythonfluente.com/2/)
+        - [Entendendo Estruturas de Dados - Marcello La Rocca](https://amzn.to/4994Btz)
     """)
         
 def livros_bd():
