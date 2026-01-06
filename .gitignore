@@ -7,3 +7,6 @@
 # data
 __pycache__
 data/mysql-data/
+
+# secrets
+secrets.toml
