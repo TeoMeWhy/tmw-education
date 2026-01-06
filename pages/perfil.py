@@ -80,8 +80,6 @@ def show_points_infos(db:orm.Session)->bool:
             if login_youtube:
                 st.login()
 
-    show_retro(userid=tmw_id, username=data['twitch'])
-    
     return True
     
 
