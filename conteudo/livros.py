@@ -36,6 +36,7 @@ def livros_programacao():
         - [Python para Análise de Dados - 3ª Edição: Tratamento de dados com pandas, NumPy & Jupyter](https://amzn.to/48xZNwe)
         - [Python Fluente 2a Edição](https://pythonfluente.com/2/)
         - [Entendendo Estruturas de Dados - Marcello La Rocca](https://amzn.to/4994Btz)
+        - [Entendendo Algoritmos - Aditya Y. Bhargava](https://amzn.to/49mJq67)
     """)
         
 def livros_bd():
