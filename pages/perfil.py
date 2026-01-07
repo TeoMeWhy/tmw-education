@@ -13,6 +13,7 @@ import pandas as pd
 
 from databases import models
 from login import twitch_login
+from login import google_login
 
 from databases import models
 
@@ -51,34 +52,24 @@ def show_points_infos(db:orm.Session)->bool:
                 st.rerun()
 
     with col3.container(border=True):
-        if st.user.is_logged_in and st.session_state["tmw_user"]:
-            
-            if st.session_state["tmw_user"]['email'] == st.user.email:
-                st.success("Conta Google vinculada!")
-                logout_google = st.button("Desvincular Google")
-                if logout_google:
-                    new_tmw_user = st.session_state["tmw_user"]
-                    new_tmw_user["email"] = ""
-                    new_tmw_user['youtube'] = ""
-                    new_tmw_user['customer_name'] = ""
-                    resp = points.update_user_points(**new_tmw_user)
-                    if resp.status_code == 200:
-                        st.logout()
-                        st.success("Conta google desvinculada com sucesso.")
+        
+        if st.session_state["tmw_user"].get("youtube"):
+            st.success("Conta Google vinculada!")
+            google_login.remove_google_infos()
 
-            else:            
-                new_tmw_user = st.session_state["tmw_user"]
-                new_tmw_user["email"] = st.user.email
-                new_tmw_user['youtube'] = st.user.sub
-                new_tmw_user['customer_name'] = st.user.name
-                resp = points.update_user_points(**new_tmw_user)
-                if resp.status_code == 200:
-                    st.success("Conta google vinculada com sucesso.")
-                    
         else:
-            login_youtube = st.button("Vincule sua conta Google", help="Após realizar o login via Google, a página será recarregada e você precisará logar novamente na Twitch.")
-            if login_youtube:
-                st.login()
+            if st.user.is_logged_in:
+                if st.user.email != st.session_state["tmw_user"].get("email"):
+                    if google_login.register_google_infos():
+                        st.success("Conta Google vinculada")
+                        google_login.remove_google_infos()
+
+                else:
+                    st.success("Conta Google vinculada")
+                    google_login.remove_google_infos()
+
+            else:
+                google_login.login()
 
     return True
     
