@@ -26,67 +26,7 @@ def load_skills():
     return True
 
 
-def home():
-
-    twitch_login.twitch_login(db)
-
-    st.image("assets/banner_home.png")
-
-    st.markdown("""
-                
-    ## Educação que liberta!
-
-    Você acabou de encontrar um espaço dedicado para aprendizado na área de **dados** e **tecnologia**.
-
-    Nossa missão é emancipar o conhecimento, oferencendo cursos gratuitos e projetos práticos para quem nos apoia.
-                
-    Conheça nossas trilhas de conhecimento e comece sua jornada de aprendizado já!
-    """)
-
-    with st.container(border=True):
-        cols = st.columns(2)
-        with cols[0]:
-            st.markdown("Siga as trilhas de conhecimento que mais tem interesse!")
-            
-        with cols[1]:
-            cols = st.columns(2)
-            with cols[-1]:
-                b1 = st.button("Trilhas", use_container_width=True)
-                if b1:
-                    st.switch_page("./pages/trilhas.py")
-
-
-    with st.container(border=True):
-        cols = st.columns(2)
-        with cols[0]:
-            st.markdown("Não sabe por onde começar? Realize nosso Plano de Desenvolvimento Individual (PDI)!")
-        
-        with cols[-1]:
-            cols = st.columns(2)
-            with cols[-1]:
-                b_pdi = st.button("PDI", use_container_width=True)
-                if b_pdi:
-                    st.switch_page("./pages/pdi.py")
-
-
-    st.markdown("Você também pode conferir todo material anual:")
-        
-    with st.container(border=True):
-        cols = st.columns(5)
-        with cols[0]:
-            b2 = st.button("2024", use_container_width=True)
-            if b2:
-                st.switch_page("./pages/material_2024.py")
-        with cols[2]:
-            b1 = st.button("2025", use_container_width=True)
-            if b1:
-                st.switch_page("./pages/material_2025.py")
-        with cols[4]:
-            b1 = st.button("2026", use_container_width=True)
-            if b1:
-                st.switch_page("./pages/material_2026.py")
-
-
+def show_apoio():
     col1, col2 = st.columns([2,1])
     col1.markdown("""
     ## Apoie quem ensina de graça
@@ -107,6 +47,55 @@ def home():
     **QR Code para doação via Pix:**
     """)
     col2.image("assets/pix.png", width=200)
+
+
+def home():
+
+    twitch_login.twitch_login(db)
+
+    st.image("assets/banner_home.png")
+
+    st.markdown("""
+                
+    ## Educação que liberta!
+
+    Você acabou de encontrar um espaço dedicado para aprendizado na área de **dados** e **tecnologia**.
+
+    Nossa missão é emancipar o conhecimento, oferencendo cursos gratuitos e projetos práticos para quem nos apoia.
+                
+    Conheça nossas trilhas de conhecimento e comece sua jornada de aprendizado já!
+    """)
+
+    col1, col2 = st.columns(2)
+
+    with col1.container(border=True):
+        st.markdown("Siga as trilhas de conhecimento que mais tem interesse!")
+        
+        _, col,_ = st.columns([1,1,1])
+        if col.button("Trilhas", use_container_width=True):
+            st.switch_page("./pages/trilhas.py")
+
+        st.markdown("Não sabe por onde começar? Realize nosso Plano de Desenvolvimento Individual (PDI)!")
+
+        _, col,_ = st.columns([1,1,1])
+        if col.button("PDI", use_container_width=True):
+            st.switch_page("./pages/pdi.py")
+
+    with col2.container(border=True):
+        st.markdown("Você também pode conferir todo material anual:")
+
+        _, col, _ = st.columns([1,1,1])
+            
+        if col.button("2024", use_container_width=True):
+            st.switch_page("./pages/material_2024.py")
+        
+        if col.button("2025", use_container_width=True):
+            st.switch_page("./pages/material_2025.py")
+        
+        if col.button("2026", use_container_width=True):
+            st.switch_page("./pages/material_2026.py")
+
+    show_apoio()
 
 
 def main():
