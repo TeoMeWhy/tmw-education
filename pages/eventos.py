@@ -21,7 +21,7 @@ def show_calendar(db:orm.Session):
 
     |Evento| Data | Cidade/UF | Palestra/Keynote |
     |:---|:---:|:---:|:---:|
-    |Python Sul|A definir|A definir|❌|
+    |[Python Sul](https://sul.python.org.br/)|01/05 - 03/05|Londrina/PR|Keynote|
     |[Caipyra](https://2026.caipyra.python.org.br/)|04/06 - 07/06|São Carlos/SP|❌|
     |[Python Brasil 2026](https://2026.pythonbrasil.org.br/)|14/10 - 19/10|Florianopólis/SC|❌|
 

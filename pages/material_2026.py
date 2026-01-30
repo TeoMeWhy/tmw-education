@@ -29,7 +29,7 @@ def show_cursos_2026(db:orm.Session):
     |Panorama da AI|Bate papo com [Caio Dallaqua](http://linkedin.com/in/caiodallaqua) | Mesa dos Magos | 25/04/2026 10AM |
     |Fogo Cruzado | Uso de dados abertos de confrontos armados para análises e modelos preditivos | Projeto | - |
     |Projeto de IoT | Projeto para coleta de dados usando dispositivos como esp32 e raspberry pi | Projeto | - |
-                
+
     """)
     
 show_cursos_2026(db)
