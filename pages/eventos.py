@@ -11,7 +11,7 @@ def show_calendar(db:orm.Session):
     twitch_login.twitch_login(db)
     
     txt = """
-    Confira os evetnos que estarei presente durante o ano de 2026.
+    Confira os eventos que estarei presente durante o ano de 2026.
     """
 
     st.markdown(txt)
