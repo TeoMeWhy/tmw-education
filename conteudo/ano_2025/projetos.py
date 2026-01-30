@@ -18,7 +18,7 @@ def projetos_2025(db: orm.Session):
     """
     ### Projetos
                 
-    Acompanhe aqui nossos todos os projetos que estamos relizamos na divididos entre as subárea que temos em Dados. Seja membro do YouTube para conseguir acessar o conteúdo destes materiais.
+    Acompanhe aqui nossos todos os projetos que relizamos em 2025. Seja membro do YouTube para conseguir acessar o conteúdo destes materiais.
                     
     Os projetos construídos a partir de 2025, terão as gravações disponíveis exclusivamente no YouTube.
     
@@ -34,4 +34,3 @@ def projetos_2025(db: orm.Session):
 
     st.markdown("#### Inteligência Artificial")
     load_and_show_course(db=db, course_slug="ia-canal-2025", user_courses_progress=user_courses_progress)
-
