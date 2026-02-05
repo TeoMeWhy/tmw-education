@@ -63,8 +63,20 @@ def home():
 
     Nossa missão é emancipar o conhecimento, oferencendo cursos gratuitos e projetos práticos para quem nos apoia.
                 
-    Conheça nossas trilhas de conhecimento e comece sua jornada de aprendizado já!
+    ### Guia de Aventuras
+                
+    Chegou por aqui agora? Assista o vídeo abaixo para ter um overview de tudo que você pode encontrar no nosso mundo de dados!
     """)
+
+
+    html_code = f"""
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QOH810do0t8" 
+    frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen loading="lazy"></iframe>
+    """
+    st.components.v1.html(html_code, height=315)
+
+    st.markdown(""" Agora sim! Escolha seu caminho de aprendizado:""")
 
     col1, col2 = st.columns(2)
 
