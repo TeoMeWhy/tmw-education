@@ -158,3 +158,6 @@ go-2026;Curso Linguagem Go;"Curso de Go para iniciantes na linguagem com foco em
 Documento completo da apresentação com material de apoio, exemplos e exercícios: https://docs.google.com/presentation/d/1A853kcKhvdhTrXK72xlufd5-wSVjg743HO0T1cuuvuc/edit?usp=sharing
 
 Repositório com código gerado ao decorrer do curso: https://github.com/TeoMeWhy/curso-go-ds";2026
+plataforma-ml-2026;Minha Plataforma de Machine Learning;"Construindo uma plataforma de machine learning para receber requisições de predições e inferência em tempo real.
+
+Serviço feito em Go que, ao receber requisições, identifica qual modelo deve ser utilizado com base no seu registro no MLFlow, busca suas respectivas features na feature store, e realiza a chamada na API associada ao modelo registrado no MLFlow.";2026

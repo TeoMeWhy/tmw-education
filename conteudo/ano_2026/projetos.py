@@ -14,24 +14,14 @@ def projetos_2026(db: orm.Session):
     if "user" in st.session_state:
         user_courses_progress = get_courses_dataframe(db, st.session_state["user"].userID)
 
-    # st.markdown(
-    # """
-    # ### Projetos
+    st.markdown(
+    """
+    ### Projetos
                 
-    # Acompanhe aqui nossos todos os projetos que relizamos ao lonog de 2025. Seja membro do YouTube para conseguir acessar o conteúdo destes materiais.
-                    
-    # Os projetos construídos a partir de 2025, terão as gravações disponíveis exclusivamente no YouTube.
+    Confira os projetos que já realizamos em 2026!
     
-    # """)
+    """)
     
-    # st.markdown("#### Data Science e Machine Learning")
-    # load_and_show_course(db=db, course_slug="loyalty-predict-2025", user_courses_progress=user_courses_progress)
+    st.markdown("#### Plataforma de Machine Learning")
+    load_and_show_course(db=db, course_slug="plataforma-ml-2026", user_courses_progress=user_courses_progress)
     
-
-    # st.markdown("#### Nekt - A nova morada do mago")
-    # load_and_show_course(db=db, course_slug="nekt-2025", user_courses_progress=user_courses_progress)
-
-
-    # st.markdown("#### Inteligência Artificial")
-    # load_and_show_course(db=db, course_slug="ia-canal-2025", user_courses_progress=user_courses_progress)
-
