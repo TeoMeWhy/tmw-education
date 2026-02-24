@@ -24,7 +24,7 @@ def show_cursos_2026(db:orm.Session):
 
     |Conteúdo| Descrição | Tipo | Data |
     |---|---|:---:|:---:|
-    |[Fórmula 1](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M29hZ25pNG10bmIzYm5vNjBjYmM2dXZyazRfMjAyNjAyMjNUMTIwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)|Criação de Lakehouse na Nekt para dados da Fórmula 1| Projeto | 23/02/2026 9AM |
+    |Fórmula 1|Criação de Lakehouse na Nekt para dados da Fórmula 1| Projeto | 02/03/2026 9AM |
     |AI for Good / Nomad Digital|Bate papo com [Nelson Buainain](http://linkedin.com/in/nelson-buainain)  | Mesa dos Magos | 23/02/2026 10AM |
     |Decolonize AI|Bate papo com [Nina da Hora](https://www.linkedin.com/in/ninadahora/) | Mesa dos Magos | 21/03/2026 10AM |
     |[Dota2](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NnVpNGVjYWN1OTY4ZXEycTA0aW0ybWtkNjFfMjAyNjAzMzBUMTIwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)|Coleta, armazenamento e processamento de dados para criação de Dashboards e Modelos de ML| Projeto | 30/03/2026 9AM |
