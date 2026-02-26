@@ -18,14 +18,13 @@ def show_calendar(db:orm.Session):
 
 
     table = """
-
     |Evento| Data | Cidade/UF | Palestra/Keynote |
     |:---|:---:|:---:|:---:|
     |[Python Sul](https://sul.python.org.br/)|01/05 - 03/05|Londrina/PR|Keynote|
+    |[The Developer's Life Weekend 2026](https://weekend.developerslife.tech/evento/9/the-developers-life-weekend-2026-maringa-pr)|30/05|Maringá/PR|Palestrante|
     |[Caipyra](https://2026.caipyra.python.org.br/)|04/06 - 07/06|São Carlos/SP|❌|
+    |[CodeCon Summit](https://eventos.codecon.dev/eventos/codecon-summit-26)|14/08 e 15/08|Curitiba/PR|Palestrante|
     |[Python Brasil 2026](https://2026.pythonbrasil.org.br/)|14/10 - 19/10|Florianopólis/SC|❌|
-
-
     """
 
     st.markdown(table)
