@@ -161,3 +161,8 @@ Repositório com código gerado ao decorrer do curso: https://github.com/TeoMeWh
 plataforma-ml-2026;Minha Plataforma de Machine Learning;"Construindo uma plataforma de machine learning para receber requisições de predições e inferência em tempo real.
 
 Serviço feito em Go que, ao receber requisições, identifica qual modelo deve ser utilizado com base no seu registro no MLFlow, busca suas respectivas features na feature store, e realiza a chamada na API associada ao modelo registrado no MLFlow.";2026
+f1-lake;Projeto completo de dados para Fórmula 1;"Contrução de uma Lakehouse usando Netk a patir da coleta de dados da Fórmula 1.
+
+Modelo preditivo criado para inferir campeão da temporada.
+
+Aplicação em Streamlit para exibição dos resultados e análise.";2026

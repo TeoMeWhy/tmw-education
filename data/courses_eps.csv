@@ -320,3 +320,34 @@ plataforma-ml-2026;11;Plataforma de ML - Testes;s7kDnDcmBvI
 plataforma-ml-2026;12;Plataforma de ML - Mais testes;D9OPsWaObXo
 plataforma-ml-2026;13;Plataforma de ML - Setup para testes;5hMMHLuHc_Q
 plataforma-ml-2026;14;Plataforma de ML - Deploy;OqHClN3494I
+f1-lake;1;F1 Lakehouse - Introdução;kxi3QBDlIRA
+f1-lake;2;F1 Lakehouse - Setup;sGwcSH8StH0
+f1-lake;3;F1 Lakehouse - Coletar e Salvar;qaB9ePcimw8
+f1-lake;4;F1 Lakehouse - Dados da Temporada;3UaZ8ad3H6U
+f1-lake;5;F1 Lakehouse - Classe de Coleta;qprVdYPhPQU
+f1-lake;6;F1 Lakehouse - Coleta completa;8BEE-k0-DOY
+f1-lake;7;F1 Lakehouse - Argparse;qgvYy4Klsts
+f1-lake;8;F1 Lakehouse - Novas colunas;_BkCOtS4pyY
+f1-lake;9;F1 Lakehouse - Dados Históricos;sgxWcn_ow4o
+f1-lake;10;F1 Lakehouse - AWS S3;-Pmx6Id6Sbk
+f1-lake;11;F1 Lakehouse - boto3;QPLMo3etG_w
+f1-lake;12;F1 Lakehouse - Classe Sender;Ooj7H2tKTgI
+f1-lake;13;F1 Lakehouse - main.py;0C-7L7YKf6o
+f1-lake;14;F1 Lakehouse - Camada BRONZE;crMhm4A8oPg
+f1-lake;15;F1 Lakehouse - Tabela de Campeões;srKeB1qjYnU
+f1-lake;16;F1 Lakehouse - Definição das Features;dZlLeHWDWjs
+f1-lake;17;F1 Lakehouse - Query Feature Store;hktS30O9x6w
+f1-lake;18;F1 Lakehouse - Primeira Carga Feature Store;hscQhvi8j3o
+f1-lake;19;F1 Lakehouse - Feature Store Histórica;o7zewvUJApg
+f1-lake;20;F1 Lakehouse - Primeira Corrida 2026;oKhdPUADalM
+f1-lake;21;F1 Lakehouse - Novas features;PCTGinSvdQ8
+f1-lake;22;F1 Lakehouse - Refatoração Query FS;6aqZN5hs6yw
+f1-lake;23;F1 Lakehouse - Feature Store ALL;qhefx3bOFok
+f1-lake;24;F1 Lakehouse - Analytical Base Table;9-jPlYuMnJE
+f1-lake;25;F1 Lakehouse - Download ABT;iFtqjfP7LfQ
+f1-lake;26;F1 Lakehouse - Amostragem;o7_gWrJ_gwo
+f1-lake;27;F1 Lakehouse - Treinamento;QKjvrWvxN3g
+f1-lake;28;F1 Lakehouse - Avaliação;G9nevw29JlY
+f1-lake;29;F1 Lakehouse - MLFlow;SAjy58z9P38
+f1-lake;30;F1 Lakehouse - ML API;zksjvVBHUGI
+f1-lake;31;F1 Lakehouse - Integração Palantir;_pJS7tJHTdc

@@ -28,9 +28,9 @@ def data_engineering(db:orm.Session):
     São projetos reais, realizando ingestão de dados em um ambiente cloud com as das melhores ferramentas do mercado.
     """)
     
-
     load_and_show_course(db=db,course_slug="speed-f1", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug="nekt-2025", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug="plataforma-ml-2026", user_courses_progress=user_courses_progress)
+    load_and_show_course(db=db, course_slug="f1-lake", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db,course_slug="lago-mago-2024", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db,course_slug="trampar-lakehouse-2024", user_courses_progress=user_courses_progress)
