@@ -24,11 +24,8 @@ def show_cursos_2026(db:orm.Session):
 
     |Conteúdo| Descrição | Tipo | Data |
     |---|---|:---:|:---:|
-    |Fórmula 1|Criação de Lakehouse na Nekt para dados da Fórmula 1| Projeto | 02/03/2026 9AM |
-    |AI for Good / Nomad Digital|Bate papo com [Nelson Buainain](http://linkedin.com/in/nelson-buainain)  | Mesa dos Magos | 23/02/2026 10AM |
     |Decolonize AI|Bate papo com [Nina da Hora](https://www.linkedin.com/in/ninadahora/) | Mesa dos Magos | 21/03/2026 10AM |
-    |[Dota2](https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NnVpNGVjYWN1OTY4ZXEycTA0aW0ybWtkNjFfMjAyNjAzMzBUMTIwMDAwWiB0ZW9AdGVvbWV3aHkub3Jn&tmsrc=teo%40teomewhy.org&scp=ALL)|Coleta, armazenamento e processamento de dados para criação de Dashboards e Modelos de ML| Projeto | 30/03/2026 9AM |
-    |Panorama da AI|Bate papo com [Caio Dallaqua](http://linkedin.com/in/caiodallaqua) | Mesa dos Magos | 25/04/2026 10AM |
+    |Physical AI|Bate papo com [Daniel Rometo](https://www.linkedin.com/in/infoslack/) | Mesa dos Magos | 25/03/2026 10AM |
     |Fogo Cruzado | Uso de dados abertos de confrontos armados para análises e modelos preditivos | Projeto | - |
     |Projeto de IoT | Projeto para coleta de dados usando dispositivos como esp32 e raspberry pi | Projeto | - |
 
