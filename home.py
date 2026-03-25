@@ -34,7 +34,7 @@ def show_apoio():
     - **Chave Pix**: `pix@teomewhy.org`
     - **LivePix**: [livepix.gg/teomewhy](https://livepix.gg/teomewhy)
     - **GitHub Sponsors**: [github.com/sponsors/TeoMeWhy](https://github.com/sponsors/TeoMeWhy)
-    - **ApoiaSe**: [apoia.se/teomewhy](apoia.se/teomewhy)
+    - **ApoiaSe**: [apoia.se/teomewhy](https://apoia.se/teomewhy)
     - **Membro no YouTube**: [youtube.com/@teomewhy/membership](https://youtube.com/@teomewhy/membership)
     - **Sub na Twitch**: [twitch.tv/teomewhy](https://twitch.tv/teomewhy)
     - **Newsletter**: [teomewhy.substack.com](https://teomewhy.substack.com)
