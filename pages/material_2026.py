@@ -24,7 +24,6 @@ def show_cursos_2026(db:orm.Session):
 
     |Conteúdo| Descrição | Tipo | Data |
     |---|---|:---:|:---:|
-    |Decolonize AI|Bate papo com [Nina da Hora](https://www.linkedin.com/in/ninadahora/) | Mesa dos Magos | 21/03/2026 10AM |
     |Physical AI|Bate papo com [Daniel Rometo](https://www.linkedin.com/in/infoslack/) | Mesa dos Magos | 25/03/2026 10AM |
     |Fogo Cruzado | Uso de dados abertos de confrontos armados para análises e modelos preditivos | Projeto | - |
     |Projeto de IoT | Projeto para coleta de dados usando dispositivos como esp32 e raspberry pi | Projeto | - |
