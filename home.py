@@ -53,12 +53,10 @@ def home():
 
     twitch_login.twitch_login(db)
 
-    st.image("assets/banner_home.png", width=450)
+    st.markdown("""### Educação que liberta!""")
+    st.image("assets/banner_home.png", width=550)
 
     st.markdown("""
-                
-    ## Educação que liberta!
-
     Você acabou de encontrar um espaço dedicado para aprendizado na área de **dados** e **tecnologia**.
 
     Nossa missão é emancipar o conhecimento, oferencendo cursos gratuitos e projetos práticos para quem nos apoia.
