@@ -53,7 +53,7 @@ def home():
 
     twitch_login.twitch_login(db)
 
-    st.image("assets/banner_home.png")
+    st.image("assets/banner_home.png", width=450)
 
     st.markdown("""
                 
