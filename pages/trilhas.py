@@ -33,6 +33,29 @@ def show_trilhas(db:orm.Session):
     videos, books = st.tabs(["Vídeos", "Livros"])
 
     with videos:
+
+        st.markdown("""
+
+    ## Overview
+                
+    #### Início em Tecnologia:
+    
+    Comece por aqui, aprendendo os fundamentos básicos de tecnologia e programação.
+
+    #### Data Science & Analytics:
+    
+    Agora entramos na área de dados. Você conhecerá bibliotecas e conceitos específicos da área de dados, independente se pretende seguir com Data Science ou Analytics. Vale dizer que muitos desses conceitos te tornarão uma pessoa profissional mais completa, ainda que queira seguir em engenharia de dados.
+                
+    Quando finalizar todos os cursos e se sentir confortável suficiente para seguir, recomento realizar os projetos. Eles podem te inspirar para criar seu próprio portfólio, como também dar uma boa noção de quais são as etapas e tarefas do dia a dia de uma pessoa na área.
+    
+    #### Data Engineering
+
+    Minha carreira sempre foi voltada à Data Science, construindo modelos preditivos. Mas sempre busquei ter autonomia em minhas entregas e assim acabei conhecendo a área de engenharia de dados. Essa sessão é focada em projetos que tem como entregável final, um produto de dados de Data Science, mas o caminho é repleto por tarefas e questões de engenharia de dados.
+                
+    Ou seja, embora nosso foco não seja exatamente os fundamentos de engenharia, você aprenderá *muito* sobre este universo e terá condições de aplicar no dia a dia, seja para seguir na carreira de Engenharia ou de Data Science/Analytics.
+
+    """)
+
         with st.container(border=True):
             basico_tech.basico_tech(db)
 
