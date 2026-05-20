@@ -1,3 +1,5 @@
+import os
+
 import datetime
 import time
 
@@ -7,6 +9,7 @@ from points import points
 from conteudo import utils
 from heroes import heroes
 from retro import retro
+from ml_models import palantir
 
 import streamlit as st
 import pandas as pd
@@ -16,6 +19,8 @@ from login import twitch_login
 from login import google_login
 
 from databases import models
+
+palantir_client = palantir.PalantirClient(os.getenv("PALANTIR_URI"))
 
 
 def show_points_infos(db:orm.Session)->bool:
@@ -30,7 +35,10 @@ def show_points_infos(db:orm.Session)->bool:
 
     date_start = data["created_at"]
     date_last = data["updated_at"]
-
+    
+    
+    
+    
     col1, col2, col3 = st.columns([2,1,1])
 
     col1.markdown(f"""
@@ -40,6 +48,34 @@ def show_points_infos(db:orm.Session)->bool:
 
     Acumula pontos desde: {date_start}
     """)
+    
+
+    fiel_score = palantir_client.get_fiel_score(tmw_id)
+    check = points.check_fiel_score_transaction(tmw_id=tmw_id)
+    
+    if check:
+        show_fiel_info(fiel_score, col1)
+    
+    else:
+        if col1.button("Revelar Score Fiel"):
+            if fiel_score is not None:
+                show_fiel_info(fiel_score, col1)
+                
+                resp, vl_points = points.post_fiel_score_transaction(tmw_id=tmw_id, score=fiel_score)
+                if "error" in resp:
+                    st.error(f"Erro ao atualizar pontos: {resp['error']}")
+                
+                else:
+                    
+                    if vl_points > 0:
+                        st.success(f"Pontos atualizados com sucesso! Você ganhou {vl_points} cubos!")
+                        
+                    else:
+                        st.warning(f"Pontos atualizados com sucesso! Infelizmente você perdeu {abs(vl_points)} cubos!")
+                    
+                    time.sleep(2)
+                    st.rerun()
+            
 
     with col2.container(border=True):
         st.success("Ecossistema vinculado!")
@@ -88,6 +124,19 @@ def integrate_or_create_tmw(db: orm.Session, user):
     st.success("Perfil vinculado com sucesso!")
     time.sleep(1)
     st.rerun()
+
+
+def show_fiel_info(score, st_widget):
+    if score < 10:
+        st_widget.warning(f"**Fiel-Score**: {score:.2f}%. Pô! Você está na lanterninha! Bora interagir mais.")
+    elif score < 25:
+        st_widget.warning(f"**Fiel-Score**: {score:.2f}%. Dá para melhorar bastante! Vamos com a gente!")
+    elif score < 50:
+        st_widget.info(f"**Fiel-Score**: {score:.2f}%. Está no caminho certo para começar a ganhar recompensas!")
+    elif score < 75 :
+        st_widget.success(f"**Fiel-Score**: {score:.2f}%. Muito bom! Continue assim para ganhar recompensas cada vez melhores!")
+    else:
+        st_widget.success(f"**Fiel-Score**: {score:.2f}%. Parabéns, você é um dos fiéis da comunidade! Exemplo a ser seguido!")
 
 
 def show_rpg():

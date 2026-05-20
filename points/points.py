@@ -1,8 +1,11 @@
+# %%
+import datetime
 import requests
 import os
 import uuid
 
 POINTS_URI = os.getenv("POINTS_URI")
+
 
 def get_user_points(**kwargs):
     url = f"{POINTS_URI}/customers"
@@ -81,6 +84,7 @@ def make_rpg_store_transaction_refound(tmw_id, items):
     data["products"] = data_items
     return data
 
+
 def make_reward_transaction(tmw_id, reward_ids):
     data = {
         "transaction_id": str(uuid.uuid4()),
@@ -100,6 +104,7 @@ def make_reward_transaction(tmw_id, reward_ids):
     data["products"] = data_items
     return data
 
+
 def post_transaction(**kwargs):
     url = f"{POINTS_URI}/transactions"
     resp = requests.post(url, json=kwargs)
@@ -109,3 +114,67 @@ def post_transaction(**kwargs):
     
     else:
         return resp.json()
+
+
+def get_last_last_transaction_category(tmw_id, category):
+    url = f"{POINTS_URI}/last_transaction_category/{tmw_id}/{category}"
+    resp = requests.get(url)
+    
+    if resp.status_code == 200:
+        return resp.json()
+    
+    else:
+        return {}
+    
+
+def post_fiel_score_transaction(tmw_id, score):
+    
+    if score < 10:
+        cod = "fiel-score-0.1"
+        points = -10
+    
+    elif score < 25:
+        cod = "fiel-score-0.25"
+        points = -5
+    
+    elif score < 50:
+        cod = "fiel-score-0.5"
+        points = -1
+    
+    elif score < 75:
+        cod = "fiel-score-0.75"
+        points = 50
+    
+    else:
+        cod = "fiel-score-1.0"
+        points = 100
+
+    produto = {
+			"product_id":  cod,
+			"product_qtd": 1,
+			"points":   points,
+    }
+    
+    
+    data = {
+        "customer_id": tmw_id,
+        "points": points,
+        "system_origin": "cursos",
+        "products": [produto]
+    }
+
+    return post_transaction(**data), points
+
+
+def check_fiel_score_transaction(tmw_id):
+    
+    last_transaction = get_last_last_transaction_category(tmw_id=tmw_id, category="fiel")
+    
+    dt = last_transaction.get("last_transaction_date", None)
+    if dt is None:
+        return False
+    
+    dt = datetime.datetime.fromisoformat(dt).date()
+    now = datetime.datetime.now().date()
+    return dt == now
+    
