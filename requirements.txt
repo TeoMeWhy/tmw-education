@@ -1,9 +1,9 @@
-Authlib==1.6.9
+Authlib==1.6.12
 cffi==1.17.1
 cryptography>=44.0.1
 pycparser==2.22
 pymysql==1.1.1
-python-dotenv==1.0.1
+python-dotenv==1.2.2
 Requests==2.33.0
 requests_oauthlib==2.0.0
 SQLAlchemy==2.0.37
