@@ -16,7 +16,13 @@ icon = "📝"
 [[pages]]
 path = "pages/trilhas.py"
 name = "Trilhas de Estudos"
+icon = "💡"
+
+[[pages]]
+path = "pages/livros.py"
+name = "Livros"
 icon = "📚"
+
 
 [[pages]]
 path = "pages/eventos.py"
