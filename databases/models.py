@@ -119,7 +119,7 @@ def get_user_by_platform(db:orm.Session, platform_name:str, platform_user_id:str
 
 def get_or_create_user(db:orm.Session, platform_name:str, platform_user_id:str):
     user = get_user_by_platform(db, platform_name=platform_name, platform_user_id=platform_user_id)
-    if user == None:
+    if user is None:
         return create_new_user(db, platform_name=platform_name, platform_user_id=platform_user_id)
     return user
 

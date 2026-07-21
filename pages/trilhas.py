@@ -66,13 +66,6 @@ def show_trilhas(db:orm.Session):
             data_engineering.data_engineering(db)
     
     with books:
-        livros.livros_bd()
-        livros.livros_programacao()
-        livros.livros_estat()
-        livros.livros_ml()
-        livros.livros_de()
-        livros.livros_cultura()
-
-
+        livros.livros()
 
 show_trilhas(db)
