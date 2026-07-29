@@ -167,3 +167,4 @@ Modelo preditivo criado para inferir campeão da temporada.
 
 Aplicação em Streamlit para exibição dos resultados e análise.";2026
 ragia;Projeto com Arquitetura RAG;Projeto completo construindo uma arquitetura RAG do zero utilizando transcrições de nossos vídeos do YouTube e artigos publicados no nosso blog.;2026
+meu-agente;Criando um Agente para o Téo Me Why;Construção de um agente de IA rodando localmente com Kobold e Gemma4, utilizando o framework Agno.;2026
