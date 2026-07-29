@@ -14,20 +14,7 @@ def show_cursos_2026(db:orm.Session):
     st.markdown("Boas vindas ao nosso calendário de cursos! Por aqui você poderá tanto acompanhar nossa agenda, mas tambem conferir todos conteúdos que geramos em 2026.")
 
     cursos_2026(db)
-
     projetos_2026(db)
 
-    st.markdown("""
-    ---
-                
-    ### Calendário
-
-    |Conteúdo| Descrição | Tipo | Data |
-    |---|---|:---:|:---:|
-    |Physical AI|Bate papo com [Daniel Rometo](https://www.linkedin.com/in/infoslack/) | Mesa dos Magos | 25/03/2026 10AM |
-    |Fogo Cruzado | Uso de dados abertos de confrontos armados para análises e modelos preditivos | Projeto | - |
-    |Projeto de IoT | Projeto para coleta de dados usando dispositivos como esp32 e raspberry pi | Projeto | - |
-
-    """)
     
 show_cursos_2026(db)

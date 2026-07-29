@@ -30,3 +30,6 @@ def projetos_2026(db: orm.Session):
 
     st.markdown("#### Ragia - Arquitetura RAG")
     load_and_show_course(db=db, course_slug="ragia", user_courses_progress=user_courses_progress)
+    
+    st.markdown("#### Meu Agente - LLM Local com Kobold e Agno")
+    load_and_show_course(db=db, course_slug="meu-agente", user_courses_progress=user_courses_progress)

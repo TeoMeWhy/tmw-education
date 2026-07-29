@@ -3,7 +3,7 @@ from streamlit.components.v1 import html
 
 from sqlalchemy import orm
 
-from conteudo.trilhas import basico_tech, data_science_analytics, data_engineering
+from conteudo.trilhas import basico_tech, data_science_analytics, data_engineering, ia_engineering
 from conteudo import livros
 
 from databases.models import SessionLocal
@@ -54,6 +54,12 @@ def show_trilhas(db:orm.Session):
                 
     Ou seja, embora nosso foco não seja exatamente os fundamentos de engenharia, você aprenderá *muito* sobre este universo e terá condições de aplicar no dia a dia, seja para seguir na carreira de Engenharia ou de Data Science/Analytics.
 
+    #### IA Engineering
+
+    Não se fala de outra coisa nas redes sociais. E embora isso me canse e deixe ansioso, queria muito trazer um conteúdo real e não emocionado sobre assunto.
+    
+    Por isso, estamos desbravando alguns projetos aplicando IA/LLM em problemas reais do nosso canal e dia a dia.
+
     """)
 
         with st.container(border=True):
@@ -64,7 +70,10 @@ def show_trilhas(db:orm.Session):
 
         with st.container(border=True):
             data_engineering.data_engineering(db)
-    
+            
+        with st.container(border=True):
+            ia_engineering.ia_engineering(db)
+
     with books:
         livros.livros()
 

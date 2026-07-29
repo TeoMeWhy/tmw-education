@@ -14,7 +14,7 @@ def data_engineering(db:orm.Session):
     st.markdown("""
     ### Data Engineering!
     
-    Como conteúo adicional, pensando no diferencial que uma pessoa de dados mais sênior pode ter, criamos um curso de Go. É bem provável que usaremos Go em alguns de nossos projetos para criação de APIs, por exemplo.            
+    Como conteúdo adicional, pensando no diferencial que uma pessoa de dados mais sênior pode ter, criamos um curso de Go. É bem provável que usaremos Go em alguns de nossos projetos para criação de APIs, por exemplo.            
     
     """)
 
@@ -32,6 +32,5 @@ def data_engineering(db:orm.Session):
     load_and_show_course(db=db, course_slug="nekt-2025", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug="plataforma-ml-2026", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db, course_slug="f1-lake", user_courses_progress=user_courses_progress)
-    load_and_show_course(db=db, course_slug="ragia", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db,course_slug="lago-mago-2024", user_courses_progress=user_courses_progress)
     load_and_show_course(db=db,course_slug="trampar-lakehouse-2024", user_courses_progress=user_courses_progress)
